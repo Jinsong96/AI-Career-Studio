@@ -1,0 +1,300 @@
+{
+  "events": [
+    {
+      "id": "intern_bigtech",
+      "stage": "university",
+      "title": "拿到大厂暑期实习",
+      "description": "大三暑假，你收到一家大厂的实习录用。第一次在千万级用户的系统里改代码，提交前手心全是汗。",
+      "probability": 0.2,
+      "percentileShift": 22,
+      "tone": "positive",
+      "metricsDelta": {
+        "growth": 5
+      }
+    },
+    {
+      "id": "acm_team",
+      "stage": "university",
+      "title": "进了学校的算法竞赛队",
+      "description": "每周六下午在机房刷题，比赛那天你写出了全队唯一一道动态规划。",
+      "probability": 0.2,
+      "percentileShift": 8,
+      "tone": "positive"
+    },
+    {
+      "id": "os_failed",
+      "stage": "university",
+      "title": "操作系统挂科了",
+      "description": "期末那道页面置换题你算错了三遍，成绩出来是58分。",
+      "probability": 0.25,
+      "percentileShift": -12,
+      "tone": "challenge",
+      "copingTip": "补考前把课程实验从头做一遍。很多人正是因为这次补考，才真正弄懂了操作系统。"
+    },
+    {
+      "id": "side_project",
+      "stage": "university",
+      "title": "和室友做的小程序有了几千用户",
+      "description": "你们给食堂做了个排队小程序，某天中午服务器被挤崩了，你们俩却笑了一下午。",
+      "probability": 0.15,
+      "percentileShift": 10,
+      "tone": "positive"
+    },
+    {
+      "id": "offer_ssp",
+      "stage": "graduation",
+      "title": "秋招拿到了高薪 offer",
+      "description": "第三轮面试官问到你实习时做的缓存方案，你讲了二十分钟，他最后说“欢迎加入”。",
+      "probability": 0.12,
+      "percentileShift": 20,
+      "tone": "positive"
+    },
+    {
+      "id": "hiring_freeze",
+      "stage": "graduation",
+      "title": "秋招遇上招聘收缩",
+      "description": "投了六十多份简历，最后只拿到一家中型公司的 offer。签约那天你在操场上走了很久。",
+      "probability": 0.3,
+      "percentileShift": -16,
+      "tone": "challenge",
+      "copingTip": "先进去积累一年真实项目经验。社招的机会通常比校招多，第一份工作不决定全部。"
+    },
+    {
+      "id": "legacy_system",
+      "stage": "year3",
+      "title": "导师离职，你接手了一个没人懂的老系统",
+      "description": "交接文档只有半页纸，代码里的注释写着“别动这里”。你花了两个月才敢提第一个改动。",
+      "probability": 0.3,
+      "percentileShift": -10,
+      "tone": "challenge",
+      "copingTip": "先画出调用关系图，把最常出问题的模块写成文档。这段经历后来常常是面试里最好讲的故事。"
+    },
+    {
+      "id": "refactor_promo",
+      "stage": "year3",
+      "title": "主导的重构上线，你升了高级工程师",
+      "description": "上线那晚整个组在会议室守到两点，监控曲线一直很平稳，组长给你点了份宵夜。",
+      "probability": 0.25,
+      "percentileShift": 16,
+      "tone": "positive",
+      "metricsDelta": {
+        "growth": 5
+      }
+    },
+    {
+      "id": "job_hop",
+      "stage": "year3",
+      "title": "跳槽去了一家正在增长的公司",
+      "description": "新公司的工位能看到江景，节奏也更快，第一个月你几乎每天都在学新东西。",
+      "probability": 0.2,
+      "percentileShift": 10,
+      "tone": "positive"
+    },
+    {
+      "id": "team_cut",
+      "stage": "year5",
+      "title": "业务调整，团队被裁撤",
+      "description": "周五下午的全员会只开了十分钟。你抱着纸箱走出大楼，手机里已经有前同事发来的内推。",
+      "probability": 0.2,
+      "percentileShift": -24,
+      "tone": "challenge",
+      "copingTip": "整理过去几年的项目成果，联系前同事内推。有5年经验的工程师在中型公司和传统行业数字化部门需求稳定。",
+      "metricsDelta": {
+        "stability": -5
+      }
+    },
+    {
+      "id": "core_owner",
+      "stage": "year5",
+      "title": "成为核心系统的负责人",
+      "description": "系统出问题时，大家第一个找的人变成了你。你开始学会说“这个需求我们下个季度再做”。",
+      "probability": 0.2,
+      "percentileShift": 14,
+      "tone": "positive"
+    },
+    {
+      "id": "ai_tools",
+      "stage": "year10",
+      "title": "团队全面用上 AI 编程工具",
+      "description": "组里缩编了两个人，你的工作从写代码变成了设计系统、审查 AI 写的代码。",
+      "probability": 0.4,
+      "percentileShift": -5,
+      "tone": "neutral",
+      "metricsDelta": {
+        "aiResilience": 5
+      }
+    }
+  ],
+  "storyChapters": [
+    {
+      "chapter": "prologue",
+      "template": "{year}年夏天，{province}。出分那晚你把查询页面刷了三遍。志愿表上，你在“{major}”后面停了很久，最后把它填进了第一栏。"
+    },
+    {
+      "chapter": "y1",
+      "template": "大一的第一节程序设计课，你写下了第一行代码。凌晨一点的宿舍里，室友在打游戏，你在和一个找不到的分号较劲。程序跑起来的那一刻，你差点叫出声。"
+    },
+    {
+      "chapter": "y3",
+      "template": "大三，{age}岁。身边的人开始分成两拨：一拨刷算法题投实习，一拨在图书馆准备考研。你的日历被笔试和项目截止日期填满了。"
+    },
+    {
+      "chapter": "grad",
+      "template": "{year}年，毕业。宿舍楼下堆满了打包的纸箱，群里每天都有人晒 offer。轮到你做决定了。"
+    },
+    {
+      "chapter": "w3",
+      "template": "工作第3年，你在{city}。你已经能独立负责一个模块，工位上还摆着第一次上线时同事送的小机器人。同岗位月薪中位数在{$stages[0].salary.p50}元左右，房租占了不小的一块。"
+    },
+    {
+      "chapter": "w5",
+      "template": "{age}岁，工作第5年。你开始带新人，开会时有人会等你先发言。周末偶尔被告警叫醒，但你已经能在二十分钟内定位问题。"
+    },
+    {
+      "chapter": "w10",
+      "template": "{year}年，{age}岁。你成了{ending_role}。"
+    },
+    {
+      "chapter": "epilogue",
+      "template": "这是你在 {universe} 里的一种结局。换一个种子，故事可能完全不同。"
+    }
+  ],
+  "artifacts": [
+    {
+      "chapter": "prologue",
+      "type": "chat",
+      "data": {
+        "title": "妈妈",
+        "messages": [
+          {
+            "from": "them",
+            "name": "妈妈",
+            "text": "分出来了吗？"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "出了，位次比模考好一点"
+          },
+          {
+            "from": "them",
+            "name": "妈妈",
+            "text": "想好报什么了吗？别选太累的"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "想报计算机，我是真的喜欢"
+          },
+          {
+            "from": "them",
+            "name": "妈妈",
+            "text": "你自己想清楚就行。晚上回来吃饺子"
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "y1",
+      "type": "moments",
+      "data": {
+        "author": "我",
+        "text": "第一次写出能跑的程序，虽然只是个计算器",
+        "images": [
+          "💻",
+          "🌙"
+        ],
+        "time": "凌晨 1:12",
+        "likes": [
+          "室友阿杰",
+          "学姐小林",
+          "妈妈"
+        ]
+      }
+    },
+    {
+      "chapter": "y3",
+      "type": "chat",
+      "data": {
+        "title": "303宿舍",
+        "messages": [
+          {
+            "from": "them",
+            "name": "阿杰",
+            "text": "明天的笔试你准备了吗"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "刷了两百道题，还是怕"
+          },
+          {
+            "from": "them",
+            "name": "小周",
+            "text": "我决定考研了，你们别笑"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "不笑，图书馆给我留个座，我投完简历去找你"
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "grad",
+      "type": "offer",
+      "data": {
+        "org": "{city}某互联网公司",
+        "title": "录用通知书",
+        "position": "后端开发工程师",
+        "text": "经过面试评估，我们很高兴地通知你，你已被录用为后端开发工程师。期待你的加入。"
+      }
+    },
+    {
+      "chapter": "w3",
+      "type": "payslip",
+      "data": {
+        "company": "某互联网公司",
+        "period": "工作第3年 · 12月",
+        "grossRef": "stages[0].salary.p50",
+        "lowRef": "stages[0].salary.p10",
+        "highRef": "stages[0].salary.p90"
+      }
+    },
+    {
+      "chapter": "w5",
+      "type": "calendar",
+      "data": {
+        "label": "工作第5年 · 某个周三"
+      }
+    },
+    {
+      "chapter": "w10",
+      "type": "moments",
+      "data": {
+        "author": "我",
+        "text": "十年前写下第一行代码的时候，没想过今天会坐在这里。",
+        "images": [
+          "🏙️",
+          "☕"
+        ],
+        "time": "晚上 10:40",
+        "likes": [
+          "阿杰",
+          "小周",
+          "前组长",
+          "妈妈"
+        ]
+      }
+    }
+  ],
+  "futureSelfFAQ": {
+    "regret": "后悔谈不上。累的时候确实想过转行，但看到自己写的东西每天有那么多人在用，又觉得值。要说遗憾，是大学时没早点去实习。",
+    "tired": "忙的时候是真累，线上出问题半夜也得爬起来。但大多数日子能正常下班。这条路的强度在同龄人里偏高，你得心里有数。",
+    "college": "早点做项目、早点实习，比多拿一个奖学金有用。数据结构和操作系统别只为了考试学，后面全会用到。",
+    "again": "大概率还会选。不过我会更早想清楚，自己想做技术专家还是管理。这只是很多种可能里的一种，你的路你自己走。",
+    "life": "我在{city}。像我这样走到第10年的人，月薪中位数大概{$stages[2].salary.p50}元，好一点的能到{$stages[2].salary.p90}元。房子、通勤、家庭，都在慢慢理顺。"
+  },
+  "reunionLine": "我还在写代码，最近在带一个做 AI 平台的小组，周末终于能去爬山了。"
+}

@@ -1,0 +1,174 @@
+{
+  "events": [
+    {
+      "id": "teach_award",
+      "stage": "university",
+      "title": "师范技能大赛拿了一等奖",
+      "description": "你讲的是《荷塘月色》，下课铃响时评委还在记笔记。",
+      "probability": 0.16,
+      "percentileShift": 19,
+      "tone": "positive"
+    },
+    {
+      "id": "internship_good",
+      "stage": "university",
+      "title": "实习时带的班很喜欢你",
+      "description": "实习结束那天，学生们在黑板上写满了“老师别走”。",
+      "probability": 0.27,
+      "percentileShift": 10,
+      "tone": "positive"
+    },
+    {
+      "id": "bianzhi_city",
+      "stage": "graduation",
+      "title": "考上了市区重点中学的编制",
+      "description": "公示名单上看到自己名字的那一刻，你给爸妈打了视频。",
+      "probability": 0.16,
+      "percentileShift": 29,
+      "tone": "positive"
+    },
+    {
+      "id": "bianzhi_miss",
+      "stage": "graduation",
+      "title": "第一年没考上理想地区的编制",
+      "description": "笔试第一，面试差了零点几分，你先去了一所乡镇中学。",
+      "probability": 0.35,
+      "percentileShift": -22,
+      "tone": "challenge",
+      "copingTip": "乡镇学校的经历在评职称和以后的遴选中都有用；每年都有调动和再考的机会。"
+    },
+    {
+      "id": "head_teacher",
+      "stage": "year3",
+      "title": "第一次当班主任",
+      "description": "家长群每天九十九加消息，你学会了在晚上十点后把手机调成静音。",
+      "probability": 0.5,
+      "percentileShift": -6,
+      "tone": "neutral"
+    },
+    {
+      "id": "open_class",
+      "stage": "year5",
+      "title": "公开课获得了全市一等奖",
+      "description": "你讲了一节《背影》，后排听课的老教师悄悄抹了眼泪。",
+      "probability": 0.16,
+      "percentileShift": 26,
+      "tone": "positive"
+    },
+    {
+      "id": "enrollment_drop",
+      "stage": "year5",
+      "title": "学校生源减少，班级合并",
+      "description": "全校今年少招了四个班，你开始担心明年的课时。",
+      "probability": 0.3,
+      "percentileShift": -22,
+      "tone": "challenge",
+      "copingTip": "可以考取更好地区的编制、转向教研，或者把写作能力用到教材编辑、出版等方向。"
+    },
+    {
+      "id": "student_returns",
+      "stage": "year10",
+      "title": "第一届学生回来看你",
+      "description": "他们已经大学毕业了，有一个说自己也当了语文老师。",
+      "probability": 0.31,
+      "percentileShift": 10,
+      "tone": "positive"
+    }
+  ],
+  "storyChapters": [
+    {
+      "chapter": "prologue",
+      "template": "{year}年夏天，{province}。你想起高中时那位语文老师，在志愿表上写下了“{major}”。"
+    },
+    {
+      "chapter": "y1",
+      "template": "大一，你读了很多以前没读过的书。古代汉语比想象中难，但你喜欢在图书馆待一整天。"
+    },
+    {
+      "chapter": "y3",
+      "template": "大三，{age}岁。你开始练粉笔字和普通话，第一次站上中学讲台时，腿有点抖。"
+    },
+    {
+      "chapter": "grad",
+      "template": "{year}年，毕业。各地的教师招聘考试排满了你的春天。"
+    },
+    {
+      "chapter": "w3",
+      "template": "工作第3年，你在{city}带两个班的语文，可能还当班主任。早读、晚自习、批改作文。同岗位月薪中位数约{$stages[0].salary.p50}元。"
+    },
+    {
+      "chapter": "w5",
+      "template": "{age}岁，工作第5年。你的课有了自己的风格，开始参加公开课和教学比赛。"
+    },
+    {
+      "chapter": "w10",
+      "template": "{year}年，{age}岁。你成了{ending_role}。"
+    },
+    {
+      "chapter": "epilogue",
+      "template": "这是你在 {universe} 里的一种结局。换一个种子，故事可能完全不同。"
+    }
+  ],
+  "artifacts": [
+    {
+      "chapter": "grad",
+      "type": "offer",
+      "data": {
+        "org": "{city}某中学",
+        "title": "聘用通知",
+        "position": "高中语文教师",
+        "text": "你已通过本年度教师公开招聘，请于八月底到校报到。"
+      }
+    },
+    {
+      "chapter": "w3",
+      "type": "chat",
+      "data": {
+        "title": "高一（3）班家长群",
+        "messages": [
+          {
+            "from": "them",
+            "name": "家长",
+            "text": "老师，孩子最近作文进步很大，谢谢您"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "是他自己用心，周记写得越来越好了"
+          },
+          {
+            "from": "them",
+            "name": "家长",
+            "text": "孩子说最喜欢上语文课"
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "w5",
+      "type": "calendar",
+      "data": {
+        "label": "工作第5年 · 某个周四"
+      }
+    },
+    {
+      "chapter": "w10",
+      "type": "payslip",
+      "data": {
+        "company": "某中学",
+        "period": "工作第10年 · 9月",
+        "grossRef": "stages[2].salary.p50",
+        "lowRef": "stages[2].salary.p10",
+        "highRef": "stages[2].salary.p90"
+      }
+    }
+  ],
+  "futureSelfFAQ": {
+    "regret": "不后悔。收入不算高，但稳定，有寒暑假。看着学生一届届长大，这种感觉很难换算成钱。",
+    "tired": "学期中挺累，班主任的事情很琐碎。寒暑假能真正休息。",
+    "college": "多读书、多写东西，普通话和粉笔字早点练。去中学实习时多观察老教师怎么上课。",
+    "again": "大概率还会选。这只是很多种可能里的一种，你的路你自己走。",
+    "life": "我在{city}的学校。第10年同岗位月薪中位数约{$stages[2].salary.p50}元，在当地算稳定，生活节奏不错。"
+  },
+  "reunionLine": "我在批改期末作文，有个学生写了我，有点感动。"
+}

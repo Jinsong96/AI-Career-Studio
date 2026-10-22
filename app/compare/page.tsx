@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Fragment, useMemo } from "react";
+import { Fragment, useMemo, useState } from "react";
+import { TimeSync } from "@/components/compare/time-sync";
 import { Plus, X } from "lucide-react";
 import { Gate } from "@/components/common/gate";
 import { LifeRadar } from "@/components/radar/life-radar";
@@ -29,6 +30,7 @@ function CompareView() {
   const profile = useStore((s) => s.profile);
   const tier = useTier();
   const { top } = useRanking();
+  const [tab, setTab] = useState<"sync" | "table">("sync");
 
   const paths: ResolvedPath[] = useMemo(
     () => compareIds.map((id) => getPath(id)).filter((p) => !!p).map((p) => resolvePath(p!, tier, branchChoices[p!.id] ?? {})),
@@ -99,7 +101,7 @@ function CompareView() {
     <div className="mx-auto max-w-6xl px-4 pb-16 pt-6">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold text-neutral-900">路径对比</h1>
+          <h1 className="text-2xl font-bold text-neutral-900">同一时刻的你们</h1>
           <p className="mt-1 text-sm text-neutral-500">
             {tierName(tier)}（{tier}） · 含分叉选择
           </p>
@@ -120,6 +122,19 @@ function CompareView() {
         </p>
       </div>
 
+      <div className="mt-6 flex gap-1 rounded-full border border-neutral-200 p-1" role="tablist">
+        {(["sync", "table"] as const).map((t) => (
+          <button key={t} role="tab" aria-selected={tab === t} onClick={() => setTab(t)} className={cn("min-h-[36px] flex-1 cursor-pointer rounded-full text-sm transition-colors", tab === t ? "bg-brand text-snow" : "text-neutral-500")}>
+            {t === "sync" ? "同一时刻的你们" : "数据对比"}
+          </button>
+        ))}
+      </div>
+      {tab === "sync" ? (
+        <div className="mt-5">
+          <TimeSync paths={paths} colors={COLORS} />
+        </div>
+      ) : (
+      <>
       <div className="mt-5 grid gap-4 lg:grid-cols-[360px_1fr]">
         <Card className="p-4">
           <div className="grid gap-2" style={{ gridTemplateColumns: `repeat(${paths.length}, minmax(0, 1fr))` }}>
@@ -128,7 +143,7 @@ function CompareView() {
                 <button onClick={() => toggleCompare(p.id)} className="absolute right-1.5 top-1.5 text-neutral-300 hover:text-neutral-500" aria-label="移出对比">
                   <X className="h-3.5 w-3.5" />
                 </button>
-                <span className="flex h-5 w-5 items-center justify-center rounded-full text-[11px] font-bold text-white" style={{ background: COLORS[i] }}>
+                <span className="flex h-5 w-5 items-center justify-center rounded-full text-[11px] font-bold text-snow" style={{ background: COLORS[i] }}>
                   {LETTERS[i]}
                 </span>
                 <Link href={`/path/${p.id}`} className="mt-1 block text-sm font-medium leading-snug text-neutral-800 hover:text-neutral-500">
@@ -192,6 +207,8 @@ function CompareView() {
           </div>
         </Card>
       </div>
+      </>
+      )}
       <StatDisclaimer className="mt-4" />
     </div>
   );

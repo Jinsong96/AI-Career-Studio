@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useCallback, useMemo, useState } from "react";
+import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
+import { ObservatoryIntro } from "@/components/results/observatory-intro";
 import { GitCompare, RefreshCw, Search, SlidersHorizontal } from "lucide-react";
 import { Gate } from "@/components/common/gate";
 import { PathCard } from "@/components/path-card/path-card";
@@ -25,6 +26,9 @@ function Results() {
   const { ranked, top, alternatives } = useRanking();
   const [showAlt, setShowAlt] = useState(false);
   const [showMajors, setShowMajors] = useState(false);
+  const introPending = useStore((s) => s.introPending);
+  const setIntroPending = useStore((s) => s.setIntroPending);
+  const endIntro = useCallback(() => setIntroPending(false), [setIntroPending]);
 
   const list = showAlt ? alternatives : top;
   const pinned = useMemo(
@@ -64,7 +68,7 @@ function Results() {
       </section>
 
       <div className="mb-4 mt-8 flex items-center justify-between">
-        <h2 className="text-lg font-semibold text-neutral-900">{showAlt ? "第5到8名" : `${top.length} 段平行人生`}</h2>
+        <h2 className="text-lg font-semibold text-neutral-900">{showAlt ? "另外 4 个宇宙" : `我们观测到了 ${top.length} 个平行宇宙里的你`}</h2>
         {compareIds.length >= 2 && (
           <Link href="/compare">
             <Button size="sm">
@@ -74,16 +78,22 @@ function Results() {
         )}
       </div>
 
-      <AnimatePresence mode="wait">
-        <motion.div key={showAlt ? "alt" : "top"} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {list.map((m, i) => (
-            <PathCard key={m.path.id} match={m} index={i} />
-          ))}
-          {pinned.map((m, i) => (
-            <PathCard key={m.path.id} match={m} index={list.length + i} />
-          ))}
-        </motion.div>
-      </AnimatePresence>
+      <LayoutGroup>
+        {introPending ? (
+          <ObservatoryIntro profile={profile} tier={tier} paths={top.map((m) => m.path)} onDone={endIntro} />
+        ) : (
+          <AnimatePresence mode="wait">
+            <motion.div key={showAlt ? "alt" : "top"} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+              {list.map((m, i) => (
+                <PathCard key={m.path.id} match={m} index={i} />
+              ))}
+              {pinned.map((m, i) => (
+                <PathCard key={m.path.id} match={m} index={list.length + i} />
+              ))}
+            </motion.div>
+          </AnimatePresence>
+        )}
+      </LayoutGroup>
 
       <StatDisclaimer className="mt-4" />
 

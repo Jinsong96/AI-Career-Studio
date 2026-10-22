@@ -119,7 +119,7 @@ export function StepBasic() {
               }}
               className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 pr-12 text-base outline-none focus:border-neutral-900"
             />
-            <span className="absolute right-3 top-1/2 -tranneutral-y-1/2 text-xs text-neutral-400">{profile.inputMode === "rank" ? "名" : "分"}</span>
+            <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-neutral-400">{profile.inputMode === "rank" ? "名" : "分"}</span>
           </div>
         )}
       </Field>

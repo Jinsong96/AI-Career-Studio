@@ -9,8 +9,31 @@ function numbersAreGrounded(text: string, data: string): boolean {
   return nums.every((n) => data.includes(n));
 }
 
+type ChapterRequest = { chapter: string; label: string; year: number; age: number; fallback: string; events: { title: string; description: string }[] };
+
+/** 故事模式：按章节生成60到120字的场景文字；失败或数字不合规时返回模板文字 */
+async function chapterText(path: ResolvedPath, c: ChapterRequest) {
+  const fallback = { text: c.fallback, mode: "template" as const };
+  const client = getClient();
+  if (!client) return fallback;
+  const choices = path.chosen.map((x) => x.option.label).join(" → ") || "暂无";
+  const data = JSON.stringify({ 职业: path.title, 阶段: c.label, 年份: c.year, 年龄: c.age, 本章事件: c.events, 参考文字: c.fallback, 阶段数据: path.stages.map((s) => ({ 阶段: s.label, 岗位: s.typicalRoles, 城市: s.cities, 月薪中位数: s.salary.p50 })) });
+  const prompt = `你在为一名高中生讲述他走"${path.title}"这条路的人生故事，现在是"${c.label}"这一章。请用第二人称写60到120字的场景文字。
+要求：
+1. 只能使用下面数据中的数字，不能编造任何数字。
+2. 体现他的选择：${choices}；如果本章有事件，要自然地写进场景里。
+3. 具体、有画面感，不美化，不制造焦虑，不使用"你一定会""成功"这类承诺性的词。
+只输出正文。
+数据：${data}`;
+  const text = await complete(client, prompt, 1024);
+  if (!text || !numbersAreGrounded(text, data + choices)) return fallback;
+  return { text, mode: "llm" as const };
+}
+
 export async function POST(req: Request) {
-  const { path } = (await req.json()) as { path: ResolvedPath };
+  const body = (await req.json()) as { path: ResolvedPath; chapter?: ChapterRequest };
+  if (body.chapter) return NextResponse.json(await chapterText(body.path, body.chapter));
+  const { path } = body;
   const fallback = { text: templateNarrative(path), mode: "template" as const };
   const client = getClient();
   if (!client) return NextResponse.json(fallback);

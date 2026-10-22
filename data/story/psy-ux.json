@@ -1,0 +1,184 @@
+{
+  "events": [
+    {
+      "id": "ux_intern",
+      "stage": "university",
+      "title": "在互联网公司做用户研究实习",
+      "description": "你做了二十场用户访谈，第一次知道大家其实不怎么看说明书。",
+      "probability": 0.2,
+      "percentileShift": 22,
+      "tone": "positive"
+    },
+    {
+      "id": "survey_project",
+      "stage": "university",
+      "title": "设计的问卷被老师用在了课题里",
+      "description": "你改了五版问卷，最后回收了一千多份有效数据。",
+      "probability": 0.2,
+      "percentileShift": 13,
+      "tone": "positive"
+    },
+    {
+      "id": "bigtech_ux",
+      "stage": "graduation",
+      "title": "拿到了大厂用户研究岗 offer",
+      "description": "终面时你现场分析了一个 App 的痛点，面试官说“我们最近就在改这个”。",
+      "probability": 0.12,
+      "percentileShift": 32,
+      "tone": "positive"
+    },
+    {
+      "id": "hr_start",
+      "stage": "graduation",
+      "title": "从 HR 专员做起",
+      "description": "用研岗位太少，你先进了一家公司做招聘，每天筛两百份简历。",
+      "probability": 0.45,
+      "percentileShift": -13,
+      "tone": "neutral"
+    },
+    {
+      "id": "insight_shipped",
+      "stage": "year3",
+      "title": "你的研究推动了一个关键改版",
+      "description": "改版上线后，用户投诉少了一半，产品总监在周会上点名表扬了你。",
+      "probability": 0.2,
+      "percentileShift": 22,
+      "tone": "positive"
+    },
+    {
+      "id": "research_ignored",
+      "stage": "year3",
+      "title": "研究结论一直没被采纳",
+      "description": "你做了三个月的研究，最后产品还是按老板的想法上线了。",
+      "probability": 0.35,
+      "percentileShift": -16,
+      "tone": "challenge",
+      "copingTip": "把结论和业务指标绑定，用数据讲故事；也可以争取参与更早的产品决策环节。"
+    },
+    {
+      "id": "team_cut",
+      "stage": "year5",
+      "title": "公司收缩，用研团队被合并",
+      "description": "十个人的团队只留下三个，你被转去做产品运营。",
+      "probability": 0.25,
+      "percentileShift": -26,
+      "tone": "challenge",
+      "copingTip": "用户洞察能力在产品、运营、咨询和人力资源岗位都很需要，可以把经验迁移过去。"
+    },
+    {
+      "id": "lead_research",
+      "stage": "year10",
+      "title": "成为用户研究负责人",
+      "description": "你开始参与公司层面的战略讨论，第一次在董事会上做汇报。",
+      "probability": 0.12,
+      "percentileShift": 26,
+      "tone": "positive"
+    }
+  ],
+  "storyChapters": [
+    {
+      "chapter": "prologue",
+      "template": "{year}年夏天，{province}。你喜欢观察人，想知道大家为什么那样做，于是填了“{major}”。"
+    },
+    {
+      "chapter": "y1",
+      "template": "大一，普通心理学打开了新世界，统计课则让你有点意外。"
+    },
+    {
+      "chapter": "y3",
+      "template": "大三，{age}岁。你学会了设计问卷和实验，第一次走进互联网公司做访谈。"
+    },
+    {
+      "chapter": "grad",
+      "template": "{year}年，毕业。用研岗位很少，HR 岗位很多，你在两者之间犹豫。"
+    },
+    {
+      "chapter": "w3",
+      "template": "工作第3年，你在{city}做{role}，把访谈里的发现写成报告，推动团队改进。同岗位月薪中位数约{$stages[0].salary.p50}元。"
+    },
+    {
+      "chapter": "w5",
+      "template": "{age}岁，工作第5年。你独立负责一条业务线的研究，开始学着影响决策。"
+    },
+    {
+      "chapter": "w10",
+      "template": "{year}年，{age}岁。你成了{ending_role}。"
+    },
+    {
+      "chapter": "epilogue",
+      "template": "这是你在 {universe} 里的一种结局。换一个种子，故事可能完全不同。"
+    }
+  ],
+  "artifacts": [
+    {
+      "chapter": "y3",
+      "type": "moments",
+      "data": {
+        "author": "我",
+        "text": "今天访谈的阿姨教会我：用户永远不会按你设计的路线走",
+        "images": [
+          "🧭",
+          "📝"
+        ],
+        "time": "晚上 7:30",
+        "likes": [
+          "实习导师",
+          "室友"
+        ]
+      }
+    },
+    {
+      "chapter": "grad",
+      "type": "offer",
+      "data": {
+        "org": "{city}某互联网公司",
+        "title": "录用通知",
+        "position": "用户研究员",
+        "text": "我们很高兴地通知你，你已被录用为用户研究员。"
+      }
+    },
+    {
+      "chapter": "w5",
+      "type": "payslip",
+      "data": {
+        "company": "某互联网公司",
+        "period": "工作第5年 · 7月",
+        "grossRef": "stages[1].salary.p50",
+        "lowRef": "stages[1].salary.p10",
+        "highRef": "stages[1].salary.p90"
+      }
+    },
+    {
+      "chapter": "w10",
+      "type": "chat",
+      "data": {
+        "title": "产品团队群",
+        "messages": [
+          {
+            "from": "them",
+            "name": "产品总监",
+            "text": "下季度的规划，先听听用研怎么说"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "我整理了三个最大的用户痛点，周三会上讲"
+          },
+          {
+            "from": "them",
+            "name": "设计",
+            "text": "期待"
+          }
+        ]
+      }
+    }
+  ],
+  "futureSelfFAQ": {
+    "regret": "不后悔，但前几年挺迷茫的，岗位少、方向不清楚。现在觉得心理学给了我一种看问题的方式。",
+    "tired": "整体不算太累，忙的时候主要是项目集中。公司收缩时会有不安全感。",
+    "college": "统计和研究方法要扎实，早点去实习。也学点产品和商业的知识。",
+    "again": "可能还会选。我会更早想清楚走用研还是 HR。这只是很多种可能里的一种。",
+    "life": "我在{city}。第10年同岗位月薪中位数约{$stages[2].salary.p50}元，好的能到{$stages[2].salary.p90}元，工作和生活还算平衡。"
+  },
+  "reunionLine": "刚做完一场访谈，用户说我们的产品像迷宫，我很赞同。"
+}

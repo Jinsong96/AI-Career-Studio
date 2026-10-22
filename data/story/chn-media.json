@@ -1,0 +1,185 @@
+{
+  "events": [
+    {
+      "id": "viral_post",
+      "stage": "university",
+      "title": "校媒的一篇文章刷屏了",
+      "description": "你写了一篇食堂阿姨的故事，阅读量第一次破了十万。",
+      "probability": 0.16,
+      "percentileShift": 22,
+      "tone": "positive"
+    },
+    {
+      "id": "own_account",
+      "stage": "university",
+      "title": "运营的个人账号涨到了一万粉",
+      "description": "你每周更新两篇读书笔记，有出版社来找你合作。",
+      "probability": 0.16,
+      "percentileShift": 16,
+      "tone": "positive"
+    },
+    {
+      "id": "big_platform",
+      "stage": "graduation",
+      "title": "进了一家大厂的内容团队",
+      "description": "入职第一天，主编让你写三个选题，下午就毙了两个。",
+      "probability": 0.16,
+      "percentileShift": 26,
+      "tone": "positive"
+    },
+    {
+      "id": "mcn_start",
+      "stage": "graduation",
+      "title": "从一家小 MCN 机构起步",
+      "description": "你什么都做：写稿、剪视频、回评论，月底还要盯数据。",
+      "probability": 0.4,
+      "percentileShift": -13,
+      "tone": "neutral"
+    },
+    {
+      "id": "ai_content",
+      "stage": "year3",
+      "title": "公司开始用 AI 批量生成内容",
+      "description": "组里砍掉了一半的基础写手岗位，你被调去做策划。",
+      "probability": 0.4,
+      "percentileShift": -16,
+      "tone": "challenge",
+      "copingTip": "把重心从“写得多”转向“判断准”：选题、策划和用户洞察，这些 AI 替代不了。"
+    },
+    {
+      "id": "brand_campaign",
+      "stage": "year3",
+      "title": "操盘的品牌活动出圈了",
+      "description": "活动上线第二天，你在地铁上看到陌生人在讨论它。",
+      "probability": 0.16,
+      "percentileShift": 26,
+      "tone": "positive"
+    },
+    {
+      "id": "platform_drop",
+      "stage": "year5",
+      "title": "账号所在平台流量下滑",
+      "description": "一年里数据掉了一半，团队开会讨论要不要换平台。",
+      "probability": 0.3,
+      "percentileShift": -22,
+      "tone": "challenge",
+      "copingTip": "内容能力是可迁移的；可以转向品牌市场、公关，或进入单位做宣传工作。"
+    },
+    {
+      "id": "indie_success",
+      "stage": "year10",
+      "title": "独立账号做出了代表作",
+      "description": "你写的一个系列被很多人收藏，有读者说这是她今年读到最好的东西。",
+      "probability": 0.12,
+      "percentileShift": 29,
+      "tone": "positive"
+    }
+  ],
+  "storyChapters": [
+    {
+      "chapter": "prologue",
+      "template": "{year}年夏天，{province}。你从小就喜欢写东西，在志愿表上写下了“{major}”。"
+    },
+    {
+      "chapter": "y1",
+      "template": "大一，你一边读经典，一边开始运营自己的账号。第一篇文章只有十二个人读。"
+    },
+    {
+      "chapter": "y3",
+      "template": "大三，{age}岁。你加入校媒，学会了采访、拍摄、剪辑，作品集越来越厚。"
+    },
+    {
+      "chapter": "grad",
+      "template": "{year}年，毕业。互联网公司、媒体、考编，三条路你都投了。"
+    },
+    {
+      "chapter": "w3",
+      "template": "工作第3年，你在{city}做{role}。每天追热点、写选题、看数据。同岗位月薪中位数约{$stages[0].salary.p50}元。"
+    },
+    {
+      "chapter": "w5",
+      "template": "{age}岁，工作第5年。你开始带一个小团队，要对数据和商业结果负责。"
+    },
+    {
+      "chapter": "w10",
+      "template": "{year}年，{age}岁。你成了{ending_role}。"
+    },
+    {
+      "chapter": "epilogue",
+      "template": "这是你在 {universe} 里的一种结局。换一个种子，故事可能完全不同。"
+    }
+  ],
+  "artifacts": [
+    {
+      "chapter": "y3",
+      "type": "moments",
+      "data": {
+        "author": "我",
+        "text": "采访了食堂阿姨一下午，她说在这里打了二十年饭",
+        "images": [
+          "🍜",
+          "✍️"
+        ],
+        "time": "晚上 8:45",
+        "likes": [
+          "校媒主编",
+          "室友",
+          "食堂阿姨的女儿"
+        ]
+      }
+    },
+    {
+      "chapter": "grad",
+      "type": "offer",
+      "data": {
+        "org": "{city}某互联网公司",
+        "title": "录用通知",
+        "position": "内容编辑",
+        "text": "经过面试评估，我们很高兴地邀请你加入内容团队。"
+      }
+    },
+    {
+      "chapter": "w3",
+      "type": "chat",
+      "data": {
+        "title": "选题群",
+        "messages": [
+          {
+            "from": "them",
+            "name": "主编",
+            "text": "这个热点明早之前要出稿"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "在写了，标题给你三个备选"
+          },
+          {
+            "from": "them",
+            "name": "设计",
+            "text": "封面图我先做两版"
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "w5",
+      "type": "payslip",
+      "data": {
+        "company": "某互联网公司",
+        "period": "工作第5年 · 11月",
+        "grossRef": "stages[1].salary.p50",
+        "lowRef": "stages[1].salary.p10",
+        "highRef": "stages[1].salary.p90"
+      }
+    }
+  ],
+  "futureSelfFAQ": {
+    "regret": "有时会后悔，尤其是数据不好、行业不景气的时候。但写的东西真的打动过人，这点不后悔。",
+    "tired": "累在要一直追热点，下班也放不下手机。工作强度看公司和季节。",
+    "college": "多写多读，早点做自己的账号。也学点数据分析，以后很有用。",
+    "again": "可能会选，但会更早找一个垂直领域深耕。这只是很多种可能里的一种。",
+    "life": "我在{city}。第10年同岗位月薪中位数约{$stages[2].salary.p50}元，差距很大，做得好的能到{$stages[2].salary.p90}元。"
+  },
+  "reunionLine": "最近在做一个城市散步的系列，欢迎来当素材。"
+}

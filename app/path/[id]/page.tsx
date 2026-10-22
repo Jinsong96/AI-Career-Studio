@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, Bot, Check, FileText, GraduationCap, Image as ImageIcon, MapPin, Plus, ShieldCheck, Sparkles, Briefcase } from "lucide-react";
+import { ArrowLeft, BookOpen, Bot, Check, FileText, GraduationCap, Image as ImageIcon, MapPin, Plus, ShieldCheck, Sparkles, Briefcase } from "lucide-react";
 import { Gate } from "@/components/common/gate";
 import { TimelineSection } from "@/components/timeline/section";
 import { SalaryBar } from "@/components/timeline/salary-bar";
@@ -22,6 +22,7 @@ import { getMajor, tierName } from "@/lib/data";
 import { branchYear, type ResolvedPath } from "@/lib/branch";
 import { METRIC_KEYS, METRIC_LABELS, displayScore } from "@/lib/metrics";
 import { cn } from "@/lib/utils";
+import { universeId } from "@/lib/story";
 
 const DEST_COLORS = ["#3B4CCA", "#7A86E0", "#FF8A3D", "#10B981", "#CBD5E1"];
 
@@ -88,9 +89,15 @@ function Detail({ id }: { id: string }) {
 
   return (
     <div className="mx-auto max-w-6xl px-4 pb-32 pt-4">
-      <Link href={hasProfile ? "/results" : "/"} className="mb-3 inline-flex items-center gap-1 text-sm text-neutral-500 hover:text-neutral-900">
-        <ArrowLeft className="h-4 w-4" /> 返回
-      </Link>
+      <div className="mb-3 flex items-center justify-between">
+        <Link href={hasProfile ? "/results" : "/"} className="inline-flex min-h-[44px] items-center gap-1 text-sm text-neutral-500 hover:text-neutral-900">
+          <ArrowLeft className="h-4 w-4" /> 返回
+        </Link>
+        <Link href={`/path/${id}/story`} className="inline-flex min-h-[44px] items-center gap-1 text-xs text-neutral-500 hover:text-neutral-900">
+          <BookOpen className="h-3.5 w-3.5" /> 故事模式
+        </Link>
+      </div>
+      <p className="font-mono text-[11px] tracking-wider text-neutral-400">{universeId(path)} · DATA VIEW</p>
 
       <header className="mb-5">
         <p className="text-sm text-neutral-500">

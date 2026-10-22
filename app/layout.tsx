@@ -1,7 +1,12 @@
 import type { Metadata, Viewport } from "next";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { MobileTabBar, SiteFooter, SiteHeader } from "@/components/common/site-chrome";
 import { MotionProvider } from "@/components/common/motion-provider";
+import { ThemeSync, themeBootScript } from "@/components/common/theme-sync";
+import { Starfield } from "@/components/common/starfield";
+
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });
 
 export const metadata: Metadata = {
   title: "职业平行人生 · 在选专业之前，先试穿你的未来",
@@ -11,13 +16,18 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#3B4CCA",
+  themeColor: "#0B0D1A",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="zh-CN">
+    <html lang="zh-CN" data-theme="dark" className={mono.variable} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
+      </head>
       <body className="min-h-screen font-sans">
+        <ThemeSync />
+        <Starfield />
         <MotionProvider>
           <SiteHeader />
           <main className="min-h-[calc(100vh-3.5rem)]">{children}</main>

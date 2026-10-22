@@ -1,0 +1,185 @@
+{
+  "events": [
+    {
+      "id": "competition_award",
+      "stage": "university",
+      "title": "电子设计竞赛拿了省奖",
+      "description": "你们用四天四夜做了一个智能配电小车，答辩时它没出一点问题。",
+      "probability": 0.16,
+      "percentileShift": 16,
+      "tone": "positive"
+    },
+    {
+      "id": "circuit_hard",
+      "stage": "university",
+      "title": "电路原理挂科了",
+      "description": "期末题里的三相电路你算了一页纸，最后答案还是错的。",
+      "probability": 0.25,
+      "percentileShift": -16,
+      "tone": "challenge",
+      "copingTip": "补考前把每章的典型题重做一遍。电路是后面所有专业课的基础，补扎实了反而受益。"
+    },
+    {
+      "id": "grid_offer",
+      "stage": "graduation",
+      "title": "考上了省电网公司",
+      "description": "笔试排名靠前，分配到了地级市的供电公司。",
+      "probability": 0.16,
+      "percentileShift": 22,
+      "tone": "positive"
+    },
+    {
+      "id": "county_assign",
+      "stage": "graduation",
+      "title": "被分到了县级供电所",
+      "description": "第一天报到，所长带你去看了覆盖二十个村的线路图。",
+      "probability": 0.45,
+      "percentileShift": -10,
+      "tone": "neutral"
+    },
+    {
+      "id": "storm_repair",
+      "stage": "year3",
+      "title": "台风夜连续抢修了三十个小时",
+      "description": "天亮时最后一条线路恢复送电，村口的大爷给你们端来了热茶。",
+      "probability": 0.22,
+      "percentileShift": 13,
+      "tone": "positive"
+    },
+    {
+      "id": "transfer_up",
+      "stage": "year5",
+      "title": "调到了市公司的技术岗",
+      "description": "调令下来那天，你在县城请同事们吃了顿饭。",
+      "probability": 0.16,
+      "percentileShift": 22,
+      "tone": "positive"
+    },
+    {
+      "id": "stuck_county",
+      "stage": "year5",
+      "title": "在基层多待了几年",
+      "description": "调动名额有限，你还在县里，但已经是所里的技术骨干。",
+      "probability": 0.35,
+      "percentileShift": -19,
+      "tone": "challenge",
+      "copingTip": "参加技术比武、考取注册电气工程师，都能增加调动机会；新能源企业也很认电网经验。"
+    },
+    {
+      "id": "smart_grid",
+      "stage": "year10",
+      "title": "负责了一个智能电网改造项目",
+      "description": "项目验收那天，调度大屏上的数据第一次全部实时跳动。",
+      "probability": 0.16,
+      "percentileShift": 19,
+      "tone": "positive"
+    }
+  ],
+  "storyChapters": [
+    {
+      "chapter": "prologue",
+      "template": "{year}年夏天，{province}。爸妈说电网稳定，你也喜欢动手做东西，于是填了“{major}”。"
+    },
+    {
+      "chapter": "y1",
+      "template": "大一，高数和大学物理把你折腾得不轻。你在实验室第一次点亮了一个自己焊的电路板。"
+    },
+    {
+      "chapter": "y3",
+      "template": "大三，{age}岁。你去变电站实习，第一次站在巨大的变压器下面，耳边是低沉的嗡嗡声。"
+    },
+    {
+      "chapter": "grad",
+      "template": "{year}年，毕业。电网统一考试是你这一年最重要的事。"
+    },
+    {
+      "chapter": "w3",
+      "template": "工作第3年，你在{city}的基层供电所，倒班值守、巡线、抢修。同岗位月薪中位数约{$stages[0].salary.p50}元。"
+    },
+    {
+      "chapter": "w5",
+      "template": "{age}岁，工作第5年。你成了所里的技术骨干，开始考虑结婚买房。"
+    },
+    {
+      "chapter": "w10",
+      "template": "{year}年，{age}岁。你成了{ending_role}。"
+    },
+    {
+      "chapter": "epilogue",
+      "template": "这是你在 {universe} 里的一种结局。换一个种子，故事可能完全不同。"
+    }
+  ],
+  "artifacts": [
+    {
+      "chapter": "grad",
+      "type": "offer",
+      "data": {
+        "org": "{city}供电公司",
+        "title": "录用通知",
+        "position": "电气工程师（基层锻炼）",
+        "text": "你已通过统一招聘考试，请于七月中旬报到参加新员工培训。"
+      }
+    },
+    {
+      "chapter": "w3",
+      "type": "moments",
+      "data": {
+        "author": "我",
+        "text": "抢修完最后一条线，天亮了",
+        "images": [
+          "⚡",
+          "🌄"
+        ],
+        "time": "早上 6:10",
+        "likes": [
+          "班长",
+          "所长",
+          "妈妈"
+        ]
+      }
+    },
+    {
+      "chapter": "w5",
+      "type": "payslip",
+      "data": {
+        "company": "某供电公司",
+        "period": "工作第5年 · 1月",
+        "grossRef": "stages[1].salary.p50",
+        "lowRef": "stages[1].salary.p10",
+        "highRef": "stages[1].salary.p90"
+      }
+    },
+    {
+      "chapter": "w10",
+      "type": "chat",
+      "data": {
+        "title": "新员工培训群",
+        "messages": [
+          {
+            "from": "them",
+            "name": "老同事",
+            "text": "十年了，当年一起培训的都散到全省了"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "我刚从县里调到市里"
+          },
+          {
+            "from": "them",
+            "name": "老同事",
+            "text": "我还在山区，空气好，欢迎来玩"
+          }
+        ]
+      }
+    }
+  ],
+  "futureSelfFAQ": {
+    "regret": "不后悔。工作稳定，社会认可度高，离家也近。前几年在基层确实辛苦，现在回想也是一段好经历。",
+    "tired": "前几年要倒班和抢修，遇到极端天气随时出动。现在规律多了。",
+    "college": "电路、电机这些课一定学扎实。多参加竞赛，动手能力在现场很重要。",
+    "again": "大概率还会选。这只是很多种可能里的一种，你的路你自己走。",
+    "life": "我在{city}。第10年同岗位月薪中位数约{$stages[2].salary.p50}元，在当地算中上，福利不错，生活安稳。"
+  },
+  "reunionLine": "我在值班，今天天气好，电网也很乖。"
+}

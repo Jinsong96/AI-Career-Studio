@@ -1,0 +1,191 @@
+{
+  "events": [
+    {
+      "id": "lab_join",
+      "stage": "university",
+      "title": "进了老师的机器学习实验室",
+      "description": "你第一次在服务器上跑通别人论文里的模型，屏幕上的准确率一点点往上爬。",
+      "probability": 0.21,
+      "percentileShift": 19,
+      "tone": "positive"
+    },
+    {
+      "id": "kaggle_medal",
+      "stage": "university",
+      "title": "数据竞赛拿了奖牌",
+      "description": "比赛最后一晚，你们组的排名从第四十跳到了第六，三个人在群里刷了一屏感叹号。",
+      "probability": 0.12,
+      "percentileShift": 24,
+      "tone": "positive"
+    },
+    {
+      "id": "math_wall",
+      "stage": "university",
+      "title": "概率论和最优化学得很吃力",
+      "description": "作业里的推导你看了三遍还是看不懂，开始怀疑自己是不是适合这个方向。",
+      "probability": 0.3,
+      "percentileShift": -19,
+      "tone": "challenge",
+      "copingTip": "找一门好的公开课从头补，配合小项目边做边学。很多算法工程师的数学都是工作后才真正补起来的。"
+    },
+    {
+      "id": "top_lab_master",
+      "stage": "graduation",
+      "title": "考上了顶尖实验室的研究生",
+      "description": "复试那天导师问你最近读了哪篇论文，你讲完之后他点了点头。",
+      "probability": 0.17,
+      "percentileShift": 29,
+      "tone": "positive"
+    },
+    {
+      "id": "algo_reject",
+      "stage": "graduation",
+      "title": "算法岗投递全部落空",
+      "description": "几十份简历石沉大海，你转而投了开发岗，打算以后再找机会转岗。",
+      "probability": 0.3,
+      "percentileShift": -24,
+      "tone": "challenge",
+      "copingTip": "先进开发岗积累工程能力，在组里主动承担数据和模型相关的活，内部转岗是很常见的路径。"
+    },
+    {
+      "id": "model_launch",
+      "stage": "year3",
+      "title": "你训练的模型上线了",
+      "description": "AB 测试结果出来，核心指标涨了 2%，产品经理在群里发了个大红包。",
+      "probability": 0.21,
+      "percentileShift": 22,
+      "tone": "positive"
+    },
+    {
+      "id": "direction_obsolete",
+      "stage": "year5",
+      "title": "你做的方向被新技术替代",
+      "description": "大模型出来后，你花三年调优的那套方法，被一个通用模型轻松超过。",
+      "probability": 0.3,
+      "percentileShift": -22,
+      "tone": "neutral",
+      "copingTip": "把积累的问题理解和数据经验迁移到新技术上，懂业务的人在转换期反而有优势。"
+    },
+    {
+      "id": "paper_accepted",
+      "stage": "year10",
+      "title": "作为负责人的成果被顶会收录",
+      "description": "你在会场的海报前站了一下午，有好几个人来加你微信。",
+      "probability": 0.12,
+      "percentileShift": 26,
+      "tone": "positive"
+    }
+  ],
+  "storyChapters": [
+    {
+      "chapter": "prologue",
+      "template": "{year}年夏天，{province}。填志愿时你搜了很多遍“人工智能就业”，最后在“{major}”前面打了勾。"
+    },
+    {
+      "chapter": "y1",
+      "template": "大一，高数和线性代数占了课表的一半。你在图书馆啃完一章矩阵，第一次觉得数学和你想做的东西连了起来。"
+    },
+    {
+      "chapter": "y3",
+      "template": "大三，{age}岁。你开始读英文论文，一篇要啃一个星期。实验室的服务器排队很长，你学会了半夜提交任务。"
+    },
+    {
+      "chapter": "grad",
+      "template": "{year}年，毕业。实验室的师兄说，算法岗看的是你做过什么，不是你学过什么。"
+    },
+    {
+      "chapter": "w3",
+      "template": "工作第3年，你在{city}做{role}。每周看实验数据，指标涨 0.5% 也值得开心。同岗位月薪中位数约{$stages[0].salary.p50}元。"
+    },
+    {
+      "chapter": "w5",
+      "template": "{age}岁，工作第5年。新技术来得太快，你下班后的时间有一半在读论文。"
+    },
+    {
+      "chapter": "w10",
+      "template": "{year}年，{age}岁。你成了{ending_role}。"
+    },
+    {
+      "chapter": "epilogue",
+      "template": "这是你在 {universe} 里的一种结局。换一个种子，故事可能完全不同。"
+    }
+  ],
+  "artifacts": [
+    {
+      "chapter": "y3",
+      "type": "moments",
+      "data": {
+        "author": "我",
+        "text": "第一次复现成功一篇论文，凌晨三点的实验室只有我和服务器的风扇声",
+        "images": [
+          "📈",
+          "🌌"
+        ],
+        "time": "凌晨 3:05",
+        "likes": [
+          "导师",
+          "师兄",
+          "室友"
+        ]
+      }
+    },
+    {
+      "chapter": "grad",
+      "type": "offer",
+      "data": {
+        "org": "{city}某科技公司",
+        "title": "录用通知书",
+        "position": "算法工程师",
+        "text": "你已通过全部面试环节，我们诚挚邀请你加入算法团队。"
+      }
+    },
+    {
+      "chapter": "w3",
+      "type": "payslip",
+      "data": {
+        "company": "某科技公司",
+        "period": "工作第3年 · 6月",
+        "grossRef": "stages[0].salary.p50",
+        "lowRef": "stages[0].salary.p10",
+        "highRef": "stages[0].salary.p90"
+      }
+    },
+    {
+      "chapter": "w10",
+      "type": "chat",
+      "data": {
+        "title": "实验室老群",
+        "messages": [
+          {
+            "from": "them",
+            "name": "师兄",
+            "text": "还记得当年排队抢 GPU 吗"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "记得，我还偷偷改过别人的优先级"
+          },
+          {
+            "from": "them",
+            "name": "导师",
+            "text": "原来是你"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "老师我错了，下次回学校请您吃饭"
+          }
+        ]
+      }
+    }
+  ],
+  "futureSelfFAQ": {
+    "regret": "不后悔，但有很多次焦虑。这个方向变得太快，五年前的经验可能今天就过时了。好处是一直有新东西学。",
+    "tired": "累主要是心累，总觉得自己在落后。工作强度不算低，加班看项目周期。",
+    "college": "把数学学扎实，概率和线代是真的会用到。再早点进实验室，做一个能讲清楚的项目。",
+    "again": "还会选，但会更早想清楚自己更喜欢研究还是工程落地。这只是很多种可能里的一种。",
+    "life": "我在{city}。第10年同岗位月薪中位数约{$stages[2].salary.p50}元，差距很大，好的能到{$stages[2].salary.p90}元。"
+  },
+  "reunionLine": "我在做多模态模型，最近一直在跟数据较劲。"
+}

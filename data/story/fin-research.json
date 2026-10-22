@@ -1,0 +1,185 @@
+{
+  "events": [
+    {
+      "id": "research_intern",
+      "stage": "university",
+      "title": "进了券商研究所实习",
+      "description": "你帮分析师整理了三个月的数据，第一次在研报的署名栏里看到了自己的名字。",
+      "probability": 0.23,
+      "percentileShift": 22,
+      "tone": "positive"
+    },
+    {
+      "id": "case_win",
+      "stage": "university",
+      "title": "拿下了一个全国投资研究比赛",
+      "description": "答辩时评委问你估值假设，你把模型打开，一项项讲清楚了。",
+      "probability": 0.14,
+      "percentileShift": 19,
+      "tone": "positive"
+    },
+    {
+      "id": "no_target_school",
+      "stage": "graduation",
+      "title": "简历在第一轮就被筛掉",
+      "description": "研究所的招聘很看学校，你投了二十家，只有两家给了面试。",
+      "probability": 0.35,
+      "percentileShift": -26,
+      "tone": "challenge",
+      "copingTip": "可以先去中小券商、财经媒体或企业投资部积累，或者读一个好学校的硕士再冲。"
+    },
+    {
+      "id": "buy_side",
+      "stage": "graduation",
+      "title": "直接进了基金公司",
+      "description": "入职第一天，基金经理把一摞年报放在你桌上：“下周讲讲这个行业。”",
+      "probability": 0.14,
+      "percentileShift": 32,
+      "tone": "positive"
+    },
+    {
+      "id": "star_report",
+      "stage": "year3",
+      "title": "一篇深度报告被很多机构转发",
+      "description": "那篇行业报告你改了十一版，发出后电话一直响到晚上。",
+      "probability": 0.19,
+      "percentileShift": 26,
+      "tone": "positive"
+    },
+    {
+      "id": "wrong_call",
+      "stage": "year3",
+      "title": "一次重要的判断错了",
+      "description": "你看好的公司财报暴雷，客户在电话里沉默了很久。",
+      "probability": 0.3,
+      "percentileShift": -19,
+      "tone": "challenge",
+      "copingTip": "复盘错误、写清楚假设哪里出了问题。研究员的成长来自一次次复盘，没有人一直判断对。"
+    },
+    {
+      "id": "pay_cut",
+      "stage": "year5",
+      "title": "行业整体降薪",
+      "description": "年终奖缩水了一大半，组里有两个人转去了企业。",
+      "probability": 0.4,
+      "percentileShift": -16,
+      "tone": "neutral"
+    },
+    {
+      "id": "fund_manager",
+      "stage": "year10",
+      "title": "开始独立管理一只基金",
+      "description": "你的名字第一次出现在基金合同上，那天你给自己买了一束花。",
+      "probability": 0.14,
+      "percentileShift": 29,
+      "tone": "positive"
+    }
+  ],
+  "storyChapters": [
+    {
+      "chapter": "prologue",
+      "template": "{year}年夏天，{province}。你看过很多关于华尔街的电影，在志愿表上写下了“{major}”。"
+    },
+    {
+      "chapter": "y1",
+      "template": "大一，你开始每天看财经新闻，买了人生第一本《证券分析》，读到第三章就卡住了。"
+    },
+    {
+      "chapter": "y3",
+      "template": "大三，{age}岁。你在研究所实习，凌晨两点还在帮分析师改模型。"
+    },
+    {
+      "chapter": "grad",
+      "template": "{year}年，毕业。研究所的门槛很高，你身边的人大多选择读研或出国。"
+    },
+    {
+      "chapter": "w3",
+      "template": "工作第3年，你在{city}跟着首席研究一个行业。同岗位月薪中位数约{$stages[0].salary.p50}元，加班多、成长快。"
+    },
+    {
+      "chapter": "w5",
+      "template": "{age}岁，工作第5年。你开始独立覆盖一批公司，要和基金经理、上市公司高管打交道。"
+    },
+    {
+      "chapter": "w10",
+      "template": "{year}年，{age}岁。你成了{ending_role}。"
+    },
+    {
+      "chapter": "epilogue",
+      "template": "这是你在 {universe} 里的一种结局。换一个种子，故事可能完全不同。"
+    }
+  ],
+  "artifacts": [
+    {
+      "chapter": "y3",
+      "type": "chat",
+      "data": {
+        "title": "实习小组",
+        "messages": [
+          {
+            "from": "them",
+            "name": "分析师",
+            "text": "模型第三页的假设再核一下"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "好的，十分钟后发您"
+          },
+          {
+            "from": "them",
+            "name": "分析师",
+            "text": "明早八点晨会，你来讲"
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "grad",
+      "type": "offer",
+      "data": {
+        "org": "{city}某证券公司",
+        "title": "录用通知",
+        "position": "研究助理",
+        "text": "你已通过研究所全部面试，欢迎加入消费行业研究团队。"
+      }
+    },
+    {
+      "chapter": "w3",
+      "type": "payslip",
+      "data": {
+        "company": "某证券公司",
+        "period": "工作第3年 · 5月",
+        "grossRef": "stages[0].salary.p50",
+        "lowRef": "stages[0].salary.p10",
+        "highRef": "stages[0].salary.p90"
+      }
+    },
+    {
+      "chapter": "w5",
+      "type": "moments",
+      "data": {
+        "author": "我",
+        "text": "第一次去上市公司调研，在工厂里走了一整天",
+        "images": [
+          "🏭",
+          "📊"
+        ],
+        "time": "晚上 9:12",
+        "likes": [
+          "首席",
+          "大学室友",
+          "妈妈"
+        ]
+      }
+    }
+  ],
+  "futureSelfFAQ": {
+    "regret": "有过后悔的时候，尤其是市场不好、判断失误的那几年。但这份工作让我看懂了很多行业。",
+    "tired": "很累，工作时间长，周末也常在看数据。市场好坏会直接影响心情和收入。",
+    "college": "数学、英语和写作都要练。尽早去研究所实习，学会把一件事讲清楚。",
+    "again": "说不准。我可能会先去产业里做几年再回来。这只是很多种可能里的一种。",
+    "life": "我在{city}。第10年同岗位月薪中位数约{$stages[2].salary.p50}元，但差距非常大，高的能到{$stages[2].salary.p90}元，波动也大。"
+  },
+  "reunionLine": "今天市场又跌了，我在写复盘，大家别问我买什么。"
+}

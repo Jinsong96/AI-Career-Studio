@@ -1,0 +1,185 @@
+{
+  "events": [
+    {
+      "id": "farm_intern",
+      "stage": "university",
+      "title": "在大型养殖企业实习了两个月",
+      "description": "你跟着场兽医每天巡栏，学会了从一头猪的精神状态判断它是不是病了。",
+      "probability": 0.25,
+      "percentileShift": 13,
+      "tone": "positive"
+    },
+    {
+      "id": "micro_hard",
+      "stage": "university",
+      "title": "兽医微生物学学得很吃力",
+      "description": "各种病原体的名字你记混了好几次，期中考试差点没过。",
+      "probability": 0.3,
+      "percentileShift": -16,
+      "tone": "challenge",
+      "copingTip": "把病原体按传播途径和症状做成卡片，结合养殖场的真实病例去记，会容易很多。"
+    },
+    {
+      "id": "trainee",
+      "stage": "graduation",
+      "title": "进了头部企业的管培生项目",
+      "description": "入职培训第一课是洗澡消毒，你才知道这一行对防疫有多严格。",
+      "probability": 0.18,
+      "percentileShift": 22,
+      "tone": "positive"
+    },
+    {
+      "id": "remote_farm",
+      "stage": "graduation",
+      "title": "被分到一个偏远的养殖场",
+      "description": "场里离最近的县城有一个半小时车程，你在宿舍窗外看到了满天星星。",
+      "probability": 0.45,
+      "percentileShift": -10,
+      "tone": "neutral"
+    },
+    {
+      "id": "outbreak_control",
+      "stage": "year3",
+      "title": "成功控制住了一次疫病",
+      "description": "你连续一周守在场里，最后疫情没有扩散，场长请全场吃了顿饭。",
+      "probability": 0.18,
+      "percentileShift": 22,
+      "tone": "positive"
+    },
+    {
+      "id": "cycle_down",
+      "stage": "year5",
+      "title": "行业周期下行，场里亏损",
+      "description": "猪价跌了一年，场里开始降本，奖金也少了。",
+      "probability": 0.35,
+      "percentileShift": -22,
+      "tone": "challenge",
+      "copingTip": "技术经验在疫苗、兽药、饲料企业都有需求，也可以考公进入畜牧兽医部门。"
+    },
+    {
+      "id": "farm_manager",
+      "stage": "year5",
+      "title": "升任场长",
+      "description": "你开始管理一百多个人，第一次要对整场的生产成绩负责。",
+      "probability": 0.14,
+      "percentileShift": 22,
+      "tone": "positive"
+    },
+    {
+      "id": "smart_farm",
+      "stage": "year10",
+      "title": "负责了智能养殖改造",
+      "description": "场里装上了自动环控和监测系统，你在手机上就能看到每栋舍的温度。",
+      "probability": 0.21,
+      "percentileShift": 13,
+      "tone": "positive"
+    }
+  ],
+  "storyChapters": [
+    {
+      "chapter": "prologue",
+      "template": "{year}年夏天，{province}。你从小在乡下长大，见过很多牲畜，在志愿表上写下了“{major}”。"
+    },
+    {
+      "chapter": "y1",
+      "template": "大一，你第一次去学校的实习牧场，被一头小牛舔了一手。"
+    },
+    {
+      "chapter": "y3",
+      "template": "大三，{age}岁。微生物学和免疫学让你开始理解疫病是怎么传播的。"
+    },
+    {
+      "chapter": "grad",
+      "template": "{year}年，毕业。管培生、读研、考公，三条路你都看了。"
+    },
+    {
+      "chapter": "w3",
+      "template": "工作第3年，你在{city}的养殖场负责防疫和健康管理，进出都要严格消毒。同岗位月薪中位数约{$stages[0].salary.p50}元。"
+    },
+    {
+      "chapter": "w5",
+      "template": "{age}岁，工作第5年。你开始管理一个场或一个区域的技术服务。"
+    },
+    {
+      "chapter": "w10",
+      "template": "{year}年，{age}岁。你成了{ending_role}。"
+    },
+    {
+      "chapter": "epilogue",
+      "template": "这是你在 {universe} 里的一种结局。换一个种子，故事可能完全不同。"
+    }
+  ],
+  "artifacts": [
+    {
+      "chapter": "grad",
+      "type": "offer",
+      "data": {
+        "org": "某大型养殖企业",
+        "title": "管培生录用通知",
+        "position": "养殖技术管培生",
+        "text": "欢迎加入本公司管培生项目，前两年将在基层养殖场轮岗锻炼。"
+      }
+    },
+    {
+      "chapter": "w3",
+      "type": "moments",
+      "data": {
+        "author": "我",
+        "text": "场里的晚上很安静，抬头就是银河",
+        "images": [
+          "🌌",
+          "🐖"
+        ],
+        "time": "晚上 9:50",
+        "likes": [
+          "场长",
+          "大学室友",
+          "妈妈"
+        ]
+      }
+    },
+    {
+      "chapter": "w5",
+      "type": "payslip",
+      "data": {
+        "company": "某养殖企业",
+        "period": "工作第5年 · 2月",
+        "grossRef": "stages[1].salary.p50",
+        "lowRef": "stages[1].salary.p10",
+        "highRef": "stages[1].salary.p90"
+      }
+    },
+    {
+      "chapter": "w10",
+      "type": "chat",
+      "data": {
+        "title": "家族群",
+        "messages": [
+          {
+            "from": "them",
+            "name": "妈妈",
+            "text": "今年过年能回来几天？"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "轮休五天，腊月二十八到家"
+          },
+          {
+            "from": "them",
+            "name": "爸爸",
+            "text": "给你留了腊肉"
+          }
+        ]
+      }
+    }
+  ],
+  "futureSelfFAQ": {
+    "regret": "不太后悔。工作地点偏一些，但收入不错，晋升通道也清楚。能保障大家餐桌上的食品安全，挺有意义。",
+    "tired": "前几年住在场里，防疫要求严，生活比较封闭。现在好多了。",
+    "college": "微生物和免疫一定学扎实，多去养殖场实习，看看能不能适应那里的环境。",
+    "again": "可能还会选，也可能会选兽药或疫苗研发。这只是很多种可能里的一种。",
+    "life": "我在{city}。第10年同岗位月薪中位数约{$stages[2].salary.p50}元，在当地算中上，能照顾到家里。"
+  },
+  "reunionLine": "我在场里，今天的猪都很健康，大家放心吃肉。"
+}

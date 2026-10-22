@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,7 +10,6 @@ import { StepBasic } from "@/components/wizard/step-basic";
 import { StepInterest } from "@/components/wizard/step-interest";
 import { StepValues } from "@/components/wizard/step-values";
 import { StepConfirm } from "@/components/wizard/step-confirm";
-import { GeneratingOverlay } from "@/components/wizard/generating";
 
 const STEPS = ["基础信息", "你对什么感兴趣", "你最在乎什么", "确认"];
 
@@ -21,7 +19,6 @@ function Wizard() {
   const setStep = useStore((s) => s.setWizardStep);
   const profile = useStore((s) => s.profile);
   const finishWizard = useStore((s) => s.finishWizard);
-  const [generating, setGenerating] = useState(false);
 
   const canNext =
     step === 0
@@ -40,11 +37,8 @@ function Wizard() {
         : "";
 
   const generate = () => {
-    setGenerating(true);
-    setTimeout(() => {
-      finishWizard();
-      router.push("/results");
-    }, 2400);
+    finishWizard();
+    router.push("/results");
   };
 
   return (
@@ -85,7 +79,6 @@ function Wizard() {
         </div>
       </div>
 
-      <AnimatePresence>{generating && <GeneratingOverlay />}</AnimatePresence>
     </div>
   );
 }

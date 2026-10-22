@@ -1,0 +1,182 @@
+{
+  "events": [
+    {
+      "id": "court_intern",
+      "stage": "university",
+      "title": "在法院做了一个暑假的书记员助理",
+      "description": "你整理了上百份卷宗，第一次在庭审时坐在书记员旁边。",
+      "probability": 0.25,
+      "percentileShift": 13,
+      "tone": "positive"
+    },
+    {
+      "id": "bar_pass",
+      "stage": "university",
+      "title": "一次通过了法考",
+      "description": "查到成绩那天，你把准考证拍下来发给了高中班主任。",
+      "probability": 0.28,
+      "percentileShift": 13,
+      "tone": "positive"
+    },
+    {
+      "id": "exam_landed",
+      "stage": "graduation",
+      "title": "考上了市级法院",
+      "description": "面试那天你讲了一个调解的案例，考官在本子上写了很久。",
+      "probability": 0.18,
+      "percentileShift": 22,
+      "tone": "positive"
+    },
+    {
+      "id": "exam_retry",
+      "stage": "graduation",
+      "title": "第一年考公没上岸",
+      "description": "笔试排第四，岗位只招一个人。你决定再考一年。",
+      "probability": 0.35,
+      "percentileShift": -22,
+      "tone": "challenge",
+      "copingTip": "很多人第二年上岸。可以先去律所或做法院聘用制书记员，积累经验也能加分。"
+    },
+    {
+      "id": "case_load",
+      "stage": "year3",
+      "title": "案件量突然翻倍",
+      "description": "年底结案率考核，你连续一个月每天写判决到九点。",
+      "probability": 0.4,
+      "percentileShift": -13,
+      "tone": "neutral"
+    },
+    {
+      "id": "judge_selected",
+      "stage": "year5",
+      "title": "遴选成为员额法官",
+      "description": "你第一次以审判长的身份坐上法官席，敲下法槌时手有点抖。",
+      "probability": 0.21,
+      "percentileShift": 26,
+      "tone": "positive"
+    },
+    {
+      "id": "quota_wait",
+      "stage": "year5",
+      "title": "员额名额紧张，一直在等",
+      "description": "同批进来的人比名额多，你还在做法官助理。",
+      "probability": 0.35,
+      "percentileShift": -19,
+      "tone": "challenge",
+      "copingTip": "继续积累办案质量和调研成果，遴选到上级法院或其他政法单位也是常见出路。"
+    },
+    {
+      "id": "model_case",
+      "stage": "year10",
+      "title": "审理的案件入选了典型案例",
+      "description": "你写的那份判决书被选进了省里的优秀裁判文书。",
+      "probability": 0.14,
+      "percentileShift": 22,
+      "tone": "positive"
+    }
+  ],
+  "storyChapters": [
+    {
+      "chapter": "prologue",
+      "template": "{year}年夏天，{province}。你想穿上那身制服，在志愿表上写下了“{major}”。"
+    },
+    {
+      "chapter": "y1",
+      "template": "大一，你读的第一本书是厚厚的《法理学》。老师说，法律人要先学会怀疑自己的直觉。"
+    },
+    {
+      "chapter": "y3",
+      "template": "大三，{age}岁。你一边备战法考，一边在法院实习，见到了课本之外的纠纷。"
+    },
+    {
+      "chapter": "grad",
+      "template": "{year}年，毕业。国考、省考、选调，你的日程表上只剩下考试。"
+    },
+    {
+      "chapter": "w3",
+      "template": "工作第3年，你在{city}的法院做{role}。卷宗堆满了桌子，结案率考核时常加班。同岗位月薪中位数约{$stages[0].salary.p50}元。"
+    },
+    {
+      "chapter": "w5",
+      "template": "{age}岁，工作第5年。你开始独立承办案件，判决书上的每一句话都要经得起推敲。"
+    },
+    {
+      "chapter": "w10",
+      "template": "{year}年，{age}岁。你成了{ending_role}。"
+    },
+    {
+      "chapter": "epilogue",
+      "template": "这是你在 {universe} 里的一种结局。换一个种子，故事可能完全不同。"
+    }
+  ],
+  "artifacts": [
+    {
+      "chapter": "grad",
+      "type": "chat",
+      "data": {
+        "title": "妈妈",
+        "messages": [
+          {
+            "from": "them",
+            "name": "妈妈",
+            "text": "面试结果出来了吗"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "出来了，第一名"
+          },
+          {
+            "from": "them",
+            "name": "妈妈",
+            "text": "我就知道！晚上给你做红烧肉"
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "w3",
+      "type": "moments",
+      "data": {
+        "author": "我",
+        "text": "今天调解成功了一起邻里纠纷，两位老人握手走出了法庭",
+        "images": [
+          "⚖️",
+          "🤝"
+        ],
+        "time": "下午 5:30",
+        "likes": [
+          "庭长",
+          "大学室友",
+          "爸爸"
+        ]
+      }
+    },
+    {
+      "chapter": "w5",
+      "type": "payslip",
+      "data": {
+        "company": "某人民法院",
+        "period": "工作第5年 · 4月",
+        "grossRef": "stages[1].salary.p50",
+        "lowRef": "stages[1].salary.p10",
+        "highRef": "stages[1].salary.p90"
+      }
+    },
+    {
+      "chapter": "w10",
+      "type": "calendar",
+      "data": {
+        "label": "工作第10年 · 某个周二"
+      }
+    }
+  ],
+  "futureSelfFAQ": {
+    "regret": "不后悔。工作稳定，有社会认可，也确实在解决问题。偶尔会羡慕当律师的同学收入高。",
+    "tired": "案件多的时候是真累，年底尤其忙。但节假日基本能正常休息。",
+    "college": "法考早点准备，多去法院实习。写作能力很重要，判决书是要给所有人看的。",
+    "again": "大概率还会选。这只是很多种可能里的一种，你自己决定。",
+    "life": "我在{city}。第10年同岗位月薪中位数约{$stages[2].salary.p50}元，收入稳定，生活节奏比较规律。"
+  },
+  "reunionLine": "今天结了三个案子，晚上终于能回家吃饭。"
+}

@@ -3,6 +3,8 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import type { BranchChoices, MetricKey, UserProfile } from "@/types";
+import type { Ending } from "./simulate";
+import { randomSeed } from "./simulate";
 import { orderToWeights } from "./metrics";
 
 export const DEFAULT_ORDER: MetricKey[] = ["growth", "income", "stability", "workIntensity", "freedom", "aiResilience"];
@@ -26,6 +28,10 @@ export const DEMO_PROFILE: UserProfile = {
   grade: "高三",
 };
 
+export type RunRecord = { seed: number; ending: Ending; salary: number; percentile: number; choices: Record<string, string>; eventIds: string[] };
+export type ChatMessage = { role: "user" | "assistant"; text: string };
+export const DEMO_SEED = 400427; // RUN #0427：每个阶段都有事件，结局为一般
+
 type State = {
   profile: UserProfile;
   hasProfile: boolean;
@@ -37,6 +43,13 @@ type State = {
   pinnedIds: string[];
   reportUnlocked: boolean;
   demoMode: boolean;
+  /** 每条路径当前这一次人生的随机种子 */
+  seeds: Record<string, number>;
+  /** 每条路径活过的每一次人生 */
+  runs: Record<string, RunRecord[]>;
+  chats: Record<string, ChatMessage[]>;
+  /** 结果页需要播放生成动画 */
+  introPending: boolean;
 
   setProfile: (p: Partial<UserProfile>) => void;
   setWizardStep: (n: number) => void;
@@ -51,6 +64,11 @@ type State = {
   pin: (pathId: string) => void;
   unlockReport: () => void;
   resetAll: () => void;
+  ensureSeed: (pathId: string) => number;
+  newSeed: (pathId: string) => number;
+  recordRun: (pathId: string, run: RunRecord) => void;
+  setChat: (pathId: string, messages: ChatMessage[]) => void;
+  setIntroPending: (v: boolean) => void;
 };
 
 export const useStore = create<State>()(
@@ -65,11 +83,15 @@ export const useStore = create<State>()(
       pinnedIds: [],
       reportUnlocked: false,
       demoMode: false,
+      seeds: {},
+      runs: {},
+      chats: {},
+      introPending: false,
 
       setProfile: (p) => set({ profile: { ...get().profile, ...p } }),
       setWizardStep: (n) => set({ wizardStep: n }),
       setValueOrder: (o) => set({ valueOrder: o, profile: { ...get().profile, valueWeights: orderToWeights(o) } }),
-      finishWizard: () => set({ hasProfile: true, demoMode: false, wizardStep: 0 }),
+      finishWizard: () => set({ hasProfile: true, demoMode: false, wizardStep: 0, introPending: true }),
       loadDemo: () =>
         set({
           profile: DEMO_PROFILE,
@@ -79,6 +101,10 @@ export const useStore = create<State>()(
           branchChoices: {},
           compareIds: [],
           pinnedIds: [],
+          seeds: { "cs-backend": DEMO_SEED },
+          runs: {},
+          chats: {},
+          introPending: false,
         }),
       choose: (pathId, nodeId, optionId) =>
         set({ branchChoices: { ...get().branchChoices, [pathId]: { ...(get().branchChoices[pathId] ?? {}), [nodeId]: optionId } } }),
@@ -102,7 +128,27 @@ export const useStore = create<State>()(
       },
       unlockReport: () => set({ reportUnlocked: true }),
       resetAll: () =>
-        set({ profile: EMPTY_PROFILE, hasProfile: false, wizardStep: 0, valueOrder: DEFAULT_ORDER, branchChoices: {}, compareIds: [], pinnedIds: [], reportUnlocked: false, demoMode: false }),
+        set({ profile: EMPTY_PROFILE, hasProfile: false, wizardStep: 0, valueOrder: DEFAULT_ORDER, branchChoices: {}, compareIds: [], pinnedIds: [], reportUnlocked: false, demoMode: false, seeds: {}, runs: {}, chats: {}, introPending: false }),
+      ensureSeed: (pathId) => {
+        const cur = get().seeds[pathId];
+        if (cur !== undefined) return cur;
+        const seed = randomSeed();
+        set({ seeds: { ...get().seeds, [pathId]: seed } });
+        return seed;
+      },
+      newSeed: (pathId) => {
+        const seed = randomSeed();
+        set({ seeds: { ...get().seeds, [pathId]: seed } });
+        return seed;
+      },
+      recordRun: (pathId, run) => {
+        const list = get().runs[pathId] ?? [];
+        const key = (r: RunRecord) => `${r.seed}|${JSON.stringify(r.choices)}`;
+        if (list.some((r) => key(r) === key(run))) return;
+        set({ runs: { ...get().runs, [pathId]: [...list, run] } });
+      },
+      setChat: (pathId, messages) => set({ chats: { ...get().chats, [pathId]: messages } }),
+      setIntroPending: (v) => set({ introPending: v }),
     }),
     { name: "parallel-life" },
   ),

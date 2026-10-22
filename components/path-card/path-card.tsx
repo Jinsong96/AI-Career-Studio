@@ -13,6 +13,7 @@ import { SourceTag } from "@/components/common/source-tag";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { universeId } from "@/lib/story";
 
 export function PathCard({ match, index = 0 }: { match: MatchResult; index?: number }) {
   const { path } = match;
@@ -26,17 +27,19 @@ export function PathCard({ match, index = 0 }: { match: MatchResult; index?: num
 
   return (
     <motion.div
+      layoutId={`universe-${path.id}`}
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.06, duration: 0.3 }}
       className={cn(
-        "flex flex-col rounded-2xl border bg-white p-5",
+        "flex flex-col rounded-2xl border bg-white/80 p-5 backdrop-blur-sm",
         demoMode && path.id === FEATURED_PATH_ID ? "border-neutral-900" : "border-neutral-200",
       )}
     >
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="text-xs text-neutral-500">{major?.name}</p>
+          <p className="font-mono text-[10px] tracking-wider text-neutral-400">{universeId(path)}</p>
+          <p className="mt-1 text-xs text-neutral-500">{major?.name}</p>
           <h3 className="mt-0.5 text-lg font-semibold leading-snug text-neutral-900">{path.title}</h3>
         </div>
         <div className="shrink-0 text-right">
@@ -75,7 +78,7 @@ export function PathCard({ match, index = 0 }: { match: MatchResult; index?: num
       </div>
 
       <div className="mt-4 flex items-center gap-2 pt-1">
-        <Link href={`/path/${path.id}`} className="flex-1">
+        <Link href={`/path/${path.id}/story`} className="flex-1">
           <Button className="w-full">
             进入这段人生 <ChevronRight className="h-4 w-4" />
           </Button>

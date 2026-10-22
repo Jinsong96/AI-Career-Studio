@@ -1,0 +1,185 @@
+{
+  "events": [
+    {
+      "id": "inverter_project",
+      "stage": "university",
+      "title": "做出了一个能用的小型逆变器",
+      "description": "你把它接上太阳能板，台灯真的亮了，室友拍了视频发到班群。",
+      "probability": 0.19,
+      "percentileShift": 19,
+      "tone": "positive"
+    },
+    {
+      "id": "analog_hard",
+      "stage": "university",
+      "title": "模电学得很痛苦",
+      "description": "放大电路的作业你交了白卷，第一次有了转专业的念头。",
+      "probability": 0.3,
+      "percentileShift": -16,
+      "tone": "challenge",
+      "copingTip": "找学长借实验笔记，多搭几个实际电路。模电很多人都是在动手中才学懂的。"
+    },
+    {
+      "id": "top_battery",
+      "stage": "graduation",
+      "title": "进了头部新能源企业",
+      "description": "入职培训在一个巨大的产线车间里，你第一次见到每分钟下线几十个电芯。",
+      "probability": 0.15,
+      "percentileShift": 29,
+      "tone": "positive"
+    },
+    {
+      "id": "test_role",
+      "stage": "graduation",
+      "title": "从测试岗起步",
+      "description": "每天做重复的老化测试，但你把每一组数据都记了下来。",
+      "probability": 0.4,
+      "percentileShift": -13,
+      "tone": "neutral"
+    },
+    {
+      "id": "patent",
+      "stage": "year3",
+      "title": "参与的设计申请了专利",
+      "description": "你的名字第一次出现在专利文件上，你把截图设成了手机壁纸。",
+      "probability": 0.19,
+      "percentileShift": 19,
+      "tone": "positive"
+    },
+    {
+      "id": "price_war",
+      "stage": "year5",
+      "title": "行业价格战，公司开始降本",
+      "description": "年终奖缩水，组里在讨论哪些项目要停。",
+      "probability": 0.35,
+      "percentileShift": -22,
+      "tone": "challenge",
+      "copingTip": "硬件研发经验通用性强，可以转向电网、汽车、家电等相关行业，或者转做技术支持。"
+    },
+    {
+      "id": "lead_product",
+      "stage": "year5",
+      "title": "负责了一款储能产品的研发",
+      "description": "产品装进了第一座光伏电站，你在现场看着它接入电网。",
+      "probability": 0.15,
+      "percentileShift": 26,
+      "tone": "positive"
+    },
+    {
+      "id": "overseas_project",
+      "stage": "year10",
+      "title": "去海外项目现场驻场半年",
+      "description": "你在沙漠边上的电站待了半年，学会了几句当地话。",
+      "probability": 0.23,
+      "percentileShift": 10,
+      "tone": "neutral"
+    }
+  ],
+  "storyChapters": [
+    {
+      "chapter": "prologue",
+      "template": "{year}年夏天，{province}。新闻里都在讲新能源，你在志愿表上写下了“{major}”。"
+    },
+    {
+      "chapter": "y1",
+      "template": "大一，你用单片机点亮了第一个 LED。宿舍的桌子上开始堆满电线和面包板。"
+    },
+    {
+      "chapter": "y3",
+      "template": "大三，{age}岁。电力电子课上，你第一次理解了电池和电网之间发生了什么。"
+    },
+    {
+      "chapter": "grad",
+      "template": "{year}年，毕业。新能源企业的校招来得很早，你在几座城市之间做选择。"
+    },
+    {
+      "chapter": "w3",
+      "template": "工作第3年，你在{city}的实验室调试样机，经常跑产线解决问题。同岗位月薪中位数约{$stages[0].salary.p50}元。"
+    },
+    {
+      "chapter": "w5",
+      "template": "{age}岁，工作第5年。你负责一个产品模块，在供应商、测试和产线之间来回沟通。"
+    },
+    {
+      "chapter": "w10",
+      "template": "{year}年，{age}岁。你成了{ending_role}。"
+    },
+    {
+      "chapter": "epilogue",
+      "template": "这是你在 {universe} 里的一种结局。换一个种子，故事可能完全不同。"
+    }
+  ],
+  "artifacts": [
+    {
+      "chapter": "y3",
+      "type": "moments",
+      "data": {
+        "author": "我",
+        "text": "自己做的逆变器点亮了台灯，室友说这是他见过最贵的台灯",
+        "images": [
+          "🔋",
+          "💡"
+        ],
+        "time": "晚上 11:20",
+        "likes": [
+          "室友",
+          "实验室学长",
+          "导师"
+        ]
+      }
+    },
+    {
+      "chapter": "grad",
+      "type": "offer",
+      "data": {
+        "org": "{city}某新能源企业",
+        "title": "录用通知",
+        "position": "研发工程师",
+        "text": "你已通过技术面试，欢迎加入储能研发中心。"
+      }
+    },
+    {
+      "chapter": "w3",
+      "type": "payslip",
+      "data": {
+        "company": "某新能源企业",
+        "period": "工作第3年 · 8月",
+        "grossRef": "stages[0].salary.p50",
+        "lowRef": "stages[0].salary.p10",
+        "highRef": "stages[0].salary.p90"
+      }
+    },
+    {
+      "chapter": "w5",
+      "type": "chat",
+      "data": {
+        "title": "项目群",
+        "messages": [
+          {
+            "from": "them",
+            "name": "项目经理",
+            "text": "客户现场的样机又报警了"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "我看了日志，是散热的问题，明早到现场"
+          },
+          {
+            "from": "them",
+            "name": "结构工程师",
+            "text": "我把新散热片的图纸发你"
+          }
+        ]
+      }
+    }
+  ],
+  "futureSelfFAQ": {
+    "regret": "不后悔。能参与能源转型，看到自己做的产品真的在发电，很有成就感。行业波动是最大的不确定性。",
+    "tired": "项目节点前很累，经常加班调试。平时还行，比互联网稍微规律一点。",
+    "college": "动手做东西，参加电子设计竞赛。电路基础一定学好，以后天天用。",
+    "again": "可能还会选，但会更关注公司的稳定性。这只是很多种可能里的一种。",
+    "life": "我在{city}。第10年同岗位月薪中位数约{$stages[2].salary.p50}元，好一些的能到{$stages[2].salary.p90}元。"
+  },
+  "reunionLine": "刚从电站回来，晒黑了两个色号。"
+}

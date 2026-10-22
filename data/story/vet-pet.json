@@ -1,0 +1,185 @@
+{
+  "events": [
+    {
+      "id": "clinic_volunteer",
+      "stage": "university",
+      "title": "在宠物医院做了一年志愿者",
+      "description": "你学会了怎么抱住一只害怕的猫，也第一次见到了手术台。",
+      "probability": 0.21,
+      "percentileShift": 13,
+      "tone": "positive"
+    },
+    {
+      "id": "chem_hard",
+      "stage": "university",
+      "title": "生物化学考得很差",
+      "description": "代谢通路图你背了又忘，期末只拿了六十出头。",
+      "probability": 0.3,
+      "percentileShift": -16,
+      "tone": "challenge",
+      "copingTip": "把代谢通路画成自己的思维导图，结合临床病例去理解，很多兽医都是这样补起来的。"
+    },
+    {
+      "id": "license_pass",
+      "stage": "graduation",
+      "title": "一次考过了执业兽医资格",
+      "description": "成绩出来那天，你抱着家里的狗转了三圈。",
+      "probability": 0.18,
+      "percentileShift": 19,
+      "tone": "positive"
+    },
+    {
+      "id": "small_clinic",
+      "stage": "graduation",
+      "title": "在一家小诊所起步",
+      "description": "诊所只有两个医生，你从挂号到手术什么都要做。",
+      "probability": 0.4,
+      "percentileShift": -13,
+      "tone": "neutral"
+    },
+    {
+      "id": "hard_case",
+      "stage": "year3",
+      "title": "救回了一只重症的小猫",
+      "description": "它在住院部住了两周，出院那天主人抱着它在门口哭了。",
+      "probability": 0.21,
+      "percentileShift": 16,
+      "tone": "positive"
+    },
+    {
+      "id": "emotional_drain",
+      "stage": "year3",
+      "title": "连着送走了几只老年犬",
+      "description": "那个月你很低落，开始想自己能不能一直做下去。",
+      "probability": 0.3,
+      "percentileShift": -19,
+      "tone": "challenge",
+      "copingTip": "和同事、带教老师聊聊，学会给自己设边界。面对离别是这份工作的一部分，也是可以被支持的。"
+    },
+    {
+      "id": "specialist",
+      "stage": "year5",
+      "title": "成为骨科专科医生",
+      "description": "你第一次独立完成一台复杂的骨折手术，同行开始转病例给你。",
+      "probability": 0.15,
+      "percentileShift": 26,
+      "tone": "positive"
+    },
+    {
+      "id": "open_clinic",
+      "stage": "year10",
+      "title": "和朋友合伙开了一家宠物医院",
+      "description": "开业那天，很多老客户带着自家猫狗来道贺。",
+      "probability": 0.12,
+      "percentileShift": 22,
+      "tone": "positive"
+    }
+  ],
+  "storyChapters": [
+    {
+      "chapter": "prologue",
+      "template": "{year}年夏天，{province}。家里那只猫陪你熬过了高三，你在志愿表上写下了“{major}”。"
+    },
+    {
+      "chapter": "y1",
+      "template": "大一，化学和生物基础课很多，你第一次意识到动物和人的身体有多不同。"
+    },
+    {
+      "chapter": "y3",
+      "template": "大三，{age}岁。你在学校动物医院跟诊，学会了给猫狗打针，也学会了被抓之后不叫出声。"
+    },
+    {
+      "chapter": "grad",
+      "template": "{year}年，毕业。执业兽医资格考试是你这一年的头等大事。"
+    },
+    {
+      "chapter": "w3",
+      "template": "工作第3年，你在{city}的宠物医院独立接诊。周末最忙，偶尔值夜班处理急诊。同岗位月薪中位数约{$stages[0].salary.p50}元。"
+    },
+    {
+      "chapter": "w5",
+      "template": "{age}岁，工作第5年。你有了自己的专科方向，熟客会点名找你。"
+    },
+    {
+      "chapter": "w10",
+      "template": "{year}年，{age}岁。你成了{ending_role}。"
+    },
+    {
+      "chapter": "epilogue",
+      "template": "这是你在 {universe} 里的一种结局。换一个种子，故事可能完全不同。"
+    }
+  ],
+  "artifacts": [
+    {
+      "chapter": "y1",
+      "type": "moments",
+      "data": {
+        "author": "我",
+        "text": "第一次在动物医院做志愿者，被一只橘猫选中了",
+        "images": [
+          "🐱",
+          "🏥"
+        ],
+        "time": "下午 3:40",
+        "likes": [
+          "室友",
+          "妈妈",
+          "高中同桌"
+        ]
+      }
+    },
+    {
+      "chapter": "grad",
+      "type": "offer",
+      "data": {
+        "org": "{city}某宠物医院",
+        "title": "录用通知",
+        "position": "执业兽医",
+        "text": "欢迎加入我院，试用期内将安排资深医生一对一带教。"
+      }
+    },
+    {
+      "chapter": "w3",
+      "type": "chat",
+      "data": {
+        "title": "豆豆的主人",
+        "messages": [
+          {
+            "from": "them",
+            "name": "豆豆主人",
+            "text": "医生，豆豆今天吃饭了！"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "太好了，记得按时吃药，周五来复查"
+          },
+          {
+            "from": "them",
+            "name": "豆豆主人",
+            "text": "谢谢你救了它"
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "w5",
+      "type": "payslip",
+      "data": {
+        "company": "某宠物医院",
+        "period": "工作第5年 · 6月",
+        "grossRef": "stages[1].salary.p50",
+        "lowRef": "stages[1].salary.p10",
+        "highRef": "stages[1].salary.p90"
+      }
+    }
+  ],
+  "futureSelfFAQ": {
+    "regret": "不后悔。收入不算高，但每天在做自己喜欢的事。最难的是面对动物的离开。",
+    "tired": "累，周末和节假日基本都在上班，体力和情绪消耗都不小。",
+    "college": "生物化学这些基础课别放弃，多去宠物医院实习，看看自己能不能接受真实的临床。",
+    "again": "大概率还会选。这只是很多种可能里的一种，你的路你自己走。",
+    "life": "我在{city}。第10年同岗位月薪中位数约{$stages[2].salary.p50}元，开了医院的能到{$stages[2].salary.p90}元左右，但也要承担经营风险。"
+  },
+  "reunionLine": "刚做完一台手术，是只很勇敢的柯基。"
+}

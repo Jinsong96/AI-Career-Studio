@@ -18,7 +18,7 @@ function SampleCard({ id, active }: { id: string; active?: boolean }) {
   const moment = path.dayInLife.schedule[Math.min(2, path.dayInLife.schedule.length - 1)];
   return (
     <Link
-      href={`/path/${id}`}
+      href={`/path/${id}/story`}
       className={cn("block rounded-2xl border bg-white p-5 transition-colors duration-200", active ? "border-neutral-900" : "border-neutral-200 hover:border-neutral-400")}
     >
       <p className="text-xs text-neutral-500">{getMajor(path.majorId)?.name}</p>

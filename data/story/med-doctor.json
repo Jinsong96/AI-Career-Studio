@@ -1,0 +1,185 @@
+{
+  "events": [
+    {
+      "id": "research_start",
+      "stage": "university",
+      "title": "跟着老师做了第一个科研课题",
+      "description": "你在实验室泡了一个暑假，第一次把数据做成一张能讲故事的图。",
+      "probability": 0.18,
+      "percentileShift": 19,
+      "tone": "positive"
+    },
+    {
+      "id": "anatomy_shock",
+      "stage": "university",
+      "title": "第一次上解剖课",
+      "description": "面对大体老师，你在门口站了很久。下课后你写了很长一段日记。",
+      "probability": 0.5,
+      "percentileShift": -6,
+      "tone": "neutral"
+    },
+    {
+      "id": "exam_fail",
+      "stage": "graduation",
+      "title": "考研差了几分",
+      "description": "成绩出来那天你一个人在操场坐到天黑，第二天开始准备调剂。",
+      "probability": 0.3,
+      "percentileShift": -29,
+      "tone": "challenge",
+      "copingTip": "调剂和二战都很常见；也可以先进入规培，边工作边准备。医生的成长周期很长，一年的差距会被慢慢抹平。"
+    },
+    {
+      "id": "top_hospital",
+      "stage": "graduation",
+      "title": "进了一家顶尖医院读研",
+      "description": "第一次穿上那家医院的白大褂，你在镜子前多看了两眼。",
+      "probability": 0.14,
+      "percentileShift": 29,
+      "tone": "positive"
+    },
+    {
+      "id": "night_shift_crisis",
+      "stage": "year3",
+      "title": "值夜班遇到了第一次独立抢救",
+      "description": "凌晨三点，病人的血压一直往下掉。等上级医生赶到时，你已经把能做的都做了。",
+      "probability": 0.28,
+      "percentileShift": 10,
+      "tone": "neutral"
+    },
+    {
+      "id": "burnout",
+      "stage": "year3",
+      "title": "连续夜班后有一段时间很疲惫",
+      "description": "你开始失眠，下班后什么都不想做，第一次认真想过自己是不是适合这行。",
+      "probability": 0.25,
+      "percentileShift": -24,
+      "tone": "challenge",
+      "copingTip": "和带教老师、同事聊聊，适当调整排班；医院一般有心理支持渠道。这种阶段很多医生都经历过。"
+    },
+    {
+      "id": "specialty_skill",
+      "stage": "year5",
+      "title": "掌握了一项科室的关键技术",
+      "description": "你第一次独立完成那台手术，主任在旁边看完，只说了一句“可以”。",
+      "probability": 0.18,
+      "percentileShift": 26,
+      "tone": "positive"
+    },
+    {
+      "id": "patient_trust",
+      "stage": "year10",
+      "title": "有了稳定的老病人",
+      "description": "有位老病人每次复诊都点名找你，还带来自己种的橘子。",
+      "probability": 0.28,
+      "percentileShift": 10,
+      "tone": "positive"
+    }
+  ],
+  "storyChapters": [
+    {
+      "chapter": "prologue",
+      "template": "{year}年夏天，{province}。你在志愿表上写下“{major}”，家里人说这条路要走很久。你说你知道。"
+    },
+    {
+      "chapter": "y1",
+      "template": "大一，课本比你高中三年加起来还厚。你在宿舍楼道里背骨头的名字，背到熄灯。"
+    },
+    {
+      "chapter": "y3",
+      "template": "大三，{age}岁。你开始学诊断和内外科，期末周的通宵成了常态。第一次在医院见习，你记住了一个病人的名字。"
+    },
+    {
+      "chapter": "grad",
+      "template": "{year}年，毕业。五年的书读完了，真正的学习才开始。"
+    },
+    {
+      "chapter": "w3",
+      "template": "工作第3年，你在{city}的医院轮转，值夜班、写病历、跟手术。同岗位月薪中位数约{$stages[0].salary.p50}元，很多人还需要家里支持。"
+    },
+    {
+      "chapter": "w5",
+      "template": "{age}岁，工作第5年。你开始管自己的病人，能独立处理很多情况，成就感一点点多起来。"
+    },
+    {
+      "chapter": "w10",
+      "template": "{year}年，{age}岁。你成了{ending_role}。"
+    },
+    {
+      "chapter": "epilogue",
+      "template": "这是你在 {universe} 里的一种结局。换一个种子，故事可能完全不同。"
+    }
+  ],
+  "artifacts": [
+    {
+      "chapter": "prologue",
+      "type": "chat",
+      "data": {
+        "title": "爸爸",
+        "messages": [
+          {
+            "from": "them",
+            "name": "爸爸",
+            "text": "真想好了？学医要读很多年"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "想好了"
+          },
+          {
+            "from": "them",
+            "name": "爸爸",
+            "text": "那就好好学，家里支持你"
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "grad",
+      "type": "offer",
+      "data": {
+        "org": "{city}某三甲医院",
+        "title": "住院医师规范化培训录取通知",
+        "position": "住院医师",
+        "text": "你已被录取参加住院医师规范化培训，请按时报到。"
+      }
+    },
+    {
+      "chapter": "w3",
+      "type": "moments",
+      "data": {
+        "author": "我",
+        "text": "下了夜班，天刚亮。食堂的豆浆是今天最好的东西。",
+        "images": [
+          "🌅",
+          "🥛"
+        ],
+        "time": "早上 7:20",
+        "likes": [
+          "同科室小王",
+          "护士长",
+          "妈妈"
+        ]
+      }
+    },
+    {
+      "chapter": "w5",
+      "type": "payslip",
+      "data": {
+        "company": "某三甲医院",
+        "period": "工作第5年 · 3月",
+        "grossRef": "stages[1].salary.p50",
+        "lowRef": "stages[1].salary.p10",
+        "highRef": "stages[1].salary.p90"
+      }
+    }
+  ],
+  "futureSelfFAQ": {
+    "regret": "不后悔。最难的是规培那几年，收入低、夜班多。但病人出院时那句谢谢，很难从别的工作里得到。",
+    "tired": "累，尤其是夜班之后还要接着上白班。现在好一些了，但节假日能休息的不多。",
+    "college": "基础课别糊弄，解剖和生理以后天天用。也早点接触科研，读研时会轻松很多。",
+    "again": "大概率还会选，不过我会更早想清楚要去哪个科室。这只是很多种可能里的一种，你自己决定。",
+    "life": "我在{city}的医院上班。像我这样第10年的医生，月薪中位数约{$stages[2].salary.p50}元。忙，但生活慢慢稳定了。"
+  },
+  "reunionLine": "今天刚下手术，一会儿还要查房，大家先聊。"
+}

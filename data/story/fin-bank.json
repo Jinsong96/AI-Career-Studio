@@ -1,0 +1,185 @@
+{
+  "events": [
+    {
+      "id": "bank_intern",
+      "stage": "university",
+      "title": "在银行支行实习了一个暑假",
+      "description": "你跟着大堂经理接待了几百位客户，学会了怎么跟着急的阿姨解释理财风险。",
+      "probability": 0.24,
+      "percentileShift": 16,
+      "tone": "positive"
+    },
+    {
+      "id": "cert_pass",
+      "stage": "university",
+      "title": "一次考过了证券从业资格",
+      "description": "查分那天你截了图发到家族群，二姨说“以后找你理财”。",
+      "probability": 0.24,
+      "percentileShift": 10,
+      "tone": "positive"
+    },
+    {
+      "id": "bank_offer",
+      "stage": "graduation",
+      "title": "拿到了国有大行的 offer",
+      "description": "签约那天，你妈在朋友圈发了九张图。",
+      "probability": 0.2,
+      "percentileShift": 22,
+      "tone": "positive"
+    },
+    {
+      "id": "counter_long",
+      "stage": "graduation",
+      "title": "在柜台待了比预想更久",
+      "description": "轮岗名额有限，你在柜台多待了一年半，每天重复同样的业务。",
+      "probability": 0.35,
+      "percentileShift": -22,
+      "tone": "challenge",
+      "copingTip": "利用这段时间考取理财和信贷相关证书，主动申请轮岗；柜面经验对以后做客户经理很有用。"
+    },
+    {
+      "id": "big_client",
+      "stage": "year3",
+      "title": "拉来了一个大企业客户",
+      "description": "你跑了这家企业十几趟，老板终于在开户单上签了字。",
+      "probability": 0.16,
+      "percentileShift": 29,
+      "tone": "positive"
+    },
+    {
+      "id": "kpi_pressure",
+      "stage": "year3",
+      "title": "季度考核压力很大",
+      "description": "季末最后一周，你把通讯录从头到尾打了一遍。",
+      "probability": 0.45,
+      "percentileShift": -10,
+      "tone": "neutral"
+    },
+    {
+      "id": "branch_closed",
+      "stage": "year5",
+      "title": "所在网点被合并",
+      "description": "线上业务越来越多，你们网点和隔壁网点合并了。",
+      "probability": 0.25,
+      "percentileShift": -26,
+      "tone": "challenge",
+      "copingTip": "主动申请调往对公或风控岗位，或者转向专业的财富管理方向，这些岗位的需求更稳定。"
+    },
+    {
+      "id": "vice_president",
+      "stage": "year10",
+      "title": "被提拔为支行副行长",
+      "description": "任命文件下来那天，老行长拍了拍你的肩膀。",
+      "probability": 0.12,
+      "percentileShift": 26,
+      "tone": "positive"
+    }
+  ],
+  "storyChapters": [
+    {
+      "chapter": "prologue",
+      "template": "{year}年夏天，{province}。亲戚们都说学金融好，你在志愿表上写下了“{major}”。"
+    },
+    {
+      "chapter": "y1",
+      "template": "大一，你发现金融不只是炒股。高数课上，你第一次觉得数学也和钱有关。"
+    },
+    {
+      "chapter": "y3",
+      "template": "大三，{age}岁。同学们在考证、参加商赛、投实习，你的简历一点点变厚。"
+    },
+    {
+      "chapter": "grad",
+      "template": "{year}年，毕业。银行秋招的笔试排满了你的周末。"
+    },
+    {
+      "chapter": "w3",
+      "template": "工作第3年，你在{city}的网点做{role}。每天和客户打交道，季度末最忙。同岗位月薪中位数约{$stages[0].salary.p50}元。"
+    },
+    {
+      "chapter": "w5",
+      "template": "{age}岁，工作第5年。你手里有了一批老客户，有人家里的大事会先打电话问你。"
+    },
+    {
+      "chapter": "w10",
+      "template": "{year}年，{age}岁。你成了{ending_role}。"
+    },
+    {
+      "chapter": "epilogue",
+      "template": "这是你在 {universe} 里的一种结局。换一个种子，故事可能完全不同。"
+    }
+  ],
+  "artifacts": [
+    {
+      "chapter": "grad",
+      "type": "offer",
+      "data": {
+        "org": "{city}某银行",
+        "title": "录用通知",
+        "position": "管理培训生",
+        "text": "恭喜你通过本行校园招聘，请于七月初到分行报到参加入职培训。"
+      }
+    },
+    {
+      "chapter": "w3",
+      "type": "chat",
+      "data": {
+        "title": "支行工作群",
+        "messages": [
+          {
+            "from": "them",
+            "name": "行长",
+            "text": "这个月存款任务还差一点，大家再加把劲"
+          },
+          {
+            "from": "them",
+            "name": "同事小李",
+            "text": "我明天去回访两个老客户"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "我下午去那家企业上门办代发"
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "w5",
+      "type": "payslip",
+      "data": {
+        "company": "某银行",
+        "period": "工作第5年 · 12月",
+        "grossRef": "stages[1].salary.p50",
+        "lowRef": "stages[1].salary.p10",
+        "highRef": "stages[1].salary.p90"
+      }
+    },
+    {
+      "chapter": "w10",
+      "type": "moments",
+      "data": {
+        "author": "我",
+        "text": "十年了，第一次带着孩子来看我上班的地方",
+        "images": [
+          "🏦",
+          "🧒"
+        ],
+        "time": "周六 上午 10:30",
+        "likes": [
+          "老行长",
+          "大学室友",
+          "爸爸"
+        ]
+      }
+    }
+  ],
+  "futureSelfFAQ": {
+    "regret": "不太后悔。工作稳定，在家附近，能照顾家里。偶尔羡慕去大城市的同学，但各有各的难处。",
+    "tired": "季末和年底累，平时还好，基本能按时下班。考核压力一直都在。",
+    "college": "多练沟通，多去实习。数学别丢，会计和财务分析以后真的会用到。",
+    "again": "可能还会选，但我会更早想清楚是做客户还是做风控。这只是很多种可能里的一种。",
+    "life": "我在{city}。第10年同岗位月薪中位数约{$stages[2].salary.p50}元，在本地算中等偏上，生活压力不大。"
+  },
+  "reunionLine": "刚开完季度会，任务又涨了，大家理财找我啊。"
+}

@@ -1,0 +1,184 @@
+{
+  "events": [
+    {
+      "id": "moot_court",
+      "stage": "university",
+      "title": "代表学校参加模拟法庭比赛",
+      "description": "你在决赛的最后陈述里引用了一个冷门判例，评委抬头看了你一眼。",
+      "probability": 0.26,
+      "percentileShift": 19,
+      "tone": "positive"
+    },
+    {
+      "id": "bar_fail",
+      "stage": "university",
+      "title": "第一次法考没过",
+      "description": "客观题差了四分。你把错题本又翻了一遍，决定明年再来。",
+      "probability": 0.35,
+      "percentileShift": -22,
+      "tone": "challenge",
+      "copingTip": "法考二战很常见，第二年通过率明显更高。可以先做律师助理，边工作边准备。"
+    },
+    {
+      "id": "big_firm",
+      "stage": "graduation",
+      "title": "进了一家大型律所",
+      "description": "入职第一周，你做了三十份尽调表格，但也见到了只在新闻里看过的项目。",
+      "probability": 0.21,
+      "percentileShift": 29,
+      "tone": "positive"
+    },
+    {
+      "id": "small_firm",
+      "stage": "graduation",
+      "title": "从一家小律所起步",
+      "description": "律所只有六个人，你什么案子都接，第一个月就跑了五次法院。",
+      "probability": 0.4,
+      "percentileShift": -10,
+      "tone": "neutral"
+    },
+    {
+      "id": "first_win",
+      "stage": "year3",
+      "title": "独立代理的案子胜诉了",
+      "description": "判决书送到的那天，当事人在电话里哭了。",
+      "probability": 0.32,
+      "percentileShift": 19,
+      "tone": "positive"
+    },
+    {
+      "id": "no_cases",
+      "stage": "year5",
+      "title": "案源一度很不稳定",
+      "description": "有三个月几乎没有新案子，你开始认真想要不要去企业做法务。",
+      "probability": 0.3,
+      "percentileShift": -26,
+      "tone": "challenge",
+      "copingTip": "专注一个细分领域积累口碑，或者转去企业法务、考公，司法经验在哪儿都用得上。"
+    },
+    {
+      "id": "niche_expert",
+      "stage": "year5",
+      "title": "在知识产权领域有了口碑",
+      "description": "一家科技公司的法务总监主动联系你，说是同行推荐的。",
+      "probability": 0.21,
+      "percentileShift": 26,
+      "tone": "positive"
+    },
+    {
+      "id": "ai_drafting",
+      "stage": "year10",
+      "title": "AI 起草合同成了标配",
+      "description": "律所买了一套合同审查工具，助理的工作量少了一半。",
+      "probability": 0.4,
+      "percentileShift": -8,
+      "tone": "neutral"
+    }
+  ],
+  "storyChapters": [
+    {
+      "chapter": "prologue",
+      "template": "{year}年夏天，{province}。你看了很多律政剧，也读过一些判决书。你在志愿表上写下了“{major}”。"
+    },
+    {
+      "chapter": "y1",
+      "template": "大一，你开始读大部头。法理学课上老师问“什么是正义”，全班沉默了很久。"
+    },
+    {
+      "chapter": "y3",
+      "template": "大三，{age}岁。法考是这一年的主线，你的书桌上堆满了真题。"
+    },
+    {
+      "chapter": "grad",
+      "template": "{year}年，毕业。律所、法院、读研，每条路上都有你的同学。"
+    },
+    {
+      "chapter": "w3",
+      "template": "工作第3年，你在{city}跟着合伙人做案子，写文书、查资料、跑法院。同岗位月薪中位数约{$stages[0].salary.p50}元。"
+    },
+    {
+      "chapter": "w5",
+      "template": "{age}岁，工作第5年。你开始有自己的客户，收入随案子起伏。"
+    },
+    {
+      "chapter": "w10",
+      "template": "{year}年，{age}岁。你成了{ending_role}。"
+    },
+    {
+      "chapter": "epilogue",
+      "template": "这是你在 {universe} 里的一种结局。换一个种子，故事可能完全不同。"
+    }
+  ],
+  "artifacts": [
+    {
+      "chapter": "y3",
+      "type": "moments",
+      "data": {
+        "author": "我",
+        "text": "法考倒计时 30 天，图书馆闭馆音乐响了",
+        "images": [
+          "📚",
+          "🌙"
+        ],
+        "time": "晚上 10:00",
+        "likes": [
+          "室友",
+          "辩论队学长"
+        ]
+      }
+    },
+    {
+      "chapter": "grad",
+      "type": "offer",
+      "data": {
+        "org": "{city}某律师事务所",
+        "title": "录用通知",
+        "position": "律师助理",
+        "text": "经面试评估，我所决定录用你为律师助理，期待你的加入。"
+      }
+    },
+    {
+      "chapter": "w3",
+      "type": "chat",
+      "data": {
+        "title": "当事人张先生",
+        "messages": [
+          {
+            "from": "them",
+            "name": "张先生",
+            "text": "律师，判决下来了吗"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "下来了，我们赢了"
+          },
+          {
+            "from": "them",
+            "name": "张先生",
+            "text": "谢谢你，这一年辛苦了"
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "w5",
+      "type": "payslip",
+      "data": {
+        "company": "某律师事务所",
+        "period": "工作第5年 · 10月",
+        "grossRef": "stages[1].salary.p50",
+        "lowRef": "stages[1].salary.p10",
+        "highRef": "stages[1].salary.p90"
+      }
+    }
+  ],
+  "futureSelfFAQ": {
+    "regret": "不后悔。前几年很难，收入低、加班多。但帮当事人争取到公平的结果时，会觉得这一切值得。",
+    "tired": "累，开庭、出差、改文书，时间不太固定。做非诉的同学比我更忙。",
+    "college": "多读多写，参加模拟法庭和辩论。法考早点准备，别拖到最后一年。",
+    "again": "可能还会选。不过我会更早选一个细分领域深耕。这只是很多种可能里的一种。",
+    "life": "我在{city}。第10年同岗位月薪中位数约{$stages[2].salary.p50}元，差距很大，成为合伙人的能到{$stages[2].salary.p90}元。"
+  },
+  "reunionLine": "刚开完庭，对方律师是咱们隔壁班的，你们猜谁赢了。"
+}

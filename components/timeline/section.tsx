@@ -17,7 +17,7 @@ export function TimelineSection({ dot, title, sub, children, className, accent }
       <span
         className={cn(
           "absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold ring-4 ring-[var(--bg)] md:h-10 md:w-10 md:text-sm",
-          accent ? "bg-brand text-white" : "bg-neutral-900 text-white",
+          accent ? "bg-brand text-snow" : "bg-neutral-900 text-white",
         )}
       >
         {dot}

@@ -1,4 +1,5 @@
 import type { CareerPath, SchoolTier } from "@/types";
+import { resolveRef } from "./story";
 
 const TIERS: SchoolTier[] = ["T1", "T2", "T3", "T4", "T5"];
 const METRICS = ["income", "stability", "freedom", "workIntensity", "growth", "aiResilience"];
@@ -74,5 +75,31 @@ export function validatePath(p: CareerPath): string[] {
   });
 
   strArr(p.highSchoolPrep, "highSchoolPrep");
+
+  const STAGES = ["university", "graduation", "year3", "year5", "year10"];
+  const CHAPTER_IDS = ["prologue", "y1", "y3", "grad", "w3", "w5", "w10", "epilogue"];
+  req(Array.isArray(p.events) && p.events.length >= 8 && p.events.length <= 12, "events 应为8到12个");
+  const challenges = (p.events ?? []).filter((e) => e.tone === "challenge");
+  req(challenges.length <= Math.floor((p.events?.length ?? 0) / 3), "challenge 类事件不超过1/3");
+  STAGES.forEach((st) => req(p.events?.some((e) => e.stage === st), `events 缺少阶段 ${st}`));
+  p.events?.forEach((e) => {
+    req(STAGES.includes(e.stage) && e.probability > 0 && e.probability <= 1 && typeof e.percentileShift === "number", `event ${e.id}`);
+    req(["positive", "neutral", "challenge"].includes(e.tone), `event ${e.id}.tone`);
+    if (e.tone === "challenge") req(typeof e.copingTip === "string" && e.copingTip.length > 0, `challenge 事件 ${e.id} 必须有 copingTip`);
+    src(e.source, `event ${e.id}`);
+  });
+  req(Array.isArray(p.storyChapters) && CHAPTER_IDS.every((c) => p.storyChapters.some((s) => s.chapter === c)), "storyChapters 需覆盖全部章节");
+  req(Array.isArray(p.artifacts) && p.artifacts.every((a) => CHAPTER_IDS.includes(a.chapter) && ["moments", "chat", "payslip", "calendar", "offer"].includes(a.type)), "artifacts");
+  p.artifacts?.forEach((a) => {
+    // 工资条等数字字段只能是数据引用，渲染时读取
+    Object.entries(a.data).forEach(([k, v]) => {
+      if (k.endsWith("Ref")) req(typeof v === "string" && typeof resolveRef(p, v) === "number", `artifact ${a.type}.${k} 引用无效`);
+      else req(typeof v !== "number", `artifact ${a.type}.${k} 不能直接写数字`);
+    });
+  });
+  const refs = [...(p.storyChapters ?? []).map((c) => c.template), ...Object.values(p.futureSelfFAQ ?? {})].flatMap((t) => Array.from(t.matchAll(/\{\$([^}]+)\}/g)).map((m) => m[1]));
+  refs.forEach((r) => req(typeof resolveRef(p, r) === "number", `模板引用 ${r} 无效`));
+  req(["regret", "tired", "college", "again", "life"].every((k) => typeof p.futureSelfFAQ?.[k as keyof typeof p.futureSelfFAQ] === "string"), "futureSelfFAQ 需覆盖5个预设问题");
+  req(typeof p.reunionLine === "string", "reunionLine");
   return errs;
 }

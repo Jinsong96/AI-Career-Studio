@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 export function Logo({ className }: { className?: string }) {
   return (
     <Link href="/" className={cn("flex items-center gap-2 font-semibold text-neutral-900", className)}>
-      <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand text-white">
+      <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand text-snow">
         <Sparkles className="h-4 w-4" />
       </span>
       <span>职业平行人生</span>
@@ -52,10 +52,10 @@ export function SiteHeader() {
         <button
           onClick={() => {
             loadDemo();
-            router.push("/results");
+            router.push("/path/cs-backend/story");
           }}
           className="flex h-9 cursor-pointer items-center gap-1.5 rounded-full border border-neutral-200 px-3 text-xs font-medium text-neutral-700 hover:border-neutral-400"
-          title="自动填入示例学生：河南，位次35000，物理+化学+生物"
+          title="示例学生：河南，位次35000，物理+化学+生物"
         >
           <PlayCircle className="h-3.5 w-3.5" />
           一键演示

@@ -1,4 +1,4 @@
-import type { CareerPath, Major, SchoolTier } from "@/types";
+import type { CareerPath, LifeEvent, Major, SchoolTier, Source } from "@/types";
 import majorsJson from "@/data/majors.json";
 import tagsJson from "@/data/tags.json";
 import tiersJson from "@/data/school-tiers.json";
@@ -20,12 +20,46 @@ import psySchool from "@/data/paths/psy-school.json";
 import psyUx from "@/data/paths/psy-ux.json";
 import vetPet from "@/data/paths/vet-pet.json";
 import vetLivestock from "@/data/paths/vet-livestock.json";
+import csBackendStory from "@/data/story/cs-backend.json";
+import csAiStory from "@/data/story/cs-ai.json";
+import medDoctorStory from "@/data/story/med-doctor.json";
+import medPharmaStory from "@/data/story/med-pharma.json";
+import finBankStory from "@/data/story/fin-bank.json";
+import finResearchStory from "@/data/story/fin-research.json";
+import lawLawyerStory from "@/data/story/law-lawyer.json";
+import lawCourtStory from "@/data/story/law-court.json";
+import chnTeacherStory from "@/data/story/chn-teacher.json";
+import chnMediaStory from "@/data/story/chn-media.json";
+import eeGridStory from "@/data/story/ee-grid.json";
+import eeNewenergyStory from "@/data/story/ee-newenergy.json";
+import psySchoolStory from "@/data/story/psy-school.json";
+import psyUxStory from "@/data/story/psy-ux.json";
+import vetPetStory from "@/data/story/vet-pet.json";
+import vetLivestockStory from "@/data/story/vet-livestock.json";
 
-// JSON 导入会把字面量拓宽为 string，这里统一断言；结构由 lib/validate.ts 在测试中做运行时校验
-export const PATHS = [
+const BASE = [
   csBackend, csAi, medDoctor, medPharma, finBank, finResearch, lawLawyer, lawCourt,
   chnTeacher, chnMedia, eeGrid, eeNewenergy, psySchool, psyUx, vetPet, vetLivestock,
-] as unknown as CareerPath[];
+];
+const STORY: Record<string, unknown> = {
+  "cs-backend": csBackendStory, "cs-ai": csAiStory, "med-doctor": medDoctorStory, "med-pharma": medPharmaStory,
+  "fin-bank": finBankStory, "fin-research": finResearchStory, "law-lawyer": lawLawyerStory, "law-court": lawCourtStory,
+  "chn-teacher": chnTeacherStory, "chn-media": chnMediaStory, "ee-grid": eeGridStory, "ee-newenergy": eeNewenergyStory,
+  "psy-school": psySchoolStory, "psy-ux": psyUxStory, "vet-pet": vetPetStory, "vet-livestock": vetLivestockStory,
+};
+
+const EVENT_SOURCE: Source = { name: "示例：从业者访谈整理（待替换）", year: 2024, confidence: "demo" };
+
+// 故事数据（事件、物品、章节模板）单独存放在 data/story，加载时合并；事件未写来源时使用默认示例来源
+// JSON 导入会把字面量拓宽为 string，这里统一断言；结构由 lib/validate.ts 在测试中做运行时校验
+export const PATHS = BASE.map((p) => {
+  const story = STORY[p.id] as unknown as Omit<CareerPath, keyof typeof p>;
+  return {
+    ...p,
+    ...story,
+    events: (story.events as Partial<LifeEvent>[]).map((e) => ({ source: EVENT_SOURCE, ...e })),
+  };
+}) as unknown as CareerPath[];
 
 export const MAJORS = majorsJson as Major[];
 export const TAG_GROUPS = tagsJson.groups;

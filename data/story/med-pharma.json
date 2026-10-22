@@ -1,0 +1,184 @@
+{
+  "events": [
+    {
+      "id": "stats_good",
+      "stage": "university",
+      "title": "医学统计学学得很好",
+      "description": "你帮学姐分析了一组临床数据，她把你的名字写进了致谢。",
+      "probability": 0.25,
+      "percentileShift": 16,
+      "tone": "positive"
+    },
+    {
+      "id": "english_weak",
+      "stage": "university",
+      "title": "英语成了短板",
+      "description": "第一次读英文临床试验论文，一页查了四十个单词。",
+      "probability": 0.3,
+      "percentileShift": -16,
+      "tone": "challenge",
+      "copingTip": "每天读一篇摘要，坚持半年就会明显不同。药企很看重英语，但这是能练出来的。"
+    },
+    {
+      "id": "cra_start",
+      "stage": "graduation",
+      "title": "从临床监查员起步",
+      "description": "第一份工作是去各地医院核对试验数据，你一个月出差了二十天。",
+      "probability": 0.45,
+      "percentileShift": -10,
+      "tone": "neutral"
+    },
+    {
+      "id": "mnc_offer",
+      "stage": "graduation",
+      "title": "拿到了外资药企的管培生 offer",
+      "description": "面试是全英文的，你讲完自己的研究，面试官笑着说“Welcome”。",
+      "probability": 0.18,
+      "percentileShift": 29,
+      "tone": "positive"
+    },
+    {
+      "id": "drug_approved",
+      "stage": "year3",
+      "title": "参与的新药获批上市",
+      "description": "获批消息出来那天，项目组的群里一直在刷屏。",
+      "probability": 0.25,
+      "percentileShift": 22,
+      "tone": "positive"
+    },
+    {
+      "id": "pipeline_cut",
+      "stage": "year5",
+      "title": "负责的产品线被砍掉",
+      "description": "总部一纸通知，你做了两年的项目停了。",
+      "probability": 0.25,
+      "percentileShift": -26,
+      "tone": "challenge",
+      "copingTip": "医学事务经验可以迁移到其他治疗领域或医疗器械公司，先盘点自己的专业积累再找机会。"
+    },
+    {
+      "id": "msl_promo",
+      "stage": "year5",
+      "title": "成为医学联络官",
+      "description": "你第一次在学术会议上做报告，台下坐着好几位你读过论文的专家。",
+      "probability": 0.2,
+      "percentileShift": 22,
+      "tone": "positive"
+    },
+    {
+      "id": "industry_shift",
+      "stage": "year10",
+      "title": "行业政策调整，公司开始收缩",
+      "description": "销售预期下调，团队招聘冻结，大家都在观望。",
+      "probability": 0.35,
+      "percentileShift": -10,
+      "tone": "neutral"
+    }
+  ],
+  "storyChapters": [
+    {
+      "chapter": "prologue",
+      "template": "{year}年夏天，{province}。你填了“{major}”。那时你还不知道，医学生不只有当医生这一条路。"
+    },
+    {
+      "chapter": "y1",
+      "template": "大一，你和临床的同学一起啃基础医学。药理课上老师讲新药研发要十年，你听得很认真。"
+    },
+    {
+      "chapter": "y3",
+      "template": "大三，{age}岁。医学统计学让你发现，读懂一篇临床试验论文需要很多功夫。你开始对研究比对病房更感兴趣。"
+    },
+    {
+      "chapter": "grad",
+      "template": "{year}年，毕业。你在医院和药企之间犹豫了很久。"
+    },
+    {
+      "chapter": "w3",
+      "template": "工作第3年，你常在{city}和各地医院之间出差。高铁上读论文成了习惯。同岗位月薪中位数约{$stages[0].salary.p50}元。"
+    },
+    {
+      "chapter": "w5",
+      "template": "{age}岁，工作第5年。你开始和专家讨论研究数据，工作时间比在医院时规律很多。"
+    },
+    {
+      "chapter": "w10",
+      "template": "{year}年，{age}岁。你成了{ending_role}。"
+    },
+    {
+      "chapter": "epilogue",
+      "template": "这是你在 {universe} 里的一种结局。换一个种子，故事可能完全不同。"
+    }
+  ],
+  "artifacts": [
+    {
+      "chapter": "grad",
+      "type": "chat",
+      "data": {
+        "title": "室友",
+        "messages": [
+          {
+            "from": "them",
+            "name": "室友",
+            "text": "你真不去医院了？"
+          },
+          {
+            "from": "me",
+            "name": "我",
+            "text": "想试试药企，做研究那一侧"
+          },
+          {
+            "from": "them",
+            "name": "室友",
+            "text": "也挺好，以后新药上市记得告诉我"
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "w3",
+      "type": "moments",
+      "data": {
+        "author": "我",
+        "text": "高铁上的第 N 篇论文，窗外是不认识的城市",
+        "images": [
+          "🚄",
+          "📄"
+        ],
+        "time": "下午 4:10",
+        "likes": [
+          "同事 Amy",
+          "大学室友"
+        ]
+      }
+    },
+    {
+      "chapter": "w5",
+      "type": "payslip",
+      "data": {
+        "company": "某医药企业",
+        "period": "工作第5年 · 9月",
+        "grossRef": "stages[1].salary.p50",
+        "lowRef": "stages[1].salary.p10",
+        "highRef": "stages[1].salary.p90"
+      }
+    },
+    {
+      "chapter": "w10",
+      "type": "offer",
+      "data": {
+        "org": "某医药企业",
+        "title": "晋升通知",
+        "position": "医学经理",
+        "text": "鉴于你在过去几年中的表现，公司决定晋升你为医学经理。"
+      }
+    }
+  ],
+  "futureSelfFAQ": {
+    "regret": "不后悔，但偶尔会想如果当了医生会怎样。这条路节奏更规律，也能用上医学知识。",
+    "tired": "出差是真累，一个月有一半时间在路上。好处是不用值夜班。",
+    "college": "英语和统计一定要学好，药企很看重这两样。有机会就去参与真实的临床研究。",
+    "again": "可能还会选，也可能先去医院做几年再转。这只是很多种可能里的一种。",
+    "life": "我在{city}。第10年同岗位月薪中位数约{$stages[2].salary.p50}元。生活还算稳定，就是行业变化要一直留心。"
+  },
+  "reunionLine": "刚开完全球电话会，英文说得舌头都麻了。"
+}
