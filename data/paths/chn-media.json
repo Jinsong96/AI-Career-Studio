@@ -1,0 +1,127 @@
+{
+  "id": "chn-media",
+  "majorId": "chn",
+  "title": "新媒体内容编辑/运营",
+  "tagline": "把好内容写出来，让对的人看到",
+  "tags": ["喜欢写作", "喜欢阅读", "喜欢艺术设计", "大城市", "成长空间", "喜欢表达和辩论", "喜欢分析数据"],
+  "tierFit": ["T2", "T3", "T4", "T5"],
+  "tierNotes": {
+    "T1": "多进入头部媒体、互联网大厂内容部门，或做品牌策略。",
+    "T2": "大厂内容运营和头部媒体是可以争取的方向，作品集很重要。",
+    "T3": "学校背景影响不大，作品和实习经历是关键。",
+    "T4": "可以从中小公司和MCN机构起步，用作品说话。",
+    "T5": "从短视频剪辑、社群运营等执行岗位起步，靠成绩晋升。"
+  },
+  "university": {
+    "coreCourses": ["现代汉语", "中国古代文学", "中国现当代文学", "写作学", "文学概论", "新闻采访与写作", "传播学概论"],
+    "hardestCourses": ["古代汉语", "文学概论"],
+    "pressureLevel": 2,
+    "switchMajorDifficulty": "转入容易，转出容易",
+    "postgradRate": "约20%-30%",
+    "abroadRate": "约3%-8%",
+    "yearByYear": [
+      { "year": 1, "description": "读大量经典，同时开始运营自己的公众号或小红书账号。" },
+      { "year": 2, "description": "加入校媒，学会采访、写稿、拍摄和剪辑。" },
+      { "year": 3, "description": "去互联网公司或媒体实习，第一次写出10万+的文章。" },
+      { "year": 4, "description": "整理作品集，参加秋招，部分人选择考研或考编。" }
+    ],
+    "source": { "name": "示例：高校汉语言文学专业培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "直接就业", "percent": 55 },
+      { "label": "国内读研", "percent": 22 },
+      { "label": "考公/选调", "percent": 15 },
+      { "label": "出国", "percent": 4 },
+      { "label": "其他", "percent": 4 }
+    ],
+    "source": { "name": "示例：毕业生就业质量年度报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["内容编辑", "新媒体运营"],
+      "salary": { "p10": 5500, "p50": 9000, "p90": 15000, "source": { "name": "示例：招聘平台公开薪资区间（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["北京", "上海", "杭州", "广州"],
+      "lifeDescription": "每天追热点、写选题、看数据，下班后也要关注评论区和热搜。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["内容主编", "品牌内容经理"],
+      "salary": { "p10": 8000, "p50": 14000, "p90": 25000, "source": { "name": "示例：招聘平台公开薪资区间（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["北京", "上海", "杭州", "广州"],
+      "lifeDescription": "带一个小团队，负责账号或品牌的内容策略，要对数据和商业结果负责。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["内容总监", "品牌负责人", "独立创作者"],
+      "salary": { "p10": 10000, "p50": 22000, "p90": 50000, "source": { "name": "示例：招聘平台公开薪资区间（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["北京", "上海", "杭州", "广州", "成都"],
+      "lifeDescription": "分化明显：有人成为品牌或内容负责人，有人做独立博主，也有人转向产品和市场。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 50000, "role": "大厂内容总监/头部独立创作者",
+      "lifeQuality": "做的内容有很大影响力，时间安排相对自由，收入较高但有波动。",
+      "howPeopleGetHere": ["持续输出，形成了个人风格和代表作", "抓住了一个平台的红利期", "懂内容也懂商业和数据"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 22000, "role": "公司品牌内容经理",
+      "lifeQuality": "在大城市过着普通白领的生活，热点来了要加班，平时节奏尚可。",
+      "howPeopleGetHere": ["在几家公司之间积累经验", "从执行做到管理"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 10000, "role": "小公司内容执行",
+      "lifeQuality": "平台规则变化快，AI生成内容增加了竞争，工作不太稳定。",
+      "howPeopleGetHere": ["长期只做执行，没有形成专业方向", "所在平台或公司流量下降"],
+      "pivotOptions": ["转向品牌市场或公关", "进入政府和企事业单位做宣传工作", "做垂直领域的专业内容（如教育、医疗科普）", "转向产品运营或用户运营"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第4年的品牌内容编辑，杭州",
+    "schedule": [
+      { "time": "10:00", "activity": "到公司刷热搜和竞品账号，找今天的选题灵感", "mood": "focus" },
+      { "time": "11:00", "activity": "选题会上提了三个点子，被毙了两个", "mood": "stress" },
+      { "time": "13:30", "activity": "写一篇推文，用AI生成了几个标题再自己改", "mood": "focus" },
+      { "time": "15:30", "activity": "和设计师一起调整封面图", "mood": "social" },
+      { "time": "17:00", "activity": "复盘上周的数据，一篇文章意外爆了", "mood": "happy" },
+      { "time": "19:30", "activity": "下班路上突然出现热点，在地铁上改稿", "mood": "tired" }
+    ],
+    "bestPart": "写的东西被很多人转发，评论区里有人说被打动了。",
+    "hardestPart": "要一直追热点，数据不好的时候很焦虑。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["基础文案撰写", "标题和摘要生成", "简单的配图和排版"],
+    "resilientTasks": ["选题判断和创意", "有个人风格的深度内容", "品牌策略和用户洞察"],
+    "skillsToBuild": ["独特的观点和表达风格", "数据分析能力", "熟练使用AI创作工具", "某个垂直领域的专业知识"],
+    "summary": "AI冲击最大的领域之一，只会写基础文案的岗位在减少，有判断力和风格的人更有价值。"
+  },
+  "metrics": { "income": 50, "stability": 40, "freedom": 70, "workIntensity": 65, "growth": 62, "aiResilience": 35 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "毕业后你会去哪里？",
+      "options": [
+        { "id": "company", "label": "互联网/品牌公司", "description": "内容运营岗", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "成长快、视野广，但节奏快、稳定性一般。" },
+        { "id": "system", "label": "考编进宣传部门", "description": "事业单位/融媒体中心", "metricsDelta": { "stability": 35, "income": -10, "freedom": -15, "workIntensity": -15 }, "salaryMultiplier": 0.8, "tradeoff": "稳定、有保障，但内容风格相对固定，收入增长平缓。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 3, "typicalRoles": ["融媒体中心编辑"], "cities": ["地级市", "省会城市"], "lifeDescription": "负责单位的公众号和视频号，节奏稳定，偶尔要加班赶重要活动。" },
+            { "yearsAfterGrad": 10, "typicalRoles": ["宣传部门负责人"], "cities": ["地级市", "省会城市"], "lifeDescription": "在单位里是写作和宣传的骨干，生活稳定。" }
+          ] }
+      ]
+    },
+    {
+      "id": "indie-choice", "atStage": "工作第3年", "question": "工作3年后，你会尝试做独立创作者吗？",
+      "options": [
+        { "id": "stay", "label": "继续在公司", "description": "向管理发展", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "收入稳定，向主编和总监方向发展。" },
+        { "id": "indie", "label": "全职做博主", "description": "做自己的账号", "metricsDelta": { "freedom": 25, "stability": -25, "income": 5 }, "salaryMultiplier": 1.1, "tradeoff": "收入上限高、时间自由，但收入非常不稳定，大多数人做不起来。" }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["多读多写，培养对文字的敏感度", "可以尝试运营一个自己的账号", "学习基本的拍摄和剪辑", "选科：没有硬性限制"],
+  "posterMoment": "17:00 复盘数据，发现上周一篇文章意外爆了"
+}

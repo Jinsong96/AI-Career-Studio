@@ -1,0 +1,10 @@
+[
+  { "id": "cs", "name": "计算机科学与技术", "category": "工学", "requiredSubjects": ["物理"], "tags": ["喜欢编程", "喜欢逻辑推理", "喜欢数学"], "duration": 4, "pathIds": ["cs-backend", "cs-ai"] },
+  { "id": "med", "name": "临床医学", "category": "医学", "requiredSubjects": ["物理", "化学"], "tags": ["对医学好奇", "想帮助别人", "受人尊重"], "duration": 5, "pathIds": ["med-doctor", "med-pharma"] },
+  { "id": "fin", "name": "金融学", "category": "经济学", "requiredSubjects": [], "tags": ["想赚大钱", "喜欢分析数据", "喜欢和人打交道"], "duration": 4, "pathIds": ["fin-bank", "fin-research"] },
+  { "id": "law", "name": "法学", "category": "法学", "requiredSubjects": [], "tags": ["关心社会公平", "喜欢表达和辩论", "喜欢阅读"], "duration": 4, "pathIds": ["law-lawyer", "law-court"] },
+  { "id": "chn", "name": "汉语言文学（师范）", "category": "文学", "requiredSubjects": [], "tags": ["喜欢写作", "喜欢阅读", "喜欢教书育人"], "duration": 4, "pathIds": ["chn-teacher", "chn-media"] },
+  { "id": "ee", "name": "电气工程及其自动化", "category": "工学", "requiredSubjects": ["物理"], "tags": ["喜欢新能源和硬件", "喜欢动手做东西", "想要稳定"], "duration": 4, "pathIds": ["ee-grid", "ee-newenergy"] },
+  { "id": "psy", "name": "心理学", "category": "理学", "requiredSubjects": [], "tags": ["对心理感兴趣", "想帮助别人", "喜欢和人打交道"], "duration": 4, "pathIds": ["psy-school", "psy-ux"] },
+  { "id": "vet", "name": "动物医学", "category": "农学", "requiredSubjects": ["化学"], "tags": ["喜欢动物", "对医学好奇", "喜欢动手做东西"], "duration": 5, "pathIds": ["vet-pet", "vet-livestock"] }
+]

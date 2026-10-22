@@ -1,0 +1,18 @@
+[
+  { "id": "cs-backend", "majorId": "cs", "title": "互联网后端开发工程师", "featured": true },
+  { "id": "cs-ai", "majorId": "cs", "title": "算法/AI工程师" },
+  { "id": "med-doctor", "majorId": "med", "title": "三甲医院临床医生" },
+  { "id": "med-pharma", "majorId": "med", "title": "医药企业医学事务/研发" },
+  { "id": "fin-bank", "majorId": "fin", "title": "银行客户经理" },
+  { "id": "fin-research", "majorId": "fin", "title": "证券/投研分析师" },
+  { "id": "law-lawyer", "majorId": "law", "title": "律所律师" },
+  { "id": "law-court", "majorId": "law", "title": "法院/检察院干警" },
+  { "id": "chn-teacher", "majorId": "chn", "title": "中学语文教师" },
+  { "id": "chn-media", "majorId": "chn", "title": "新媒体内容编辑/运营" },
+  { "id": "ee-grid", "majorId": "ee", "title": "国家电网工程师" },
+  { "id": "ee-newenergy", "majorId": "ee", "title": "新能源企业研发工程师" },
+  { "id": "psy-school", "majorId": "psy", "title": "学校心理老师" },
+  { "id": "psy-ux", "majorId": "psy", "title": "用户研究员/HR" },
+  { "id": "vet-pet", "majorId": "vet", "title": "宠物医生" },
+  { "id": "vet-livestock", "majorId": "vet", "title": "畜牧/动保企业技术岗" }
+]

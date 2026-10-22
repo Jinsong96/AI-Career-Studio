@@ -1,0 +1,129 @@
+{
+  "id": "ee-grid",
+  "majorId": "ee",
+  "title": "国家电网工程师",
+  "tagline": "守护千家万户的灯火，从基层变电站起步",
+  "tags": ["想要稳定", "喜欢新能源和硬件", "喜欢动手做东西", "想回家乡发展", "不想坐办公室", "受人尊重"],
+  "tierFit": ["T2", "T3", "T4"],
+  "tierNotes": {
+    "T1": "可以进入电网总部、省公司或研究院，也有很多人选择读研。",
+    "T2": "电力类“老八校”等院校在电网招聘中很有优势，省公司机会多。",
+    "T3": "省属电力类院校是地市供电公司的主要来源。",
+    "T4": "多进入县级供电公司，或电网下属的集体企业。",
+    "T5": "多为供电所一线运维、抄表等岗位。"
+  },
+  "university": {
+    "coreCourses": ["电路原理", "电机学", "电力系统分析", "电力电子技术", "自动控制原理", "继电保护", "高电压技术"],
+    "hardestCourses": ["电路原理", "电机学", "电力系统分析"],
+    "pressureLevel": 4,
+    "switchMajorDifficulty": "转入较难，转出相对容易",
+    "postgradRate": "约35%-45%",
+    "abroadRate": "约2%-5%",
+    "yearByYear": [
+      { "year": 1, "description": "高数和大学物理，为后面的专业课打基础。" },
+      { "year": 2, "description": "电路和电机学是硬骨头，挂科率不低。" },
+      { "year": 3, "description": "去变电站和电厂实习，第一次看到大型变压器。" },
+      { "year": 4, "description": "准备电网统一考试，或者考研到更好的电力院校。" }
+    ],
+    "source": { "name": "示例：高校电气工程专业培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "直接就业", "percent": 55 },
+      { "label": "国内读研", "percent": 38 },
+      { "label": "考公/选调", "percent": 3 },
+      { "label": "出国", "percent": 2 },
+      { "label": "其他", "percent": 2 }
+    ],
+    "source": { "name": "示例：毕业生就业质量年度报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["变电运维", "配电检修"],
+      "salary": { "p10": 6000, "p50": 9000, "p90": 13000, "source": { "name": "示例：能源央企薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["县城", "地级市"],
+      "lifeDescription": "先在基层供电所或变电站锻炼，倒班值守，遇到恶劣天气要抢修。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["技术专责", "班组长"],
+      "salary": { "p10": 8000, "p50": 11000, "p90": 16000, "source": { "name": "示例：能源央企薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["地级市", "省会城市"],
+      "lifeDescription": "调到地市公司的技术岗位，工作稳定，福利完善，开始考虑结婚买房。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["高级工程师", "部门主管"],
+      "salary": { "p10": 10000, "p50": 14000, "p90": 22000, "source": { "name": "示例：能源央企薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["地级市", "省会城市"],
+      "lifeDescription": "在当地收入中上，工作稳定，社会认可度高，但晋升节奏比较慢。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 22000, "role": "省公司技术骨干/地市公司中层",
+      "lifeQuality": "在省会安家，工作稳定，有成就感，生活和工作平衡得较好。",
+      "howPeopleGetHere": ["毕业于电力强校，进入省公司", "在技术比武中表现突出", "主动承担重点工程"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 14000, "role": "地市供电公司工程师",
+      "lifeQuality": "收入在当地中上，有完善的福利，偶尔要值班和抢修。",
+      "howPeopleGetHere": ["通过电网统一考试", "从基层做起，按部就班地发展"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 10000, "role": "县级供电所一线员工",
+      "lifeQuality": "长期在基层，工作环境比较辛苦，晋升机会少。",
+      "howPeopleGetHere": ["分配到偏远地区", "没有找到调动机会"],
+      "pivotOptions": ["通过内部竞聘调到地市公司", "转向新能源企业，技术经验很受认可", "考取注册电气工程师，进入设计院", "考公进入能源管理部门"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第3年的变电运维工程师，河南某地级市",
+    "schedule": [
+      { "time": "08:00", "activity": "到变电站交接班，查看夜间的运行记录", "mood": "focus" },
+      { "time": "09:00", "activity": "戴好安全帽，按清单巡视设备", "mood": "focus" },
+      { "time": "11:00", "activity": "配合检修班做一次倒闸操作，每一步都要唱票复诵", "mood": "stress" },
+      { "time": "12:00", "activity": "和同事在站里食堂吃饭", "mood": "happy" },
+      { "time": "14:00", "activity": "整理设备缺陷记录，学习新的智能巡检系统", "mood": "focus" },
+      { "time": "17:30", "activity": "下班，周末和朋友去打球", "mood": "happy" }
+    ],
+    "bestPart": "暴雨后连夜抢修，看到小区的灯一盏盏亮起来。",
+    "hardestPart": "前几年在基层，要倒班和值守，遇到极端天气随时出动。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["常规巡检和数据记录", "抄表和计量", "报表统计"],
+    "resilientTasks": ["现场操作和故障处理", "电网规划和设计", "安全管理"],
+    "skillsToBuild": ["扎实的电气理论基础", "智能电网和数字化技能", "现场经验和安全意识", "项目管理"],
+    "summary": "智能巡检会替代部分重复工作，但现场处理和电网规划仍然离不开工程师。"
+  },
+  "metrics": { "income": 52, "stability": 92, "freedom": 30, "workIntensity": 50, "growth": 48, "aiResilience": 70 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "毕业后你会怎么选？",
+      "options": [
+        { "id": "direct", "label": "本科进电网", "description": "参加电网统一考试", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "早点稳定下来，但大概率从县级供电公司起步。" },
+        { "id": "master", "label": "读研再进电网", "description": "去电力强校读研", "metricsDelta": { "growth": 10, "income": 8 }, "salaryMultiplier": 1.15, "tradeoff": "更容易进入省公司和地市公司，但要多读2到3年。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 3, "typicalRoles": ["地市公司技术岗"], "cities": ["省会城市", "地级市"], "lifeDescription": "研究生毕业直接进入地市公司或省公司，基层锻炼的时间更短。" }
+          ] }
+      ]
+    },
+    {
+      "id": "move-choice", "atStage": "工作第3年", "question": "在基层工作3年后，你会怎么选？",
+      "options": [
+        { "id": "stay", "label": "继续留在电网", "description": "争取内部调动", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "稳定性非常好，但晋升要看机会。" },
+        { "id": "newenergy", "label": "跳槽到新能源企业", "description": "光伏、储能、电动车", "metricsDelta": { "income": 20, "stability": -30, "growth": 20, "workIntensity": 20 }, "salaryMultiplier": 1.4, "tradeoff": "收入和成长空间更大，但失去了央企的稳定性。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 5, "typicalRoles": ["储能系统工程师"], "cities": ["深圳", "常州", "合肥"], "lifeDescription": "电网经验很受新能源企业认可，节奏变快了，收入也明显提高。" }
+          ] }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["物理和数学是基础，尤其是电学部分", "动手能力很重要，可以尝试做电子小制作", "了解电网的招聘方式和地域特点", "选科：物理必选，化学推荐"],
+  "posterMoment": "暴雨夜抢修后，看着小区的灯一盏盏亮起来"
+}

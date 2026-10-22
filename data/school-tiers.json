@@ -1,0 +1,11 @@
+{
+  "note": "层次划分和薪资系数均为 Demo 示意值，不是真实录取或薪资数据",
+  "baseTier": "T3",
+  "tiers": [
+    { "tier": "T1", "name": "顶尖985", "salaryFactor": 1.35 },
+    { "tier": "T2", "name": "985/211", "salaryFactor": 1.15 },
+    { "tier": "T3", "name": "双一流及省属重点", "salaryFactor": 1.0 },
+    { "tier": "T4", "name": "普通本科", "salaryFactor": 0.85 },
+    { "tier": "T5", "name": "高职专科", "salaryFactor": 0.7 }
+  ]
+}

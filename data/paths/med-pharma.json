@@ -1,0 +1,123 @@
+{
+  "id": "med-pharma",
+  "majorId": "med",
+  "title": "医药企业医学事务/研发",
+  "tagline": "不穿白大褂，用医学知识推动新药走到病人身边",
+  "tags": ["对医学好奇", "喜欢研究", "喜欢分析数据", "喜欢和人打交道", "大城市", "成长空间"],
+  "tierFit": ["T1", "T2", "T3"],
+  "tierNotes": {
+    "T1": "外企和头部药企的医学部、研发岗青睐名校硕博，起点较高。",
+    "T2": "硕士学历是主流门槛，英语好会加分不少。",
+    "T3": "可以从临床研究协调员（CRC）、临床监查员（CRA）起步，逐步进入医学事务。",
+    "T4": "多从CRC、医药代表等岗位起步，靠经验积累转型。",
+    "T5": "以药店、医疗器械销售等岗位为主，转型需要补学历。"
+  },
+  "university": {
+    "coreCourses": ["生理学", "药理学", "病理学", "内科学", "医学统计学", "流行病学", "诊断学"],
+    "hardestCourses": ["药理学", "医学统计学", "生物化学"],
+    "pressureLevel": 5,
+    "switchMajorDifficulty": "转入很难，转出相对容易",
+    "postgradRate": "约55%-70%",
+    "abroadRate": "约2%-5%",
+    "yearByYear": [
+      { "year": 1, "description": "和临床同学一样啃基础医学，背书量巨大。" },
+      { "year": 2, "description": "学药理时第一次对新药是怎么被研发出来的产生好奇。" },
+      { "year": 3, "description": "医学统计学让你发现，读懂一篇临床试验论文需要很多功夫。" },
+      { "year": 5, "description": "实习后意识到自己更喜欢研究和沟通，开始了解药企的岗位。" }
+    ],
+    "source": { "name": "示例：高校临床医学培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "国内读研", "percent": 60 },
+      { "label": "直接就业", "percent": 30 },
+      { "label": "考公/选调", "percent": 3 },
+      { "label": "出国", "percent": 3 },
+      { "label": "其他", "percent": 4 }
+    ],
+    "source": { "name": "示例：医学院毕业生就业质量报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["临床监查员（CRA）", "医学信息专员"],
+      "salary": { "p10": 8000, "p50": 13000, "p90": 20000, "source": { "name": "示例：医药行业薪酬报告（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["上海", "北京", "苏州", "广州"],
+      "lifeDescription": "经常出差去各地医院检查临床试验数据，熟悉了新药研发的每一个环节。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["医学联络官（MSL）", "临床项目经理"],
+      "salary": { "p10": 14000, "p50": 22000, "p90": 35000, "source": { "name": "示例：医药行业薪酬报告（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["上海", "北京", "苏州", "杭州"],
+      "lifeDescription": "和医院专家讨论最新的研究数据，在学术会议上做报告，工作时间相对规律。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["医学经理", "医学总监", "临床开发负责人"],
+      "salary": { "p10": 20000, "p50": 38000, "p90": 70000, "source": { "name": "示例：医药行业薪酬报告（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["上海", "北京", "苏州"],
+      "lifeDescription": "负责一个产品或治疗领域的医学策略，收入不错，但会受到行业政策和公司调整的影响。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 70000, "role": "头部药企医学总监",
+      "lifeQuality": "在上海等城市安家，工作有国际视野，能参与新药上市的关键决策。",
+      "howPeopleGetHere": ["硕博学历，英语流利", "在一个治疗领域（如肿瘤）持续深耕", "跟随公司的明星产品成长", "沟通和项目管理能力强"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 38000, "role": "药企医学经理",
+      "lifeQuality": "收入中上，工作强度适中，出差较多，生活相对有规律。",
+      "howPeopleGetHere": ["从CRA或MSL起步", "积累了5年以上的行业经验", "跳槽1到2次"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 20000, "role": "小型CRO公司项目执行",
+      "lifeQuality": "行业调整时岗位不稳定，出差频繁，晋升空间有限。",
+      "howPeopleGetHere": ["长期停留在执行层面", "所在产品线被裁撤", "缺乏英语和专业领域积累"],
+      "pivotOptions": ["转向医疗器械或数字医疗公司", "回到医院做临床研究管理", "转做医学写作或医学科普", "进入药监、卫健等相关部门"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第5年的医学联络官（MSL），上海",
+    "schedule": [
+      { "time": "08:30", "activity": "在高铁上读一篇新发表的临床试验论文", "mood": "focus" },
+      { "time": "10:30", "activity": "在医院和一位肿瘤科主任讨论最新的研究数据", "mood": "social" },
+      { "time": "12:30", "activity": "在医院附近吃一碗面，整理拜访记录", "mood": "tired" },
+      { "time": "14:00", "activity": "线上参加全球医学团队的会议，全程英文", "mood": "stress" },
+      { "time": "16:00", "activity": "准备下周学术会议上的报告幻灯片", "mood": "focus" },
+      { "time": "18:30", "activity": "回到酒店，和家人视频通话", "mood": "happy" }
+    ],
+    "bestPart": "自己参与的新药上市了，知道有更多病人能用上。",
+    "hardestPart": "出差多，而且要不断学习某个领域最新的医学进展。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["文献检索和摘要", "数据录入和核查", "常规的报告撰写"],
+    "resilientTasks": ["和专家进行学术交流", "制定医学策略", "判断研究数据的临床意义"],
+    "skillsToBuild": ["英语和学术沟通", "医学统计和数据解读", "项目管理", "使用AI工具做文献分析"],
+    "summary": "AI能处理大量文献和数据，但学术判断和专家关系需要人来建立。"
+  },
+  "metrics": { "income": 72, "stability": 60, "freedom": 55, "workIntensity": 60, "growth": 72, "aiResilience": 65 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "医学本科毕业后，你会怎么选？",
+      "options": [
+        { "id": "master", "label": "读研再进药企", "description": "读药理、流行病等方向硕士", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "进头部药企的主流方式，起点岗位更好。" },
+        { "id": "cra", "label": "直接做CRA", "description": "本科进入临床研究行业", "metricsDelta": { "growth": -5, "income": -5, "workIntensity": 5 }, "salaryMultiplier": 0.88, "tradeoff": "早点积累行业经验，但升到医学部需要更长时间。" }
+      ]
+    },
+    {
+      "id": "company-choice", "atStage": "工作第3年", "question": "工作3年后，你会选什么样的公司？",
+      "options": [
+        { "id": "mnc", "label": "外资药企", "description": "体系成熟", "metricsDelta": { "stability": 5 }, "salaryMultiplier": 1.05, "tradeoff": "培训体系完善、福利好，但要适应全球化流程和英文工作环境。" },
+        { "id": "biotech", "label": "本土创新药企", "description": "成长快", "metricsDelta": { "growth": 10, "stability": -15, "freedom": 5 }, "salaryMultiplier": 1.0, "tradeoff": "承担的事情多、成长快，但公司发展存在不确定性。" }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["生物、化学打好基础", "重视英语，尤其是阅读能力", "了解新药研发的基本流程", "选科：物理和化学必选，生物推荐"],
+  "posterMoment": "10:30 在医院和肿瘤科主任讨论最新研究数据"
+}

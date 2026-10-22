@@ -1,0 +1,129 @@
+{
+  "id": "fin-research",
+  "majorId": "fin",
+  "title": "证券/投研分析师",
+  "tagline": "研究一个行业，判断一家公司未来值多少钱",
+  "tags": ["喜欢分析数据", "喜欢研究", "想赚大钱", "喜欢阅读", "大城市", "成长空间", "喜欢数学"],
+  "tierFit": ["T1", "T2"],
+  "tierNotes": {
+    "T1": "头部券商研究所和基金公司的主要来源，名校硕士几乎是标配。",
+    "T2": "需要读到名校硕士，并有研究所实习经历，竞争激烈。",
+    "T3": "直接进入头部研究所较难，可以从中小券商、财经媒体或企业投资部起步。",
+    "T4": "建议读研提升学历，或者从证券营业部、投资顾问岗位起步。",
+    "T5": "以证券营业部客服、销售等岗位为主。"
+  },
+  "university": {
+    "coreCourses": ["微观经济学", "宏观经济学", "投资学", "公司金融", "财务报表分析", "计量经济学", "金融衍生工具"],
+    "hardestCourses": ["计量经济学", "金融衍生工具", "财务报表分析"],
+    "pressureLevel": 4,
+    "switchMajorDifficulty": "转入较难（热门专业），转出容易",
+    "postgradRate": "约40%-55%",
+    "abroadRate": "约15%-25%",
+    "yearByYear": [
+      { "year": 1, "description": "打好数学和经济学基础，开始看财经新闻和上市公司年报。" },
+      { "year": 2, "description": "参加投资社团和研究比赛，学会写第一篇行业研究报告。" },
+      { "year": 3, "description": "争取券商研究所实习，熬夜帮分析师整理数据是常态。" },
+      { "year": 4, "description": "大多数人选择读研或出国，继续积累实习。" }
+    ],
+    "source": { "name": "示例：高校金融学专业培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "直接就业", "percent": 40 },
+      { "label": "国内读研", "percent": 35 },
+      { "label": "考公/选调", "percent": 5 },
+      { "label": "出国", "percent": 18 },
+      { "label": "其他", "percent": 2 }
+    ],
+    "source": { "name": "示例：毕业生就业质量年度报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["研究助理", "行业研究员"],
+      "salary": { "p10": 10000, "p50": 18000, "p90": 32000, "source": { "name": "示例：证券基金行业薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["上海", "北京", "深圳"],
+      "lifeDescription": "跟着首席分析师研究一个行业，写报告、做模型、跑调研，加班多、成长快。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["行业分析师", "基金研究员"],
+      "salary": { "p10": 15000, "p50": 30000, "p90": 55000, "source": { "name": "示例：证券基金行业薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["上海", "北京", "深圳"],
+      "lifeDescription": "开始独立覆盖一批公司，要和基金经理、上市公司管理层打交道。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["首席分析师", "基金经理", "投资总监"],
+      "salary": { "p10": 18000, "p50": 45000, "p90": 120000, "source": { "name": "示例：证券基金行业薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["上海", "北京", "深圳"],
+      "lifeDescription": "收入差距非常大，和市场行情、个人业绩高度相关，压力也随之而来。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 120000, "role": "明星基金经理/首席分析师",
+      "lifeQuality": "收入很高，在行业内有影响力，但需要承受业绩排名和市场波动的压力。",
+      "howPeopleGetHere": ["名校硕士加顶级研究所实习", "深耕一个行业，判断准确", "赶上了行业的好周期", "抗压能力和自律性强"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 45000, "role": "研究员/投资经理",
+      "lifeQuality": "收入较高但有波动，在一线城市生活，工作和学习的时间都很长。",
+      "howPeopleGetHere": ["稳定地做研究，积累行业资源", "在研究所和买方机构之间跳槽"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 18000, "role": "中小机构研究岗/离开行业",
+      "lifeQuality": "行业降薪和收缩时岗位不稳定，需要重新规划方向。",
+      "howPeopleGetHere": ["没能形成自己的研究方向", "所在机构业务收缩", "市场持续低迷"],
+      "pivotOptions": ["转到企业做战略和投资者关系", "进入产业资本或政府引导基金", "转做财经内容或投资者教育", "考取CPA，转向财务和审计"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第4年的消费行业研究员，上海",
+    "schedule": [
+      { "time": "07:30", "activity": "在地铁上看隔夜的海外市场和行业新闻", "mood": "focus" },
+      { "time": "08:30", "activity": "晨会，用3分钟讲清楚昨晚某公司财报的要点", "mood": "stress" },
+      { "time": "10:00", "activity": "更新财务模型，测算下一年的利润", "mood": "focus" },
+      { "time": "13:00", "activity": "和一家上市公司的董秘开电话会", "mood": "social" },
+      { "time": "15:00", "activity": "股市收盘，开始写深度报告", "mood": "focus" },
+      { "time": "19:00", "activity": "陪领导见基金经理客户", "mood": "social" },
+      { "time": "22:30", "activity": "回家改报告，明早要发布", "mood": "tired" }
+    ],
+    "bestPart": "自己的判断被市场验证的那一刻。",
+    "hardestPart": "工作时间长，市场不好时压力很大，判断错了也要承担后果。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["数据整理和图表制作", "财报的基础分析", "研报初稿撰写"],
+    "resilientTasks": ["独立的投资判断", "和管理层、客户建立关系", "对行业趋势的深度理解"],
+    "skillsToBuild": ["财务和估值能力", "产业链调研能力", "独立思考和表达", "用AI处理数据"],
+    "summary": "基础研究工作会被AI加速，真正的价值在于独立判断和产业洞察。"
+  },
+  "metrics": { "income": 88, "stability": 40, "freedom": 50, "workIntensity": 85, "growth": 82, "aiResilience": 55 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "本科毕业后你会怎么选？",
+      "options": [
+        { "id": "master", "label": "国内名校硕士", "description": "读金融专硕", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "进头部研究所的常规路径，两年里要不停实习。" },
+        { "id": "abroad", "label": "出国读硕士", "description": "1到2年海外硕士", "metricsDelta": { "growth": 5, "income": 3 }, "salaryMultiplier": 1.05, "tradeoff": "开阔视野、时间短，但费用较高，回国后同样要竞争实习。" },
+        { "id": "work", "label": "本科直接就业", "description": "中小券商或企业", "metricsDelta": { "income": -15, "growth": -10, "stability": 5 }, "salaryMultiplier": 0.7, "tradeoff": "早点工作，但想进核心研究岗位会更难。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 3, "typicalRoles": ["投资顾问", "企业财务分析"], "lifeDescription": "在券商营业部或企业财务部门工作，做的是研究和服务结合的工作。" }
+          ] }
+      ]
+    },
+    {
+      "id": "side-choice", "atStage": "工作第3年", "question": "工作3年后，你会去买方还是留在卖方？",
+      "options": [
+        { "id": "sell", "label": "留在券商研究所", "description": "卖方研究", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "曝光度高，有机会成为明星分析师，但要不停地写报告和路演。" },
+        { "id": "buy", "label": "去基金公司", "description": "买方研究", "metricsDelta": { "workIntensity": -5, "stability": 5 }, "salaryMultiplier": 1.05, "tradeoff": "更专注于投资判断，有机会成为基金经理，但业绩压力直接。" },
+        { "id": "corp", "label": "去企业做战略投资", "description": "产业方", "metricsDelta": { "workIntensity": -15, "stability": 10, "income": -10 }, "salaryMultiplier": 0.85, "tradeoff": "节奏更可控，离产业更近，但收入上限低于金融机构。" }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["数学和英语是重点", "养成读新闻和财经资讯的习惯", "可以了解上市公司年报的基本结构", "选科：物理加数学方向的选择面更广，历史类也可报考"],
+  "posterMoment": "08:30 晨会上用3分钟讲清楚一份财报"
+}

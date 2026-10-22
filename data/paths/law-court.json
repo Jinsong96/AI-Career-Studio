@@ -1,0 +1,128 @@
+{
+  "id": "law-court",
+  "majorId": "law",
+  "title": "法院/检察院干警",
+  "tagline": "穿上制服，在法律的框架里维护公平正义",
+  "tags": ["关心社会公平", "想要稳定", "受人尊重", "喜欢阅读", "喜欢写作", "想回家乡发展"],
+  "tierFit": ["T2", "T3", "T4"],
+  "tierNotes": {
+    "T1": "可以竞争最高法、省级院和中央选调，也有不少人选择律所和学术。",
+    "T2": "省级、市级法院检察院的主要来源之一，选调生机会较多。",
+    "T3": "通过公务员考试进入市县两级法院检察院是主要路径。",
+    "T4": "基层法院和检察院是常见去向，法考通过率很关键。",
+    "T5": "可以报考书记员、司法辅警等辅助岗位。"
+  },
+  "university": {
+    "coreCourses": ["法理学", "宪法学", "民法", "刑法", "刑事诉讼法", "行政法", "证据法"],
+    "hardestCourses": ["民法", "刑法", "刑事诉讼法"],
+    "pressureLevel": 4,
+    "switchMajorDifficulty": "转入中等，转出容易",
+    "postgradRate": "约30%-40%",
+    "abroadRate": "约2%-5%",
+    "yearByYear": [
+      { "year": 1, "description": "读法学经典，了解司法体系是怎么运转的。" },
+      { "year": 2, "description": "刑法和诉讼法课上，开始用法律思维分析真实案例。" },
+      { "year": 3, "description": "全力备考法考，同时去法院实习做书记员助理。" },
+      { "year": 4, "description": "准备国考、省考和选调，面试要练习很多遍。" }
+    ],
+    "source": { "name": "示例：高校法学专业培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "考公/选调", "percent": 35 },
+      { "label": "国内读研", "percent": 30 },
+      { "label": "直接就业", "percent": 28 },
+      { "label": "出国", "percent": 3 },
+      { "label": "其他", "percent": 4 }
+    ],
+    "source": { "name": "示例：毕业生就业质量年度报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["法官助理", "检察官助理"],
+      "salary": { "p10": 5000, "p50": 7000, "p90": 10000, "source": { "name": "示例：公务员薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["省会城市", "地级市", "县城"],
+      "lifeDescription": "协助法官整理卷宗、起草文书，案件量大，结案率考核时会加班。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["员额法官/检察官（部分）", "资深法官助理"],
+      "salary": { "p10": 6500, "p50": 9000, "p90": 13000, "source": { "name": "示例：公务员薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["省会城市", "地级市", "县城"],
+      "lifeDescription": "部分人通过遴选成为员额法官或检察官，开始独立承办案件。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["员额法官", "员额检察官", "庭长/部门负责人"],
+      "salary": { "p10": 8000, "p50": 12000, "p90": 18000, "source": { "name": "示例：公务员薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["省会城市", "地级市", "县城"],
+      "lifeDescription": "工作稳定，有社会地位，福利保障完善，案件压力依然存在。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 18000, "role": "中级以上法院庭长/检察院部门负责人",
+      "lifeQuality": "工作稳定，社会认可度高，在当地有很好的生活质量。",
+      "howPeopleGetHere": ["选调进入省市级单位", "业务能力突出，审判质量高", "持续学习，善于写调研文章"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 12000, "role": "基层法院员额法官",
+      "lifeQuality": "收入在当地中等偏上，工作稳定，节假日正常，但案件多时压力不小。",
+      "howPeopleGetHere": ["通过公务员考试入职", "按时遴选成为员额法官"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 8000, "role": "长期法官助理",
+      "lifeQuality": "员额名额有限，晋升慢，长期从事辅助工作会有一定的倦怠感。",
+      "howPeopleGetHere": ["遴选竞争激烈，名额有限", "所在单位晋升空间小"],
+      "pivotOptions": ["遴选到上级法院或其他政法单位", "辞职做律师，司法经验很受欢迎", "转到政府法制部门", "继续深造，转向学术或培训"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第6年的基层法院员额法官，河南某县",
+    "schedule": [
+      { "time": "08:20", "activity": "到办公室，看今天要开庭的三个案件材料", "mood": "focus" },
+      { "time": "09:00", "activity": "主持一场邻里纠纷的庭审，耐心听双方陈述", "mood": "focus" },
+      { "time": "11:00", "activity": "调解成功，双方握手离开法庭", "mood": "happy" },
+      { "time": "12:00", "activity": "单位食堂吃饭，午休半小时", "mood": "happy" },
+      { "time": "14:30", "activity": "合议庭讨论一起合同纠纷的判决思路", "mood": "social" },
+      { "time": "16:00", "activity": "写判决书，每一句话都要经得起推敲", "mood": "stress" },
+      { "time": "18:00", "activity": "下班回家，晚饭后陪孩子写作业", "mood": "happy" }
+    ],
+    "bestPart": "一个纠纷在我手里得到了公正的解决，双方都能接受。",
+    "hardestPart": "案件多，结案压力大，有时也会面对当事人的不理解。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["类案检索", "卷宗整理", "文书格式校对"],
+    "resilientTasks": ["庭审主持和调解", "事实认定和裁判", "承担司法责任"],
+    "skillsToBuild": ["法律写作", "沟通和调解能力", "公文写作", "使用智慧法院工具"],
+    "summary": "AI能辅助检索和整理，但裁判权和司法责任必须由人承担。"
+  },
+  "metrics": { "income": 45, "stability": 92, "freedom": 30, "workIntensity": 60, "growth": 50, "aiResilience": 80 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "毕业后你会怎么进入体制？",
+      "options": [
+        { "id": "exam", "label": "直接考公", "description": "报考市县两级法院", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "早点上岸，但起点在基层。" },
+        { "id": "select", "label": "考研后选调", "description": "读法硕再参加选调", "metricsDelta": { "growth": 10, "income": 5 }, "salaryMultiplier": 1.1, "tradeoff": "起点单位和晋升通道更好，但要多读3年，选调竞争也激烈。" }
+      ]
+    },
+    {
+      "id": "career-choice", "atStage": "工作第3年", "question": "工作几年后，你会继续留在体制内吗？",
+      "options": [
+        { "id": "stay", "label": "继续留下", "description": "争取员额和晋升", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "稳定、有保障，但收入增长平缓。" },
+        { "id": "leave", "label": "辞职做律师", "description": "带着司法经验去律所", "metricsDelta": { "income": 25, "stability": -35, "freedom": 20, "workIntensity": 15 }, "salaryMultiplier": 1.8, "tradeoff": "收入上限高很多，但失去了稳定性，要从头积累客户。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 5, "typicalRoles": ["律所律师"], "cities": ["省会城市", "北京", "广州"], "lifeDescription": "司法经验让你在律所很受欢迎，但要开始自己找案源。" },
+            { "yearsAfterGrad": 10, "typicalRoles": ["律所合伙人"], "cities": ["省会城市", "北京", "广州"], "lifeDescription": "在诉讼领域有了口碑，收入明显提高，工作也更忙了。" }
+          ] }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["重视语文和政治，提升写作能力", "关注社会新闻中的法律案例", "培养耐心和同理心", "选科：没有硬性限制，部分公安类院校有体检和政审要求"],
+  "posterMoment": "11:00 邻里纠纷调解成功，双方握手离开法庭"
+}

@@ -1,0 +1,125 @@
+{
+  "id": "ee-newenergy",
+  "majorId": "ee",
+  "title": "新能源企业研发工程师",
+  "tagline": "设计电池、储能和充电系统，参与能源转型",
+  "tags": ["喜欢新能源和硬件", "喜欢动手做东西", "喜欢研究", "成长空间", "想赚大钱", "喜欢逻辑推理"],
+  "tierFit": ["T1", "T2", "T3", "T4"],
+  "tierNotes": {
+    "T1": "头部企业的核心研发岗和研究院机会多，读研比例高。",
+    "T2": "进入头部新能源企业研发岗的主力，硕士学历更有竞争力。",
+    "T3": "可以进入二线新能源企业的研发或测试岗，有项目经历会加分。",
+    "T4": "多从测试、工艺、现场技术支持等岗位起步。",
+    "T5": "多为生产线技术员、设备维护等岗位，可以通过经验积累晋升。"
+  },
+  "university": {
+    "coreCourses": ["电路原理", "模拟电子技术", "数字电子技术", "电力电子技术", "自动控制原理", "电机学", "单片机原理"],
+    "hardestCourses": ["电路原理", "电力电子技术", "自动控制原理"],
+    "pressureLevel": 4,
+    "switchMajorDifficulty": "转入较难，转出相对容易",
+    "postgradRate": "约40%-50%",
+    "abroadRate": "约3%-6%",
+    "yearByYear": [
+      { "year": 1, "description": "打好数学和物理基础，第一次用单片机点亮一个LED。" },
+      { "year": 2, "description": "模电和数电很烧脑，开始参加电子设计竞赛。" },
+      { "year": 3, "description": "电力电子课上做出一个小型逆变器，开始找新能源企业实习。" },
+      { "year": 4, "description": "毕业设计和秋招，有竞赛经历的同学很受欢迎。" }
+    ],
+    "source": { "name": "示例：高校电气工程专业培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "直接就业", "percent": 50 },
+      { "label": "国内读研", "percent": 42 },
+      { "label": "考公/选调", "percent": 3 },
+      { "label": "出国", "percent": 3 },
+      { "label": "其他", "percent": 2 }
+    ],
+    "source": { "name": "示例：毕业生就业质量年度报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["电池管理系统工程师", "电力电子工程师"],
+      "salary": { "p10": 9000, "p50": 14000, "p90": 22000, "source": { "name": "示例：招聘平台公开薪资区间（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["深圳", "宁德", "常州", "合肥", "西安"],
+      "lifeDescription": "在实验室调试电路和样机，经常去产线解决问题，项目节点前要加班。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["高级研发工程师", "项目技术负责人"],
+      "salary": { "p10": 12000, "p50": 20000, "p90": 32000, "source": { "name": "示例：招聘平台公开薪资区间（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["深圳", "宁德", "常州", "合肥", "西安"],
+      "lifeDescription": "负责一个产品模块的研发，要和供应商、测试、产线反复沟通。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["研发经理", "技术专家", "系统架构师"],
+      "salary": { "p10": 15000, "p50": 30000, "p90": 55000, "source": { "name": "示例：招聘平台公开薪资区间（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["深圳", "宁德", "常州", "合肥", "西安"],
+      "lifeDescription": "成为团队骨干或管理者，收入不错，但会受到行业周期和价格竞争的影响。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 55000, "role": "头部企业技术专家/研发总监",
+      "lifeQuality": "参与核心产品的研发决策，在新一线城市安家，工作有挑战和成就感。",
+      "howPeopleGetHere": ["在行业快速增长期加入头部企业", "在储能或电驱某个方向深耕", "有扎实的硬件和系统设计能力"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 30000, "role": "中型企业研发经理",
+      "lifeQuality": "收入中上，工作节奏较快，在二线或新一线城市安家。",
+      "howPeopleGetHere": ["稳定积累项目经验", "跳槽1到2次"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 15000, "role": "小企业测试/工艺工程师",
+      "lifeQuality": "行业价格战导致公司压力大，可能面临降薪或调岗。",
+      "howPeopleGetHere": ["所在企业在竞争中掉队", "长期做重复性的测试工作"],
+      "pivotOptions": ["转到电网、电力设计院等稳定单位", "进入汽车、家电等相关行业", "转做技术支持或售前工程师", "考取注册电气工程师证书"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第3年的储能系统研发工程师，深圳",
+    "schedule": [
+      { "time": "09:00", "activity": "到实验室，查看昨晚样机的老化测试数据", "mood": "focus" },
+      { "time": "10:00", "activity": "示波器上看到一个异常波形，开始排查", "mood": "stress" },
+      { "time": "12:00", "activity": "在园区食堂吃饭，聊行业新闻", "mood": "social" },
+      { "time": "13:30", "activity": "和结构工程师讨论散热方案", "mood": "social" },
+      { "time": "15:00", "activity": "去产线解决一个批量出现的问题", "mood": "focus" },
+      { "time": "17:30", "activity": "问题解决了，写测试报告", "mood": "happy" },
+      { "time": "20:00", "activity": "项目节点前，晚上继续调试程序", "mood": "tired" }
+    ],
+    "bestPart": "自己设计的储能柜装在了光伏电站里，真的在给城市供电。",
+    "hardestPart": "项目周期紧，行业竞争激烈，公司的情况变化很快。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["常规仿真和参数计算", "测试数据整理", "文档编写"],
+    "resilientTasks": ["硬件调试和故障分析", "系统方案设计", "跨部门协作和量产落地"],
+    "skillsToBuild": ["电路和系统设计能力", "动手调试能力", "嵌入式编程", "项目管理"],
+    "summary": "硬件研发离不开实验和现场，AI更多是辅助仿真和设计的工具。"
+  },
+  "metrics": { "income": 72, "stability": 55, "freedom": 50, "workIntensity": 72, "growth": 80, "aiResilience": 75 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "毕业后你会怎么选？",
+      "options": [
+        { "id": "direct", "label": "直接进企业", "description": "本科进入研发或测试岗", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "早点积累项目经验，但核心研发岗位更青睐硕士。" },
+        { "id": "master", "label": "读研", "description": "电力电子或电池方向", "metricsDelta": { "growth": 8, "income": 5 }, "salaryMultiplier": 1.15, "tradeoff": "更容易进入核心研发岗，晚2到3年工作。" }
+      ]
+    },
+    {
+      "id": "company-choice", "atStage": "工作第3年", "question": "工作3年后，你会选什么样的公司？",
+      "options": [
+        { "id": "big", "label": "头部大企业", "description": "平台大、流程完善", "metricsDelta": { "stability": 10 }, "salaryMultiplier": 1.05, "tradeoff": "平台稳、资源多，但分工细，可能只负责很小的一部分。" },
+        { "id": "startup", "label": "创业公司", "description": "做更多的事情", "metricsDelta": { "growth": 10, "stability": -20, "freedom": 10 }, "salaryMultiplier": 1.0, "tradeoff": "成长快、有期权，但公司失败的风险大。" },
+        { "id": "soe", "label": "能源国企", "description": "电力投资、发电集团", "metricsDelta": { "stability": 25, "workIntensity": -20, "growth": -10, "income": -10 }, "salaryMultiplier": 0.85, "tradeoff": "稳定性大幅提升，但技术成长速度会放慢。" }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["物理和数学是核心", "动手能力很重要，可以玩Arduino或单片机", "关注新能源行业的新闻", "选科：物理必选，化学推荐"],
+  "posterMoment": "10:00 示波器上出现一个异常波形"
+}

@@ -1,0 +1,128 @@
+{
+  "id": "law-lawyer",
+  "majorId": "law",
+  "title": "律所律师",
+  "tagline": "在规则之中，为委托人争取最好的结果",
+  "tags": ["喜欢表达和辩论", "关心社会公平", "喜欢阅读", "喜欢写作", "想赚大钱", "大城市", "成长空间"],
+  "tierFit": ["T1", "T2", "T3"],
+  "tierNotes": {
+    "T1": "红圈所和外资所的主要来源，非诉业务起点高。",
+    "T2": "可以竞争大型律所，建议读法硕并积累实习。",
+    "T3": "多数人进入中型或地方律所，诉讼业务是常见起点。",
+    "T4": "从小型律所起步，通过法考后靠积累案源逐步成长。",
+    "T5": "多以法律助理、法务专员等辅助岗位起步。"
+  },
+  "university": {
+    "coreCourses": ["法理学", "宪法学", "民法", "刑法", "民事诉讼法", "刑事诉讼法", "商法", "国际法"],
+    "hardestCourses": ["民法", "刑法", "民事诉讼法"],
+    "pressureLevel": 4,
+    "switchMajorDifficulty": "转入中等，转出容易",
+    "postgradRate": "约35%-45%",
+    "abroadRate": "约5%-10%",
+    "yearByYear": [
+      { "year": 1, "description": "从法理学开始读大部头，第一次参加模拟法庭。" },
+      { "year": 2, "description": "民法和刑法是核心，案例分析需要大量阅读和写作。" },
+      { "year": 3, "description": "备战法律职业资格考试（法考），被称为“最难的考试之一”。" },
+      { "year": 4, "description": "在律所或法院实习，决定读研、考公还是进律所。" }
+    ],
+    "source": { "name": "示例：高校法学专业培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "直接就业", "percent": 40 },
+      { "label": "国内读研", "percent": 35 },
+      { "label": "考公/选调", "percent": 18 },
+      { "label": "出国", "percent": 5 },
+      { "label": "其他", "percent": 2 }
+    ],
+    "source": { "name": "示例：毕业生就业质量年度报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["律师助理", "初级律师"],
+      "salary": { "p10": 5000, "p50": 10000, "p90": 22000, "source": { "name": "示例：律师行业薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["北京", "上海", "广州", "省会城市"],
+      "lifeDescription": "跟着合伙人做案子，写文书、查资料、跑法院，收入差距在不同律所之间非常大。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["执业律师", "资深律师"],
+      "salary": { "p10": 8000, "p50": 18000, "p90": 40000, "source": { "name": "示例：律师行业薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["北京", "上海", "广州", "省会城市"],
+      "lifeDescription": "开始独立办案，部分人开始有自己的客户，收入的波动比较大。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["合伙人", "资深律师", "企业法务总监"],
+      "salary": { "p10": 12000, "p50": 30000, "p90": 90000, "source": { "name": "示例：律师行业薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["北京", "上海", "广州", "省会城市"],
+      "lifeDescription": "成为合伙人的人有较高的收入和自由度，也有不少人转到企业做法务，生活更稳定。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 90000, "role": "大所合伙人",
+      "lifeQuality": "收入高、时间相对自由，在某个专业领域有口碑，但要对律所和团队负责。",
+      "howPeopleGetHere": ["在一个细分领域（如知识产权、并购）深耕", "积累了稳定的客户资源", "专业能力和口碑兼具"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 30000, "role": "律所资深律师/企业法务",
+      "lifeQuality": "收入中上，工作忙但相对稳定，开庭和出差多。",
+      "howPeopleGetHere": ["通过法考并在律所稳定执业", "跟随一个团队成长"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 12000, "role": "小所独立律师",
+      "lifeQuality": "案源不稳定，收入波动大，需要自己找客户。",
+      "howPeopleGetHere": ["没有形成专业方向", "案源积累不足", "所在城市法律服务竞争激烈"],
+      "pivotOptions": ["转到企业做法务，收入稳定", "考公进入法院、检察院或政府法制部门", "做法律科普和法律咨询内容", "专攻一个细分领域，重新积累口碑"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第4年的诉讼律师，广州",
+    "schedule": [
+      { "time": "08:30", "activity": "赶到法院，在门口和当事人最后对一遍材料", "mood": "stress" },
+      { "time": "09:30", "activity": "开庭，和对方律师就证据交锋了两个小时", "mood": "focus" },
+      { "time": "12:30", "activity": "在法院附近简单吃饭，向合伙人汇报庭审情况", "mood": "tired" },
+      { "time": "14:00", "activity": "回律所写代理意见，引用了二十多个法条", "mood": "focus" },
+      { "time": "16:30", "activity": "接待一位新客户，听他讲合同纠纷的来龙去脉", "mood": "social" },
+      { "time": "20:00", "activity": "改完一份合同，下班回家", "mood": "tired" }
+    ],
+    "bestPart": "通过自己的努力为当事人争取到了公平的结果。",
+    "hardestPart": "工作时间不固定，前几年收入不高，需要耐心积累。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["法律检索", "标准合同起草", "文书初稿撰写"],
+    "resilientTasks": ["出庭辩论", "复杂案件的策略设计", "客户沟通和谈判"],
+    "skillsToBuild": ["口头表达和辩论", "某个细分领域的专业深度", "客户开发能力", "用AI做法律检索"],
+    "summary": "AI会大幅提高检索和起草的效率，但策略、谈判和出庭仍然需要律师。"
+  },
+  "metrics": { "income": 72, "stability": 45, "freedom": 60, "workIntensity": 80, "growth": 78, "aiResilience": 58 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "通过法考后，你会怎么选？",
+      "options": [
+        { "id": "firm", "label": "直接进律所", "description": "从律师助理做起", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "早点开始积累案件经验，但前几年收入不高。" },
+        { "id": "master", "label": "读法律硕士", "description": "提升学历和平台", "metricsDelta": { "growth": 5, "income": 5 }, "salaryMultiplier": 1.1, "tradeoff": "能竞争更好的律所，但晚2到3年进入职场。" }
+      ]
+    },
+    {
+      "id": "type-choice", "atStage": "工作第3年", "question": "工作3年后，你想做哪类业务？",
+      "options": [
+        { "id": "litigation", "label": "诉讼业务", "description": "打官司", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "直接面对冲突，锻炼能力，但案源和收入不稳定。" },
+        { "id": "nonlit", "label": "非诉业务", "description": "并购、上市、合规", "metricsDelta": { "income": 10, "workIntensity": 5, "aiResilience": -5 }, "salaryMultiplier": 1.15, "tradeoff": "收入更高，但加班更多，文件工作量大。" },
+        { "id": "inhouse", "label": "去企业做法务", "description": "公司内部", "metricsDelta": { "stability": 20, "workIntensity": -20, "income": -10, "freedom": -10 }, "salaryMultiplier": 0.85, "tradeoff": "稳定规律，但收入上限低于成功的律师。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 5, "typicalRoles": ["企业法务经理"], "lifeDescription": "审合同、处理公司的合规问题，基本能按时下班。" },
+            { "yearsAfterGrad": 10, "typicalRoles": ["法务总监"], "lifeDescription": "负责公司的整个法务团队，参与重大决策。" }
+          ] }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["多读书，培养阅读和写作能力", "参加辩论社或模拟联合国", "关注社会新闻里的法律问题", "选科：没有硬性限制，政治和历史有帮助"],
+  "posterMoment": "09:30 在法庭上和对方律师交锋了两个小时"
+}

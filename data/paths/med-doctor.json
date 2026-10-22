@@ -1,0 +1,130 @@
+{
+  "id": "med-doctor",
+  "majorId": "med",
+  "title": "三甲医院临床医生",
+  "tagline": "用十年的学习，换来在关键时刻能救人的本事",
+  "tags": ["对医学好奇", "想帮助别人", "受人尊重", "有耐心", "想要稳定", "成长空间"],
+  "tierFit": ["T1", "T2", "T3"],
+  "tierNotes": {
+    "T1": "八年制或本博连读机会多，进入顶级三甲医院的可能性最高。",
+    "T2": "大部分人需要读研到博士，再竞争大城市三甲医院的岗位。",
+    "T3": "省属医学院毕业生是省内三甲医院的重要来源，读研是标配。",
+    "T4": "更常见的去向是地市级医院和县级医院，基层同样需要好医生。",
+    "T5": "高职医学类多为临床助理、护理等方向，执业范围有区别。"
+  },
+  "university": {
+    "coreCourses": ["系统解剖学", "生理学", "生物化学", "病理学", "药理学", "诊断学", "内科学", "外科学"],
+    "hardestCourses": ["系统解剖学", "生物化学", "病理学"],
+    "pressureLevel": 5,
+    "switchMajorDifficulty": "转入很难，转出相对容易",
+    "postgradRate": "约50%-70%",
+    "abroadRate": "约1%-3%",
+    "yearByYear": [
+      { "year": 1, "description": "大量基础课和化学、生物，背书量远超高中。" },
+      { "year": 2, "description": "第一次上解剖课，面对大体老师，理解了这份职业的分量。" },
+      { "year": 3, "description": "开始学诊断和内外科，书越来越厚，期末周通宵是常态。" },
+      { "year": 5, "description": "在医院实习，跟着带教老师查房、写病历，准备考研和执业医师考试。" }
+    ],
+    "source": { "name": "示例：高校临床医学五年制培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "国内读研", "percent": 55 },
+      { "label": "规培/就业", "percent": 38 },
+      { "label": "考公/选调", "percent": 2 },
+      { "label": "出国", "percent": 1 },
+      { "label": "其他", "percent": 4 }
+    ],
+    "source": { "name": "示例：医学院毕业生就业质量报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["规培住院医师", "硕士研究生"],
+      "salary": { "p10": 3000, "p50": 5000, "p90": 8000, "source": { "name": "示例：住院医师规范化培训待遇调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["省会城市", "北京", "上海", "广州"],
+      "lifeDescription": "在各个科室轮转，值夜班、写病历、跟手术。收入不高，很多人还需要家里支持。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["住院医师", "主治医师（部分）"],
+      "salary": { "p10": 7000, "p50": 12000, "p90": 18000, "source": { "name": "示例：公立医院薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["省会城市", "地级市", "北京", "上海"],
+      "lifeDescription": "定科后开始管自己的病人，夜班依然多。能独立处理很多情况，成就感开始变强。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["主治医师", "副主任医师"],
+      "salary": { "p10": 12000, "p50": 22000, "p90": 40000, "source": { "name": "示例：公立医院薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["省会城市", "地级市", "北京", "上海"],
+      "lifeDescription": "成为科室骨干，有稳定的病人和口碑。工作依然辛苦，但职业稳定、越老越吃香。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 40000, "role": "大城市三甲医院副主任医师",
+      "lifeQuality": "在专业领域有影响力，受病人信任，工作强度大但很有意义感。",
+      "howPeopleGetHere": ["本博连读或读到博士", "选择了有发展前景的科室", "坚持做临床研究和论文", "遇到好的导师和团队"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 22000, "role": "省市级医院主治医师",
+      "lifeQuality": "工作稳定，社会认可度高，夜班和急诊会影响家庭时间。",
+      "howPeopleGetHere": ["硕士毕业完成规培", "在一家医院长期积累", "按时晋升职称"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 12000, "role": "基层医院医生/离开临床",
+      "lifeQuality": "长期高强度工作带来倦怠，晋升受限，对职业的热情下降。",
+      "howPeopleGetHere": ["考研或规培中途受挫", "所在医院平台有限", "没有找到适合自己的科室"],
+      "pivotOptions": ["转去医药企业做医学事务或临床研究", "去社区和基层医院，节奏更平稳", "转向健康管理、医学科普", "考公进入卫生健康系统"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第5年的普外科住院医师，郑州",
+    "schedule": [
+      { "time": "07:30", "activity": "提前到科室看病人的夜间记录和化验结果", "mood": "focus" },
+      { "time": "08:00", "activity": "跟主任查房，汇报每个病人的情况", "mood": "stress" },
+      { "time": "09:30", "activity": "进手术室当一助，在台上站了4个小时", "mood": "focus" },
+      { "time": "13:40", "activity": "下手术，在办公室匆匆吃了份外卖", "mood": "tired" },
+      { "time": "14:30", "activity": "写病历、开医嘱、和家属沟通手术方案", "mood": "social" },
+      { "time": "17:00", "activity": "一个术后病人顺利出院，家属送来感谢", "mood": "happy" },
+      { "time": "18:00", "activity": "接夜班，处理急诊收进来的阑尾炎病人", "mood": "stress" }
+    ],
+    "bestPart": "病人康复出院时说的那句谢谢。",
+    "hardestPart": "夜班之后还要接着上白班，体力和情绪都是考验。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["影像初筛", "病历书写的初稿", "常规的指南查询"],
+    "resilientTasks": ["手术操作", "复杂病情的综合判断", "与病人和家属的沟通", "承担医疗责任"],
+    "skillsToBuild": ["扎实的临床基本功", "医患沟通能力", "使用AI辅助诊断工具", "科研思维"],
+    "summary": "AI会成为医生的助手，但手术、判断和承担责任仍然需要人。"
+  },
+  "metrics": { "income": 62, "stability": 85, "freedom": 30, "workIntensity": 90, "growth": 75, "aiResilience": 88 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "本科毕业后你会怎么选？",
+      "options": [
+        { "id": "master", "label": "读专硕（含规培）", "description": "读研的同时完成规培", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "大多数人的选择，3年后拿到硕士学位和规培证。" },
+        { "id": "phd", "label": "一路读到博士", "description": "冲刺大城市顶级医院", "metricsDelta": { "growth": 8, "income": 5, "workIntensity": 5 }, "salaryMultiplier": 1.15, "tradeoff": "进大医院的门槛，但要多读3年，30岁左右才真正开始工作。" },
+        { "id": "direct", "label": "直接规培就业", "description": "去地市级医院", "metricsDelta": { "growth": -10, "stability": 5, "workIntensity": -5 }, "salaryMultiplier": 0.85, "tradeoff": "更早独立，但学历会影响以后去大医院和晋升。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 5, "cities": ["地级市", "县城"], "lifeDescription": "在地市级医院已经能独当一面，生活成本低，离家近。" },
+            { "yearsAfterGrad": 10, "cities": ["地级市", "县城"], "lifeDescription": "成为当地医院的骨干医生，在本地很受尊重。" }
+          ] }
+      ]
+    },
+    {
+      "id": "dept-choice", "atStage": "工作第3年", "question": "定科时你会选什么科室？",
+      "options": [
+        { "id": "surgery", "label": "外科", "description": "手术为主", "metricsDelta": { "income": 5, "workIntensity": 5 }, "salaryMultiplier": 1.05, "tradeoff": "成就感直接、收入较高，但体力消耗大、成长周期长。" },
+        { "id": "internal", "label": "内科", "description": "诊断和慢病管理", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "需要很强的综合判断能力，节奏相对外科平稳一些。" },
+        { "id": "support", "label": "影像/病理/麻醉等", "description": "平台科室", "metricsDelta": { "workIntensity": -10, "freedom": 5, "aiResilience": -10 }, "salaryMultiplier": 0.95, "tradeoff": "作息相对规律，但影像和病理受AI影响更明显。" }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["生物和化学要打好基础", "做好学医要读8到11年的心理准备", "可以去医院做志愿者，真实感受医院的工作", "选科：物理和化学必选，生物强烈推荐"],
+  "posterMoment": "09:30 在手术室里站了4个小时"
+}

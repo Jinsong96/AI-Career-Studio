@@ -1,0 +1,129 @@
+{
+  "id": "vet-pet",
+  "majorId": "vet",
+  "title": "宠物医生",
+  "tagline": "为说不出话的小病人看病，也安抚它们的家人",
+  "tags": ["喜欢动物", "对医学好奇", "想帮助别人", "喜欢动手做东西", "有耐心", "不想坐办公室", "喜欢和人打交道"],
+  "tierFit": ["T2", "T3", "T4", "T5"],
+  "tierNotes": {
+    "T1": "多进入高校动物医院、研究机构或继续读博。",
+    "T2": "可以进入大型连锁宠物医院，起点和培训体系更好。",
+    "T3": "宠物医院更看重技术和执业兽医资格证，学历影响相对小。",
+    "T4": "从助理医生起步，技术积累比学历更重要。",
+    "T5": "多从宠物护理、兽医助理等岗位起步，考取资格证后可以晋升。"
+  },
+  "university": {
+    "coreCourses": ["动物解剖学", "动物生理学", "动物生物化学", "兽医病理学", "兽医药理学", "兽医临床诊断学", "兽医外科学", "兽医内科学"],
+    "hardestCourses": ["动物解剖学", "兽医病理学", "动物生物化学"],
+    "pressureLevel": 4,
+    "switchMajorDifficulty": "转入中等，转出容易",
+    "postgradRate": "约30%-40%",
+    "abroadRate": "约2%-5%",
+    "yearByYear": [
+      { "year": 1, "description": "化学和生物基础课多，第一次了解动物和人的身体有多不同。" },
+      { "year": 2, "description": "解剖课要记很多种动物的结构，比想象中辛苦。" },
+      { "year": 3, "description": "在学校动物医院跟诊，学会给猫狗打针和做检查。" },
+      { "year": 5, "description": "去宠物医院实习，准备执业兽医资格考试。" }
+    ],
+    "source": { "name": "示例：高校动物医学专业培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "直接就业", "percent": 58 },
+      { "label": "国内读研", "percent": 30 },
+      { "label": "考公/选调", "percent": 7 },
+      { "label": "出国", "percent": 2 },
+      { "label": "其他", "percent": 3 }
+    ],
+    "source": { "name": "示例：毕业生就业质量年度报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["宠物医院执业兽医"],
+      "salary": { "p10": 5000, "p50": 8000, "p90": 12000, "source": { "name": "示例：宠物行业薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["上海", "北京", "成都", "广州", "省会城市"],
+      "lifeDescription": "独立接诊常见病，周末是最忙的时候，偶尔要值夜班处理急诊。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["主治兽医", "专科医生（如外科、影像）"],
+      "salary": { "p10": 7000, "p50": 12000, "p90": 20000, "source": { "name": "示例：宠物行业薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["上海", "北京", "成都", "广州", "省会城市"],
+      "lifeDescription": "开始有了自己的专科方向，熟客会指名找你看病。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["院长", "专科主任", "宠物医院合伙人"],
+      "salary": { "p10": 9000, "p50": 18000, "p90": 40000, "source": { "name": "示例：宠物行业薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["上海", "北京", "成都", "广州", "省会城市"],
+      "lifeDescription": "有人开了自己的宠物医院，有人成为连锁医院的专科主任，收入差距较大。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 40000, "role": "宠物医院院长/知名专科医生",
+      "lifeQuality": "在城市里有了口碑，做自己热爱的事情，收入不错，但医院经营也有压力。",
+      "howPeopleGetHere": ["在一个专科（如骨科、眼科）深耕", "在大型医院积累了大量病例", "有很好的沟通能力和口碑"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 18000, "role": "连锁宠物医院主治医生",
+      "lifeQuality": "收入中等，工作充实，周末和节假日经常上班。",
+      "howPeopleGetHere": ["考取执业兽医资格证", "在一两家医院稳定积累"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 9000, "role": "小型宠物诊所医生",
+      "lifeQuality": "工作强度大，收入不高，情绪消耗也比较大。",
+      "howPeopleGetHere": ["没有形成专科方向", "所在诊所规模小、病例少"],
+      "pivotOptions": ["转向宠物药品或宠物食品企业做技术支持", "考公进入动物卫生监督部门", "做宠物健康科普内容", "进入实验动物或动物保护机构"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第4年的宠物医院外科医生，成都",
+    "schedule": [
+      { "time": "09:00", "activity": "查看住院部的猫狗，给一只术后的柯基换药", "mood": "focus" },
+      { "time": "10:00", "activity": "接诊一只不吃东西的猫，安抚着急的主人", "mood": "social" },
+      { "time": "11:30", "activity": "给一只金毛做骨折手术", "mood": "focus" },
+      { "time": "13:30", "activity": "在休息室吃饭，被医院养的猫蹭了一下腿", "mood": "happy" },
+      { "time": "15:00", "activity": "向主人解释一只老狗的病情和治疗方案", "mood": "stress" },
+      { "time": "17:00", "activity": "被一只紧张的猫抓了一下，戴好手套继续", "mood": "tired" },
+      { "time": "19:00", "activity": "康复的小狗出院，主人抱着它说谢谢", "mood": "happy" }
+    ],
+    "bestPart": "看到一只病得很重的小动物重新活蹦乱跳。",
+    "hardestPart": "要面对动物的离开，也要处理主人的情绪和费用的顾虑。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["影像初步读片", "化验结果解读", "病历整理"],
+    "resilientTasks": ["手术操作", "临床检查和判断", "和主人沟通"],
+    "skillsToBuild": ["扎实的临床技术", "专科方向的深度", "沟通和共情能力", "使用AI辅助诊断"],
+    "summary": "动手操作和沟通是核心，AI主要作为辅助诊断的工具。"
+  },
+  "metrics": { "income": 48, "stability": 60, "freedom": 55, "workIntensity": 72, "growth": 62, "aiResilience": 85 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "毕业后你会怎么选？",
+      "options": [
+        { "id": "chain", "label": "进大型连锁医院", "description": "培训体系完善", "metricsDelta": { "growth": 5 }, "salaryMultiplier": 1.0, "tradeoff": "培训体系好、病例多，但前期收入不高、工作量大。" },
+        { "id": "master", "label": "读研", "description": "临床兽医硕士", "metricsDelta": { "growth": 8, "income": 5 }, "salaryMultiplier": 1.1, "tradeoff": "专科能力更强，但晚3年工作，宠物医院更看重实际经验。" },
+        { "id": "civil", "label": "考公进动物卫生部门", "description": "动物防疫和检疫", "metricsDelta": { "stability": 30, "income": -10, "workIntensity": -25, "growth": -15 }, "salaryMultiplier": 0.85, "tradeoff": "稳定、规律，但不再直接给宠物看病。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 3, "typicalRoles": ["动物卫生监督员"], "cities": ["县城", "地级市"], "lifeDescription": "负责动物检疫和防疫工作，经常要去养殖场和屠宰场。" },
+            { "yearsAfterGrad": 10, "typicalRoles": ["畜牧兽医部门负责人"], "cities": ["县城", "地级市"], "lifeDescription": "工作稳定，负责一个区域的动物防疫管理。" }
+          ] }
+      ]
+    },
+    {
+      "id": "open-choice", "atStage": "工作第3年", "question": "工作几年后，你会自己开宠物医院吗？",
+      "options": [
+        { "id": "stay", "label": "继续在连锁医院", "description": "走专科路线", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "收入稳定增长，不用承担经营风险。" },
+        { "id": "open", "label": "和朋友合伙开医院", "description": "创业", "metricsDelta": { "freedom": 20, "income": 10, "stability": -25, "workIntensity": 10 }, "salaryMultiplier": 1.25, "tradeoff": "收入上限更高，但要承担房租、设备和招人的风险。" }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["生物和化学打好基础", "可以去宠物医院或救助站做志愿者", "想清楚自己能否面对动物的生病和离开", "选科：化学通常必选，物理和生物推荐"],
+  "posterMoment": "11:30 给一只金毛做骨折手术"
+}

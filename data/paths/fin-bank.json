@@ -1,0 +1,129 @@
+{
+  "id": "fin-bank",
+  "majorId": "fin",
+  "title": "银行客户经理",
+  "tagline": "从柜台起步，帮家庭和企业管好钱",
+  "tags": ["喜欢和人打交道", "想要稳定", "受人尊重", "想回家乡发展", "喜欢分析数据"],
+  "tierFit": ["T2", "T3", "T4"],
+  "tierNotes": {
+    "T1": "更多人会去总行、投行或研究岗，基层网点不是主要去向。",
+    "T2": "可以竞争国有大行和股份制银行的总行、分行管培生岗位。",
+    "T3": "省内国有大行、城商行是主要去向，通常从网点起步。",
+    "T4": "城商行、农商行和村镇银行是常见去向，本地资源很重要。",
+    "T5": "多从银行外包、大堂助理、信用卡销售等岗位起步。"
+  },
+  "university": {
+    "coreCourses": ["微观经济学", "宏观经济学", "货币银行学", "公司金融", "投资学", "会计学", "计量经济学", "金融风险管理"],
+    "hardestCourses": ["计量经济学", "高等数学", "公司金融"],
+    "pressureLevel": 3,
+    "switchMajorDifficulty": "转入较难（热门专业），转出容易",
+    "postgradRate": "约25%-35%",
+    "abroadRate": "约10%-15%",
+    "yearByYear": [
+      { "year": 1, "description": "学经济学原理和高数，发现金融不只是炒股，数学要求不低。" },
+      { "year": 2, "description": "开始考证（如证券从业资格），参加社团和商赛。" },
+      { "year": 3, "description": "寒暑假去银行或券商实习，开始积累简历。" },
+      { "year": 4, "description": "银行秋招笔试面试密集，同时准备毕业论文。" }
+    ],
+    "source": { "name": "示例：高校金融学专业培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "直接就业", "percent": 55 },
+      { "label": "国内读研", "percent": 25 },
+      { "label": "考公/选调", "percent": 8 },
+      { "label": "出国", "percent": 10 },
+      { "label": "其他", "percent": 2 }
+    ],
+    "source": { "name": "示例：毕业生就业质量年度报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["综合柜员", "理财经理"],
+      "salary": { "p10": 5000, "p50": 8500, "p90": 14000, "source": { "name": "示例：银行业薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["省会城市", "地级市", "县城"],
+      "lifeDescription": "在网点从柜员转到理财经理，每天和客户打交道，有存款和理财的考核指标。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["对公/零售客户经理"],
+      "salary": { "p10": 7000, "p50": 12000, "p90": 22000, "source": { "name": "示例：银行业薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["省会城市", "地级市"],
+      "lifeDescription": "手里有了一批稳定的客户，收入和业绩挂钩，经常要陪客户、跑企业。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["支行副行长", "高级客户经理", "分行部门主管"],
+      "salary": { "p10": 10000, "p50": 18000, "p90": 35000, "source": { "name": "示例：银行业薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["省会城市", "地级市"],
+      "lifeDescription": "在本地有了人脉和社会认可度，工作稳定，但考核压力一直存在。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 35000, "role": "支行行长/分行业务骨干",
+      "lifeQuality": "在本地有较高的社会地位，收入稳定增长，能平衡工作和家庭。",
+      "howPeopleGetHere": ["积累了一批优质的企业客户", "有很强的沟通和信任建立能力", "进入了总分行管理岗位的通道"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 18000, "role": "高级客户经理",
+      "lifeQuality": "收入在当地中等偏上，工作稳定，季度末和年底比较忙。",
+      "howPeopleGetHere": ["在一家银行稳定工作", "业绩达标，按部就班地晋升"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 10000, "role": "网点柜员/基层岗位",
+      "lifeQuality": "银行网点在减少，基层岗位压力和不确定性在增加。",
+      "howPeopleGetHere": ["长期停留在柜面操作", "没有积累客户资源", "所在银行收缩网点"],
+      "pivotOptions": ["转岗到风控、合规等中后台岗位", "考取财富管理相关证书，转型做专业理财顾问", "进入企业做财务或资金管理", "考公进入金融监管或财政系统"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第5年的零售客户经理，郑州",
+    "schedule": [
+      { "time": "08:15", "activity": "晨会，行长通报这个月的业绩进度", "mood": "stress" },
+      { "time": "09:00", "activity": "网点开门，接待来咨询理财产品的阿姨", "mood": "social" },
+      { "time": "11:00", "activity": "给几位老客户打电话，介绍新的定期存款", "mood": "social" },
+      { "time": "12:30", "activity": "在单位食堂吃饭，和同事吐槽考核", "mood": "happy" },
+      { "time": "14:00", "activity": "去一家小企业上门，帮老板办理代发工资", "mood": "focus" },
+      { "time": "17:00", "activity": "回网点整理资料，准备月底的总结", "mood": "tired" },
+      { "time": "18:30", "activity": "准时下班，去接孩子放学", "mood": "happy" }
+    ],
+    "bestPart": "客户把我当朋友，遇到家里的大事会先来问我的意见。",
+    "hardestPart": "业绩考核一直都在，市场不好时压力很大。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["柜面业务办理", "标准化的理财产品推荐", "资料审核和录入"],
+    "resilientTasks": ["和客户建立信任", "复杂的企业金融方案", "风险判断和关系维护"],
+    "skillsToBuild": ["沟通和信任建立", "财务分析能力", "了解本地产业和企业", "专业资格证书"],
+    "summary": "柜面业务正在被线上和AI替代，但懂客户、能建立信任的客户经理依然需要。"
+  },
+  "metrics": { "income": 55, "stability": 75, "freedom": 40, "workIntensity": 55, "growth": 50, "aiResilience": 45 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "毕业后你会进哪类银行？",
+      "options": [
+        { "id": "state", "label": "国有大行", "description": "体系大、更稳定", "metricsDelta": { "stability": 10 }, "salaryMultiplier": 1.0, "tradeoff": "稳定、福利好，但晋升节奏慢，论资排辈多一些。" },
+        { "id": "joint", "label": "股份制银行", "description": "更市场化", "metricsDelta": { "income": 10, "stability": -10, "workIntensity": 10 }, "salaryMultiplier": 1.15, "tradeoff": "收入更高、晋升更快，但考核压力明显更大。" },
+        { "id": "local", "label": "家乡农商行", "description": "回到县城或地级市", "metricsDelta": { "income": -10, "workIntensity": -10, "freedom": 5 }, "salaryMultiplier": 0.8, "tradeoff": "离家近、生活成本低，但平台和收入上限有限。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 5, "cities": ["县城", "地级市"], "lifeDescription": "在家乡的银行认识了很多本地企业主，周末能陪父母。" },
+            { "yearsAfterGrad": 10, "cities": ["县城", "地级市"], "lifeDescription": "成为当地银行的中层，在小城市里生活压力小。" }
+          ] }
+      ]
+    },
+    {
+      "id": "track-choice", "atStage": "工作第3年", "question": "工作3年后，你想走哪条线？",
+      "options": [
+        { "id": "front", "label": "继续做客户经理", "description": "前台业务", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "收入和业绩直接挂钩，上限高但波动也大。" },
+        { "id": "back", "label": "转风控/合规", "description": "中后台岗位", "metricsDelta": { "stability": 10, "income": -5, "workIntensity": -10, "aiResilience": 5 }, "salaryMultiplier": 0.9, "tradeoff": "没有业绩考核，工作稳定，但收入增长比较平缓。" }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["数学不能放松，金融学对数学有要求", "多锻炼表达和与人沟通的能力", "了解基本的理财和经济常识", "选科：没有硬性限制，物理加数学方向的选择面更广"],
+  "posterMoment": "14:00 去一家小企业上门，帮老板办理代发工资"
+}

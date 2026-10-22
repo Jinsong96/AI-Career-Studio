@@ -1,0 +1,124 @@
+{
+  "id": "psy-ux",
+  "majorId": "psy",
+  "title": "用户研究员/HR",
+  "tagline": "用心理学理解用户和员工，帮公司做出更好的决定",
+  "tags": ["对心理感兴趣", "喜欢和人打交道", "喜欢分析数据", "大城市", "成长空间", "喜欢研究"],
+  "tierFit": ["T1", "T2", "T3", "T4"],
+  "tierNotes": {
+    "T1": "互联网大厂用户研究岗的主要来源，硕士更有优势。",
+    "T2": "可以竞争大厂用户研究和人力资源管培生岗位。",
+    "T3": "HR岗位机会多，用户研究岗需要实习和作品支撑。",
+    "T4": "多从HR专员、招聘专员起步，逐步发展。",
+    "T5": "多从招聘助理、人事助理等岗位起步。"
+  },
+  "university": {
+    "coreCourses": ["普通心理学", "社会心理学", "心理统计学", "实验心理学", "心理测量学", "认知心理学", "管理心理学"],
+    "hardestCourses": ["心理统计学", "实验心理学", "认知心理学"],
+    "pressureLevel": 3,
+    "switchMajorDifficulty": "转入中等，转出容易",
+    "postgradRate": "约40%-55%",
+    "abroadRate": "约10%-15%",
+    "yearByYear": [
+      { "year": 1, "description": "普通心理学打开了新世界，统计课让人有点意外。" },
+      { "year": 2, "description": "学会设计问卷和实验，第一次用统计软件分析数据。" },
+      { "year": 3, "description": "去互联网公司做用户研究实习，或者去企业做HR实习。" },
+      { "year": 4, "description": "准备作品集和秋招，部分人读应用心理硕士。" }
+    ],
+    "source": { "name": "示例：高校心理学专业培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "国内读研", "percent": 42 },
+      { "label": "直接就业", "percent": 42 },
+      { "label": "考公/选调", "percent": 5 },
+      { "label": "出国", "percent": 9 },
+      { "label": "其他", "percent": 2 }
+    ],
+    "source": { "name": "示例：毕业生就业质量年度报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["用户研究员", "HRBP专员"],
+      "salary": { "p10": 7000, "p50": 13000, "p90": 22000, "source": { "name": "示例：招聘平台公开薪资区间（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["北京", "上海", "深圳", "杭州"],
+      "lifeDescription": "做用户访谈和问卷调研，把发现写成报告，推动产品团队做改进。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["资深用户研究员", "HRBP"],
+      "salary": { "p10": 10000, "p50": 18000, "p90": 30000, "source": { "name": "示例：招聘平台公开薪资区间（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["北京", "上海", "深圳", "杭州"],
+      "lifeDescription": "独立负责一个业务线的研究，或者作为HRBP支持几个团队的人才管理。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["用户研究负责人", "人力资源经理/总监"],
+      "salary": { "p10": 14000, "p50": 28000, "p90": 50000, "source": { "name": "示例：招聘平台公开薪资区间（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["北京", "上海", "深圳", "杭州", "成都"],
+      "lifeDescription": "带领团队，参与公司层面的决策，工作和生活的平衡度相对较好。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 50000, "role": "大厂用户研究负责人/HR总监",
+      "lifeQuality": "在一线城市安家，工作有影响力，能参与产品和组织的重要决策。",
+      "howPeopleGetHere": ["硕士毕业，研究方法扎实", "懂业务，能把研究发现转化为决策", "沟通和影响力强"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 28000, "role": "中型公司用研经理/HR经理",
+      "lifeQuality": "收入中上，工作节奏适中，偶尔加班。",
+      "howPeopleGetHere": ["在一两家公司稳定积累", "从执行做到管理"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 14000, "role": "小公司HR专员/用研岗位被裁撤",
+      "lifeQuality": "公司收缩时，用户研究和HR岗位容易被优化，需要重新找方向。",
+      "howPeopleGetHere": ["长期做事务性工作", "研究成果没有被业务认可"],
+      "pivotOptions": ["转向产品经理或用户运营", "进入咨询公司做调研", "转做组织发展和培训", "考取心理咨询相关资质，转向员工关怀"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第4年的用户研究员，深圳",
+    "schedule": [
+      { "time": "09:30", "activity": "到公司，整理昨天的5份用户访谈记录", "mood": "focus" },
+      { "time": "10:30", "activity": "和产品经理讨论这次调研要回答什么问题", "mood": "social" },
+      { "time": "13:30", "activity": "在访谈室和一位用户聊了一个小时，观察她怎么用App", "mood": "happy" },
+      { "time": "15:00", "activity": "用统计软件分析问卷数据，发现一个意外的结论", "mood": "focus" },
+      { "time": "16:30", "activity": "向团队汇报，说服大家调整一个设计", "mood": "stress" },
+      { "time": "19:00", "activity": "下班，和朋友去吃饭", "mood": "happy" }
+    ],
+    "bestPart": "因为我的研究，产品改了一个设计，用户的抱怨明显变少了。",
+    "hardestPart": "研究结论不一定被采纳，需要不断说服别人。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["问卷数据的基础分析", "访谈录音转写和整理", "简历初筛"],
+    "resilientTasks": ["深度访谈和洞察", "研究设计", "推动决策和组织变革"],
+    "skillsToBuild": ["研究设计和统计", "商业和产品理解", "沟通和影响力", "用AI分析定性数据"],
+    "summary": "AI会接手大量整理和分析工作，能提出真问题、推动决策的人更有价值。"
+  },
+  "metrics": { "income": 62, "stability": 55, "freedom": 58, "workIntensity": 55, "growth": 65, "aiResilience": 55 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "毕业后你会怎么选？",
+      "options": [
+        { "id": "direct", "label": "直接工作", "description": "进入HR或用研岗位", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "早点积累经验，HR岗位机会多，用研岗位竞争大。" },
+        { "id": "master", "label": "读应用心理硕士", "description": "提升研究能力", "metricsDelta": { "growth": 8, "income": 5 }, "salaryMultiplier": 1.12, "tradeoff": "更容易进入大厂用研岗位，晚两年工作。" }
+      ]
+    },
+    {
+      "id": "track-choice", "atStage": "工作第3年", "question": "工作3年后，你想往哪个方向走？",
+      "options": [
+        { "id": "ux", "label": "深耕用户研究", "description": "专业路线", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "专业性强，但岗位数量相对少。" },
+        { "id": "hr", "label": "走HR管理路线", "description": "人力资源管理", "metricsDelta": { "stability": 10, "aiResilience": 5 }, "salaryMultiplier": 1.0, "tradeoff": "每家公司都需要HR，岗位多、相对稳定，但事务性工作较多。" },
+        { "id": "pm", "label": "转产品经理", "description": "从研究到决策", "metricsDelta": { "income": 10, "growth": 10, "workIntensity": 10 }, "salaryMultiplier": 1.15, "tradeoff": "收入和影响力更高，但压力和工作强度也更大。" }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["数学和英语都很重要", "多观察身边的人和他们的行为", "可以尝试设计一个小问卷做调查", "选科：没有硬性限制"],
+  "posterMoment": "13:30 在访谈室观察一位用户怎么用App"
+}

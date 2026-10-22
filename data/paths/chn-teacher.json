@@ -1,0 +1,129 @@
+{
+  "id": "chn-teacher",
+  "majorId": "chn",
+  "title": "中学语文教师",
+  "tagline": "陪一届届学生读懂文字，也读懂自己",
+  "tags": ["喜欢教书育人", "喜欢阅读", "喜欢写作", "想要稳定", "想帮助别人", "想回家乡发展", "有耐心", "喜欢表达和辩论"],
+  "tierFit": ["T2", "T3", "T4"],
+  "tierNotes": {
+    "T1": "多去一线城市名校或继续读研，部分人转向教研和学术。",
+    "T2": "部属师范大学毕业生是省会名校的热门人选，可能有公费师范生政策。",
+    "T3": "省属师范大学是地市级重点中学的主力来源。",
+    "T4": "县城和乡镇中学是主要去向，教师招聘考试很关键。",
+    "T5": "多为小学或幼儿园教师方向，需要考取相应的教师资格证。"
+  },
+  "university": {
+    "coreCourses": ["现代汉语", "古代汉语", "中国古代文学", "中国现当代文学", "外国文学", "文学概论", "教育学", "语文教学论"],
+    "hardestCourses": ["古代汉语", "文学概论", "语言学概论"],
+    "pressureLevel": 2,
+    "switchMajorDifficulty": "转入容易，转出容易",
+    "postgradRate": "约20%-30%",
+    "abroadRate": "约1%-3%",
+    "yearByYear": [
+      { "year": 1, "description": "大量阅读经典作品，第一次发现古代汉语比想象中难。" },
+      { "year": 2, "description": "学教育学和心理学，开始练习粉笔字和普通话。" },
+      { "year": 3, "description": "考教师资格证，去中学见习，第一次站上讲台。" },
+      { "year": 4, "description": "教育实习三个月，然后参加各地的教师招聘考试。" }
+    ],
+    "source": { "name": "示例：高校汉语言文学（师范）培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "直接就业（教师）", "percent": 62 },
+      { "label": "国内读研", "percent": 22 },
+      { "label": "考公/选调", "percent": 10 },
+      { "label": "出国", "percent": 2 },
+      { "label": "其他", "percent": 4 }
+    ],
+    "source": { "name": "示例：师范类毕业生就业质量报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["初中/高中语文教师", "班主任"],
+      "salary": { "p10": 4500, "p50": 6500, "p90": 9500, "source": { "name": "示例：中小学教师薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["地级市", "县城", "省会城市"],
+      "lifeDescription": "带两个班的语文，可能还当班主任。早读、晚自习、批改作文，周末偶尔补课。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["骨干教师", "年级组长"],
+      "salary": { "p10": 5500, "p50": 7500, "p90": 11000, "source": { "name": "示例：中小学教师薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["地级市", "县城", "省会城市"],
+      "lifeDescription": "评上中级职称，教学有了自己的风格，开始参加公开课和教学比赛。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["高级教师", "教研组长", "学校中层"],
+      "salary": { "p10": 6500, "p50": 9000, "p90": 14000, "source": { "name": "示例：中小学教师薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["地级市", "县城", "省会城市"],
+      "lifeDescription": "稳定且受人尊重，有寒暑假，可以照顾家庭。毕业的学生会回来看你。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 14000, "role": "省会名校骨干教师/教研员",
+      "lifeQuality": "有寒暑假，在当地有很好的口碑和社会地位，工作和家庭平衡得比较好。",
+      "howPeopleGetHere": ["毕业于好的师范院校", "坚持打磨课堂，参加教学比赛获奖", "愿意做班主任，和学生关系好", "持续写作和教研"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 9000, "role": "地市级中学语文教师",
+      "lifeQuality": "收入稳定，有编制，寒暑假可以休息，学期中工作量不小。",
+      "howPeopleGetHere": ["考上编制", "按时评职称", "在一所学校长期任教"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 6500, "role": "乡镇学校教师/民办学校教师",
+      "lifeQuality": "学生人数减少，部分学校面临合并，工作稳定性受影响。",
+      "howPeopleGetHere": ["没有考上理想地区的编制", "所在地区生源减少"],
+      "pivotOptions": ["考取更好地区的教师编制", "转向教育培训、教研或教材编辑", "转做文字类工作，如新媒体、出版", "考公进入宣传、教育等系统"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第5年的高中语文老师兼班主任，广东某地级市",
+    "schedule": [
+      { "time": "06:50", "activity": "到教室看早读，带全班读《赤壁赋》", "mood": "focus" },
+      { "time": "08:00", "activity": "上两节语文课，讲作文怎么写出真情实感", "mood": "happy" },
+      { "time": "10:30", "activity": "在办公室批改50篇作文，写下一条条评语", "mood": "tired" },
+      { "time": "12:30", "activity": "找一个最近成绩下滑的学生聊天", "mood": "social" },
+      { "time": "15:00", "activity": "教研组集体备课，讨论下周的公开课", "mood": "social" },
+      { "time": "17:30", "activity": "放学后和一位家长通电话", "mood": "stress" },
+      { "time": "19:30", "activity": "看晚自习，学生安静地写题", "mood": "focus" }
+    ],
+    "bestPart": "学生毕业多年后发消息说，是你让他爱上了读书。",
+    "hardestPart": "班主任事情琐碎，还要兼顾成绩压力和家长沟通。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["作业批改和错题统计", "制作课件", "生成练习题"],
+    "resilientTasks": ["课堂上的引导和启发", "关心学生的成长和情绪", "和家长沟通"],
+    "skillsToBuild": ["课堂表达和组织能力", "理解青少年心理", "用AI备课和批改", "持续阅读和写作"],
+    "summary": "AI能减轻批改和备课的负担，但育人这件事无法被替代。"
+  },
+  "metrics": { "income": 40, "stability": 88, "freedom": 45, "workIntensity": 60, "growth": 45, "aiResilience": 78 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "毕业后你会去哪里当老师？",
+      "options": [
+        { "id": "city", "label": "竞争省会或大城市学校", "description": "平台更好", "metricsDelta": { "income": 15, "workIntensity": 10 }, "salaryMultiplier": 1.3, "tradeoff": "收入和发展更好，但竞争激烈，需要研究生学历的情况越来越多。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 3, "cities": ["深圳", "广州", "郑州", "省会城市"], "lifeDescription": "在大城市的学校任教，学生和家长要求都很高，成长很快。" }
+          ] },
+        { "id": "home", "label": "回家乡县城", "description": "离家近", "metricsDelta": { "income": -5, "workIntensity": -5, "stability": 5 }, "salaryMultiplier": 0.9, "tradeoff": "生活成本低、离家近，但教育资源和发展空间有限。" },
+        { "id": "master", "label": "读教育硕士", "description": "提升学历", "metricsDelta": { "growth": 10 }, "salaryMultiplier": 1.1, "tradeoff": "进好学校的敲门砖，但晚两年工作。" }
+      ]
+    },
+    {
+      "id": "role-choice", "atStage": "工作第3年", "question": "工作几年后，你想往哪个方向发展？",
+      "options": [
+        { "id": "teach", "label": "做好一线老师", "description": "专注课堂", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "和学生在一起，专业成长靠自己积累。" },
+        { "id": "admin", "label": "走管理路线", "description": "年级主任、学校中层", "metricsDelta": { "income": 10, "workIntensity": 10, "freedom": -10 }, "salaryMultiplier": 1.1, "tradeoff": "影响力更大，但事务性工作多，离讲台远了一些。" },
+        { "id": "content", "label": "兼做内容创作", "description": "读书博主、写作课", "metricsDelta": { "freedom": 15, "income": 5, "workIntensity": 10 }, "salaryMultiplier": 1.05, "tradeoff": "多一份收入和可能性，但需要遵守教师的相关规定，精力分配是挑战。" }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["大量阅读，尤其是经典文学作品", "多写作，可以尝试投稿或参加作文比赛", "练习普通话和公众表达", "选科：历史类和物理类均可，部分公费师范生有特定要求"],
+  "posterMoment": "06:50 带全班读《赤壁赋》"
+}

@@ -1,0 +1,128 @@
+{
+  "id": "psy-school",
+  "majorId": "psy",
+  "title": "学校心理老师",
+  "tagline": "成为学生心里那个可以安心说话的人",
+  "tags": ["对心理感兴趣", "想帮助别人", "喜欢教书育人", "想要稳定", "有耐心", "喜欢和人打交道", "想回家乡发展"],
+  "tierFit": ["T2", "T3", "T4"],
+  "tierNotes": {
+    "T1": "多数人会读研或从事研究，也可以竞争一线城市名校的心理教师岗位。",
+    "T2": "省会城市中学的心理教师岗位越来越重视研究生学历。",
+    "T3": "地市级中小学是主要去向，需要考教师资格证和编制。",
+    "T4": "县城学校的心理健康教师需求在增加，但岗位数量有限。",
+    "T5": "可以考虑心理咨询辅助、社区服务等岗位。"
+  },
+  "university": {
+    "coreCourses": ["普通心理学", "发展心理学", "社会心理学", "心理统计学", "实验心理学", "心理测量学", "咨询心理学", "变态心理学"],
+    "hardestCourses": ["心理统计学", "实验心理学", "生理心理学"],
+    "pressureLevel": 3,
+    "switchMajorDifficulty": "转入中等，转出容易",
+    "postgradRate": "约40%-55%",
+    "abroadRate": "约8%-15%",
+    "yearByYear": [
+      { "year": 1, "description": "发现心理学和想象中不一样：有很多统计和实验。" },
+      { "year": 2, "description": "学发展心理学时，开始理解自己青春期的很多困惑。" },
+      { "year": 3, "description": "在学校心理中心做助理，参与心理健康讲座。" },
+      { "year": 4, "description": "考研或参加教师招聘，部分人开始学习咨询技能。" }
+    ],
+    "source": { "name": "示例：高校心理学专业培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "国内读研", "percent": 45 },
+      { "label": "直接就业", "percent": 38 },
+      { "label": "考公/选调", "percent": 6 },
+      { "label": "出国", "percent": 8 },
+      { "label": "其他", "percent": 3 }
+    ],
+    "source": { "name": "示例：毕业生就业质量年度报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["中学心理健康教师"],
+      "salary": { "p10": 4500, "p50": 6500, "p90": 9500, "source": { "name": "示例：中小学教师薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["地级市", "省会城市", "县城"],
+      "lifeDescription": "负责全校的心理健康课和心理咨询室，每周接待几位来访的学生。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["心理健康中心负责人"],
+      "salary": { "p10": 5500, "p50": 7500, "p90": 11000, "source": { "name": "示例：中小学教师薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["地级市", "省会城市", "县城"],
+      "lifeDescription": "建立了学校的心理档案和危机干预流程，开始给班主任和家长做培训。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["心理教研员", "高级教师"],
+      "salary": { "p10": 6500, "p50": 9000, "p90": 14000, "source": { "name": "示例：中小学教师薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["地级市", "省会城市", "县城"],
+      "lifeDescription": "在区域内负责心理健康教育的教研，工作稳定，有寒暑假。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 14000, "role": "市级心理教研员/名校心理中心主任",
+      "lifeQuality": "工作有意义且稳定，在区域内有专业影响力，生活节奏适中。",
+      "howPeopleGetHere": ["读了心理健康教育或应用心理硕士", "持续接受咨询督导和培训", "在区域内做了有影响的项目"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 9000, "role": "中学专职心理教师",
+      "lifeQuality": "收入稳定，有编制和寒暑假，学期中偶尔要处理学生的心理危机。",
+      "howPeopleGetHere": ["考取教师编制", "在学校长期任教"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 6500, "role": "兼职心理老师",
+      "lifeQuality": "学校对心理工作重视不够，经常被安排其他课程或行政工作。",
+      "howPeopleGetHere": ["所在学校没有专职岗位", "专业成长缺乏支持"],
+      "pivotOptions": ["考取更重视心理健康的学校的编制", "转向社会心理服务机构", "做青少年心理科普内容", "转向人力资源或用户研究"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第4年的高中心理老师，广州",
+    "schedule": [
+      { "time": "08:00", "activity": "到心理咨询室，整理这周的预约表", "mood": "focus" },
+      { "time": "09:40", "activity": "给高一上心理课，主题是怎么应对考试焦虑", "mood": "happy" },
+      { "time": "11:00", "activity": "和班主任沟通一个最近情绪低落的学生", "mood": "social" },
+      { "time": "12:40", "activity": "午休时间，一个女生来咨询室聊和父母的矛盾", "mood": "focus" },
+      { "time": "15:00", "activity": "写咨询记录，每一条都要谨慎保密", "mood": "focus" },
+      { "time": "16:30", "activity": "给全年级的家长做一次线上讲座", "mood": "stress" },
+      { "time": "18:00", "activity": "下班后去上一个心理咨询督导课", "mood": "tired" }
+    ],
+    "bestPart": "一个曾经很封闭的学生，慢慢愿意和同学交朋友了。",
+    "hardestPart": "遇到心理危机事件时，要承担很大的压力和责任。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["心理测评的施测和计分", "心理课的课件制作", "心理档案的整理"],
+    "resilientTasks": ["一对一的心理咨询", "心理危机的识别和干预", "和学生建立信任关系"],
+    "skillsToBuild": ["咨询技术和共情能力", "危机干预能力", "家校沟通", "持续的专业督导和学习"],
+    "summary": "AI可以做初步筛查和陪伴，但真正的信任关系和危机干预需要人。"
+  },
+  "metrics": { "income": 38, "stability": 85, "freedom": 50, "workIntensity": 45, "growth": 50, "aiResilience": 82 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "本科毕业后你会怎么选？",
+      "options": [
+        { "id": "direct", "label": "直接考编当老师", "description": "进入中小学", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "早点稳定，但心理咨询的专业积累需要在工作中慢慢补。" },
+        { "id": "master", "label": "读心理健康教育硕士", "description": "提升专业能力", "metricsDelta": { "growth": 10, "income": 5 }, "salaryMultiplier": 1.1, "tradeoff": "更容易进入好学校，专业能力更扎实，但晚两三年工作。" }
+      ]
+    },
+    {
+      "id": "move-choice", "atStage": "工作第3年", "question": "工作几年后，你还想做什么？",
+      "options": [
+        { "id": "stay", "label": "继续在学校", "description": "深耕学校心理", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "稳定、有寒暑假，影响一届又一届的学生。" },
+        { "id": "counselor", "label": "转做社会心理咨询师", "description": "去咨询机构或独立执业", "metricsDelta": { "income": 15, "stability": -30, "freedom": 20 }, "salaryMultiplier": 1.3, "tradeoff": "收入上限更高，但需要多年的督导积累，起步阶段客源不稳定。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 5, "typicalRoles": ["心理咨询师"], "cities": ["广州", "深圳", "上海", "省会城市"], "lifeDescription": "在咨询机构工作，每周接待十几位来访者，收入和客源挂钩。" },
+            { "yearsAfterGrad": 10, "typicalRoles": ["资深咨询师", "督导"], "cities": ["广州", "深圳", "上海", "省会城市"], "lifeDescription": "有了稳定的来访者和口碑，开始带新的咨询师。" }
+          ] }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["数学不要放松，心理学有大量统计", "多观察和理解身边的人", "可以阅读一些心理学入门书籍", "选科：没有硬性限制，部分院校心理学按理科招生"],
+  "posterMoment": "12:40 午休时，一个女生来咨询室聊和父母的矛盾"
+}

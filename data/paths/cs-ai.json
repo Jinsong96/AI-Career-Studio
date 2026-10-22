@@ -1,0 +1,134 @@
+{
+  "id": "cs-ai",
+  "majorId": "cs",
+  "title": "算法/AI工程师",
+  "tagline": "训练模型，让机器学会看、听、说和推荐",
+  "tags": ["喜欢编程", "喜欢数学", "喜欢研究", "喜欢逻辑推理", "想赚大钱", "大城市"],
+  "tierFit": ["T1", "T2", "T3"],
+  "tierNotes": {
+    "T1": "保研、读博、进顶级实验室的机会多，算法岗校招的主要来源。",
+    "T2": "大多数人通过读研进入算法岗，论文或竞赛经历是敲门砖。",
+    "T3": "本科直接进算法岗较难，通常需要读研到更好的学校，或从开发岗内部转岗。",
+    "T4": "建议把读研作为主要路线，同时用开源项目和比赛积累作品。",
+    "T5": "可以从数据标注、AI应用开发等岗位切入，算法核心岗位门槛较高。"
+  },
+  "university": {
+    "coreCourses": ["高等数学", "线性代数", "概率论与数理统计", "数据结构", "机器学习", "深度学习", "最优化方法", "计算机视觉/自然语言处理"],
+    "hardestCourses": ["概率论与数理统计", "机器学习", "最优化方法"],
+    "pressureLevel": 5,
+    "switchMajorDifficulty": "转入难，需要数学基础好",
+    "postgradRate": "约50%-65%",
+    "abroadRate": "约10%-15%",
+    "yearByYear": [
+      { "year": 1, "description": "数学课占了一半，高数和线代决定了你后面能走多远。" },
+      { "year": 2, "description": "第一次跑通一个图像分类模型，看着准确率一点点上涨，很上头。" },
+      { "year": 3, "description": "进实验室跟老师做项目，或者参加数据竞赛，开始读英文论文。" },
+      { "year": 4, "description": "保研、考研或申请出国，少数人直接拿到算法岗offer。" }
+    ],
+    "source": { "name": "示例：高校人工智能方向培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "直接就业", "percent": 35 },
+      { "label": "国内读研", "percent": 50 },
+      { "label": "考公/选调", "percent": 3 },
+      { "label": "出国", "percent": 10 },
+      { "label": "其他", "percent": 2 }
+    ],
+    "source": { "name": "示例：毕业生就业质量年度报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["算法工程师", "机器学习工程师"],
+      "salary": { "p10": 12000, "p50": 22000, "p90": 38000, "source": { "name": "示例：招聘平台公开薪资区间（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["北京", "上海", "深圳", "杭州"],
+      "lifeDescription": "负责一个推荐或识别模型的迭代，每周看实验数据，指标涨了0.5%都值得开心。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["高级算法工程师", "大模型应用负责人"],
+      "salary": { "p10": 16000, "p50": 32000, "p90": 55000, "source": { "name": "示例：招聘平台公开薪资区间（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["北京", "上海", "深圳", "杭州"],
+      "lifeDescription": "开始独立负责一个方向，要同时懂技术和业务。新技术更新太快，下班后也在读论文。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["算法专家", "AI团队负责人", "研究员"],
+      "salary": { "p10": 20000, "p50": 45000, "p90": 90000, "source": { "name": "示例：招聘平台公开薪资区间（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["北京", "上海", "深圳", "杭州"],
+      "lifeDescription": "分化很大：有人成为业内知名的专家，有人转向AI产品或创业，也有人回到高校和研究所。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 90000, "role": "大厂算法专家/AI实验室负责人",
+      "lifeQuality": "在一线城市安家，工作有挑战也有话语权，能参与行业前沿的项目。",
+      "howPeopleGetHere": ["在好的实验室读研，有扎实的论文或项目", "选对了方向并持续深耕", "在技术爆发期加入了核心团队", "既懂模型也懂业务落地"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 45000, "role": "中大型公司高级算法工程师",
+      "lifeQuality": "收入较高，但需要不断学习新技术，工作节奏快，周末偶尔要跑实验。",
+      "howPeopleGetHere": ["硕士毕业进入算法岗", "在推荐、搜索、视觉等某个方向积累", "跳槽1到2次"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 20000, "role": "调参为主的算法岗/转回开发岗",
+      "lifeQuality": "所在方向被新技术替代，工作内容变成重复调参，职业方向需要重新调整。",
+      "howPeopleGetHere": ["只会调用现成工具，基础理论薄弱", "所在业务线收缩", "没有跟上技术迭代"],
+      "pivotOptions": ["转向AI应用开发，市场需求大", "进入传统行业做智能化改造", "转做AI产品经理或解决方案", "去高校或职业院校做教学"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第3年的推荐算法工程师，北京",
+    "schedule": [
+      { "time": "10:00", "activity": "到公司先看昨晚跑完的实验结果，模型效果涨了一点点", "mood": "happy" },
+      { "time": "10:30", "activity": "和组里讨论新的模型方案，白板上写满公式", "mood": "focus" },
+      { "time": "12:00", "activity": "食堂吃饭，听隔壁组聊最新发布的大模型", "mood": "social" },
+      { "time": "13:30", "activity": "读一篇英文论文，想办法在自己的业务上复现", "mood": "focus" },
+      { "time": "15:30", "activity": "数据有问题，花两个小时清洗和排查", "mood": "stress" },
+      { "time": "17:30", "activity": "给产品和运营讲这次实验的结论", "mood": "social" },
+      { "time": "20:00", "activity": "提交一个新的训练任务，明早看结果", "mood": "tired" }
+    ],
+    "bestPart": "一个想法被实验证明有效，上线后真的改善了几千万用户的体验。",
+    "hardestPart": "很多实验都会失败，技术更新快，总担心自己落后。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["常规的模型调参", "数据清洗脚本", "复现公开的基线模型"],
+    "resilientTasks": ["定义问题和设计评估方法", "提出新的模型思路", "把AI落地到具体业务"],
+    "skillsToBuild": ["扎实的数学和统计基础", "快速学习新论文的能力", "业务理解和问题拆解", "英文阅读"],
+    "summary": "工具越来越自动化，但能定义问题、判断方向的人更稀缺。"
+  },
+  "metrics": { "income": 88, "stability": 50, "freedom": 62, "workIntensity": 78, "growth": 90, "aiResilience": 72 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "本科毕业后你会怎么选？",
+      "options": [
+        { "id": "master", "label": "国内读研", "description": "读2到3年硕士进实验室", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "算法岗的主流入场方式，但需要先在保研或考研中胜出。" },
+        { "id": "phd", "label": "读博", "description": "读5年左右博士做研究", "metricsDelta": { "growth": 5, "freedom": 10, "income": -5, "stability": -5 }, "salaryMultiplier": 1.2, "tradeoff": "研究能力和天花板更高，但晚5年工作，读博过程的不确定性也大。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 3, "typicalRoles": ["博士在读"], "lifeDescription": "在实验室写论文、投会议，补贴不高，但时间相对自由。" },
+            { "yearsAfterGrad": 5, "typicalRoles": ["研究员", "博士后"], "lifeDescription": "刚毕业进入企业研究院或高校，起点较高。" }
+          ] },
+        { "id": "work", "label": "直接工作", "description": "本科进开发岗，再找机会转算法", "metricsDelta": { "growth": -5, "income": -5 }, "salaryMultiplier": 0.85, "tradeoff": "早点赚钱，但直接进算法岗难，往往要先做开发再内部转岗。" }
+      ]
+    },
+    {
+      "id": "direction", "atStage": "工作第3年", "question": "工作3年后，你想往哪个方向走？",
+      "options": [
+        { "id": "tech", "label": "继续深耕技术", "description": "做专家路线", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "技术越深越值钱，但要一直跟上新技术。" },
+        { "id": "product", "label": "转AI产品经理", "description": "懂技术的产品人", "metricsDelta": { "aiResilience": 5, "workIntensity": -5, "growth": -5 }, "salaryMultiplier": 0.9, "tradeoff": "沟通和业务判断更重要，技术积累会慢慢变浅。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 5, "typicalRoles": ["AI产品经理"], "lifeDescription": "每天和用户、工程师、老板沟通，决定做什么比怎么做更重要。" },
+            { "yearsAfterGrad": 10, "typicalRoles": ["产品总监", "AI业务负责人"], "lifeDescription": "负责一条产品线，能看到自己做的产品被很多人使用。" }
+          ] },
+        { "id": "startup", "label": "加入AI创业公司", "description": "高风险高回报", "metricsDelta": { "freedom": 15, "stability": -20, "workIntensity": 10 }, "salaryMultiplier": 1.05, "tradeoff": "有机会获得期权和更大的舞台，但公司失败的概率不低。" }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["数学是核心，尤其是函数、概率和逻辑", "提前学Python，尝试一个简单的机器学习小项目", "培养英文阅读能力，未来要大量读论文", "选科：物理必选，化学推荐"],
+  "posterMoment": "10:00 打开电脑，昨晚跑的实验效果涨了一点点"
+}

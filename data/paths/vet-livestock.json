@@ -1,0 +1,127 @@
+{
+  "id": "vet-livestock",
+  "majorId": "vet",
+  "title": "畜牧/动保企业技术岗",
+  "tagline": "在养殖场和实验室之间，守护餐桌上的食品安全",
+  "tags": ["喜欢动物", "不想坐办公室", "喜欢研究", "喜欢户外", "想要稳定", "想回家乡发展", "喜欢动手做东西"],
+  "tierFit": ["T2", "T3", "T4", "T5"],
+  "tierNotes": {
+    "T1": "多进入大型企业研发中心或继续读博。",
+    "T2": "头部畜牧和动保企业的管培生是主要去向。",
+    "T3": "大型养殖企业技术岗位需求大，晋升通道清晰。",
+    "T4": "从养殖场技术员起步，基层经验积累很重要。",
+    "T5": "多从养殖场饲养员、防疫员等一线岗位起步。"
+  },
+  "university": {
+    "coreCourses": ["动物解剖学", "动物生理学", "兽医微生物学", "兽医免疫学", "兽医传染病学", "动物营养学", "畜牧学概论"],
+    "hardestCourses": ["兽医微生物学", "兽医免疫学", "动物生物化学"],
+    "pressureLevel": 3,
+    "switchMajorDifficulty": "转入中等，转出容易",
+    "postgradRate": "约30%-40%",
+    "abroadRate": "约2%-4%",
+    "yearByYear": [
+      { "year": 1, "description": "基础课多，第一次去学校的实习牧场。" },
+      { "year": 2, "description": "微生物学和免疫学课上，开始理解动物疫病是怎么传播的。" },
+      { "year": 3, "description": "在养殖企业实习，学习防疫和饲养管理。" },
+      { "year": 5, "description": "参加企业校招或考研，很多企业提供管培生项目。" }
+    ],
+    "source": { "name": "示例：高校动物医学专业培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "直接就业", "percent": 60 },
+      { "label": "国内读研", "percent": 28 },
+      { "label": "考公/选调", "percent": 8 },
+      { "label": "出国", "percent": 1 },
+      { "label": "其他", "percent": 3 }
+    ],
+    "source": { "name": "示例：毕业生就业质量年度报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["养殖场兽医", "技术服务专员"],
+      "salary": { "p10": 6000, "p50": 9000, "p90": 13000, "source": { "name": "示例：畜牧行业薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["县城", "乡镇", "地级市"],
+      "lifeDescription": "住在养殖场附近，负责猪群或鸡群的防疫和健康管理，进出要严格消毒。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["场长", "区域技术经理"],
+      "salary": { "p10": 8000, "p50": 13000, "p90": 20000, "source": { "name": "示例：畜牧行业薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["县城", "地级市"],
+      "lifeDescription": "管理一个养殖场或一个区域的技术服务，开始要对生产成绩负责。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["生产总监", "技术总监"],
+      "salary": { "p10": 10000, "p50": 18000, "p90": 35000, "source": { "name": "示例：畜牧行业薪酬调研（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["地级市", "省会城市"],
+      "lifeDescription": "负责多个养殖基地的生产管理，收入不错，但会受到行业周期和疫病风险的影响。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 35000, "role": "大型养殖企业生产总监",
+      "lifeQuality": "管理规模大，收入较高，工作有挑战性，在省会或地级市安家。",
+      "howPeopleGetHere": ["从基层一路做上来，懂生产", "在疫病防控中表现突出", "有管理能力"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 18000, "role": "区域技术经理/场长",
+      "lifeQuality": "收入在当地中上，工作地点相对偏远，和家人团聚的时间有时受限。",
+      "howPeopleGetHere": ["在一家企业稳定发展", "积累了扎实的现场经验"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 10000, "role": "小型养殖场技术员",
+      "lifeQuality": "行业周期下行时收入受影响，工作环境比较艰苦。",
+      "howPeopleGetHere": ["所在企业在行业周期中受损", "长期在偏远地区，没有晋升机会"],
+      "pivotOptions": ["转向动物疫苗和兽药企业做技术服务", "考公进入畜牧兽医部门", "进入饲料企业做技术或销售", "做农业技术推广和培训"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第3年的养殖场兽医，河南某县",
+    "schedule": [
+      { "time": "07:00", "activity": "洗澡消毒、换上工作服，进入猪场生产区", "mood": "focus" },
+      { "time": "08:00", "activity": "巡查猪舍，观察每一栏猪的精神和采食情况", "mood": "focus" },
+      { "time": "10:00", "activity": "给一批小猪接种疫苗", "mood": "tired" },
+      { "time": "12:00", "activity": "在场里食堂和同事吃饭", "mood": "happy" },
+      { "time": "14:00", "activity": "采集样本送到化验室检测", "mood": "focus" },
+      { "time": "16:00", "activity": "和场长开会，分析这个月的生产数据", "mood": "stress" },
+      { "time": "19:00", "activity": "在宿舍和家人视频，周末轮休回家", "mood": "happy" }
+    ],
+    "bestPart": "一批猪健康地出栏，自己的防疫方案起了作用。",
+    "hardestPart": "工作地点偏远，严格的防疫要求让生活比较封闭。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["生产数据记录和统计", "环境监控", "常规的报表分析"],
+    "resilientTasks": ["现场诊断和疫病处理", "生产管理和团队带领", "防疫方案的制定"],
+    "skillsToBuild": ["疫病防控专业能力", "生产管理能力", "数据分析和智能养殖技术", "团队管理"],
+    "summary": "智能养殖设备会替代部分监测工作，但现场判断和管理依然需要人。"
+  },
+  "metrics": { "income": 50, "stability": 65, "freedom": 35, "workIntensity": 60, "growth": 55, "aiResilience": 72 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "毕业后你会怎么选？",
+      "options": [
+        { "id": "trainee", "label": "大企业管培生", "description": "头部养殖企业", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "晋升通道清晰、起薪不错，但要在基层养殖场待几年。" },
+        { "id": "master", "label": "读研进研发岗", "description": "疫苗、兽药研发", "metricsDelta": { "growth": 10, "freedom": 10, "workIntensity": -5 }, "salaryMultiplier": 1.1, "tradeoff": "工作地点更好，在实验室里工作，但要多读3年。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 3, "typicalRoles": ["兽用疫苗研发员"], "cities": ["郑州", "武汉", "广州", "哈尔滨"], "lifeDescription": "在企业研发中心做实验，工作地点在城市，作息规律。" }
+          ] }
+      ]
+    },
+    {
+      "id": "stay-choice", "atStage": "工作第3年", "question": "在养殖场工作3年后，你会怎么选？",
+      "options": [
+        { "id": "stay", "label": "继续生产管理", "description": "向场长发展", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "收入增长快，但要一直在偏远地区。" },
+        { "id": "service", "label": "转做技术服务", "description": "动保企业技术支持", "metricsDelta": { "freedom": 15, "workIntensity": 5, "stability": -5 }, "salaryMultiplier": 1.05, "tradeoff": "要经常出差拜访客户，但不用一直住在养殖场里。" }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["生物和化学打好基础", "了解现代养殖业和食品安全", "能接受在偏远地区工作的环境", "选科：化学通常必选，物理和生物推荐"],
+  "posterMoment": "07:00 洗澡消毒，换上工作服进入猪场"
+}

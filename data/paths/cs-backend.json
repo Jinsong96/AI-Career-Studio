@@ -1,0 +1,139 @@
+{
+  "id": "cs-backend",
+  "majorId": "cs",
+  "title": "互联网后端开发工程师",
+  "tagline": "用代码搭建千万人每天使用的系统",
+  "tags": ["喜欢编程", "喜欢逻辑推理", "想赚大钱", "成长空间", "大城市"],
+  "tierFit": ["T1", "T2", "T3", "T4"],
+  "tierNotes": {
+    "T1": "大厂校招机会多，实习资源丰富，也有不少人去读博或做研究。",
+    "T2": "进大厂的主力来源，关键在于大三之前要有一段像样的实习。",
+    "T3": "能进大厂，但要靠项目和实习自己争取；中型公司和国企信息部门是常见去向。",
+    "T4": "学校平台的帮助有限，建议尽早做项目、参加竞赛，或者考虑读研提升学历。",
+    "T5": "以测试、运维、外包开发岗位起步，后续靠经验积累转型。"
+  },
+  "university": {
+    "coreCourses": ["程序设计基础", "数据结构", "计算机组成原理", "操作系统", "计算机网络", "数据库系统", "算法设计与分析", "软件工程"],
+    "hardestCourses": ["数据结构", "操作系统", "离散数学"],
+    "pressureLevel": 4,
+    "switchMajorDifficulty": "转入难，转出相对容易",
+    "postgradRate": "约30%-40%",
+    "abroadRate": "约5%-10%",
+    "yearByYear": [
+      { "year": 1, "description": "学C语言和高数，第一次写出能运行的程序，也第一次被调试折磨到半夜。" },
+      { "year": 2, "description": "数据结构和离散数学是分水岭，有人开始刷算法题，有人开始怀疑人生。" },
+      { "year": 3, "description": "关键的一年：找实习、做项目、决定考研还是工作。" },
+      { "year": 4, "description": "秋招、毕业设计，手里的offer决定了起点。" }
+    ],
+    "source": { "name": "示例：高校计算机专业培养方案（待替换）", "year": 2024, "confidence": "demo" }
+  },
+  "graduation": {
+    "destinations": [
+      { "label": "直接就业", "percent": 58 },
+      { "label": "国内读研", "percent": 30 },
+      { "label": "考公/选调", "percent": 5 },
+      { "label": "出国", "percent": 5 },
+      { "label": "其他", "percent": 2 }
+    ],
+    "source": { "name": "示例：毕业生就业质量年度报告（待替换）", "year": 2023, "confidence": "demo" }
+  },
+  "stages": [
+    {
+      "label": "第3年", "yearsAfterGrad": 3,
+      "typicalRoles": ["后端开发工程师", "Java/Go开发"],
+      "salary": { "p10": 9000, "p50": 16000, "p90": 28000, "source": { "name": "示例：招聘平台公开薪资区间（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["杭州", "深圳", "北京", "成都"],
+      "lifeDescription": "能独立负责一个模块。租房住，通勤40分钟，忙的时候周末也要处理线上问题。"
+    },
+    {
+      "label": "第5年", "yearsAfterGrad": 5,
+      "typicalRoles": ["高级开发工程师", "技术骨干"],
+      "salary": { "p10": 12000, "p50": 24000, "p90": 42000, "source": { "name": "示例：招聘平台公开薪资区间（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["杭州", "深圳", "北京", "成都"],
+      "lifeDescription": "开始带新人、参与架构讨论。有人在考虑买房，有人在考虑跳槽或回二线城市。"
+    },
+    {
+      "label": "第10年", "yearsAfterGrad": 10,
+      "typicalRoles": ["技术专家", "技术经理", "架构师"],
+      "salary": { "p10": 15000, "p50": 35000, "p90": 65000, "source": { "name": "示例：招聘平台公开薪资区间（待替换）", "year": 2024, "confidence": "demo" } },
+      "cities": ["杭州", "深圳", "北京", "成都", "家乡省会"],
+      "lifeDescription": "分化明显：有人成为技术专家或管理者，有人转向产品、创业，或者进入国企和传统行业做数字化。"
+    }
+  ],
+  "scenarios": [
+    {
+      "type": "ideal", "percentileLabel": "约前10%",
+      "year10Salary": 65000, "role": "大厂技术专家/技术负责人",
+      "lifeQuality": "在一线或新一线城市买房，工作强度高但自主权大，有能力选择项目和团队。",
+      "howPeopleGetHere": ["大三前有1到2段大厂实习", "在一个技术方向上深耕（如分布式系统）", "在业务增长期加入了好团队", "持续学习，主动承担复杂项目"]
+    },
+    {
+      "type": "typical", "percentileLabel": "中位数",
+      "year10Salary": 35000, "role": "中型公司高级工程师/小组长",
+      "lifeQuality": "收入在同龄人中偏上，可能在新一线或二线城市安家，偶尔加班，对35岁的职业焦虑有感受。",
+      "howPeopleGetHere": ["按部就班地积累经验", "跳槽1到2次", "技术扎实，但没有特别突出的方向"]
+    },
+    {
+      "type": "worst", "percentileLabel": "约后10%-20%",
+      "year10Salary": 15000, "role": "外包开发/小公司程序员",
+      "lifeQuality": "工作稳定性差，项目频繁变动，面临年龄和技术更新的双重压力。",
+      "howPeopleGetHere": ["长期做重复性工作，没有技术积累", "没有及时跟上新技术", "所在行业或公司收缩"],
+      "pivotOptions": ["转向传统行业或国企做数字化，稳定性更高", "转产品经理、技术支持或售前", "考公进入信息技术相关岗位", "回到家乡城市，生活成本降低，相对生活质量反而提升"]
+    }
+  ],
+  "dayInLife": {
+    "persona": "工作第4年的后端工程师，杭州",
+    "schedule": [
+      { "time": "09:40", "activity": "到公司，买咖啡，看昨晚的线上告警", "mood": "focus" },
+      { "time": "10:00", "activity": "团队站会，每人说进度和问题，15分钟", "mood": "social" },
+      { "time": "10:30", "activity": "写新功能的代码，用AI助手生成初稿再自己改", "mood": "focus" },
+      { "time": "12:00", "activity": "和同事吃午饭，聊技术也聊八卦", "mood": "happy" },
+      { "time": "13:30", "activity": "和产品经理争论需求是否合理", "mood": "stress" },
+      { "time": "15:00", "activity": "帮同事做代码评审", "mood": "focus" },
+      { "time": "16:30", "activity": "排查一个只在线上出现的bug", "mood": "stress" },
+      { "time": "19:30", "activity": "下班，地铁上刷技术文章", "mood": "tired" },
+      { "time": "22:00", "activity": "被拉进紧急群处理问题，20分钟解决", "mood": "tired" }
+    ],
+    "bestPart": "自己写的功能上线后，几百万人在用。",
+    "hardestPart": "需求经常变，线上出问题随时要响应。",
+    "source": { "name": "示例：从业者描述（待替换为真实问卷）", "year": 2024, "confidence": "demo" }
+  },
+  "aiRisk": {
+    "replaceableTasks": ["编写常规的增删改查代码", "写单元测试", "查文档和写简单脚本"],
+    "resilientTasks": ["系统架构设计", "理解复杂的业务", "排查疑难问题", "跨团队沟通和决策"],
+    "skillsToBuild": ["系统设计能力", "业务理解能力", "熟练使用AI工具提效", "沟通和表达"],
+    "summary": "初级编码工作受AI影响最大，能设计系统、理解业务的工程师价值反而上升。"
+  },
+  "metrics": { "income": 82, "stability": 55, "freedom": 60, "workIntensity": 75, "growth": 85, "aiResilience": 60 },
+  "branches": [
+    {
+      "id": "grad-choice", "atStage": "毕业时", "question": "毕业后你会怎么选？",
+      "options": [
+        { "id": "work", "label": "直接工作", "description": "拿offer进入互联网公司", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "早3年积累经验和收入，但学历天花板在一些公司会显现。" },
+        { "id": "postgrad", "label": "考研/保研", "description": "读3年硕士再就业", "metricsDelta": { "growth": 5, "income": 5 }, "salaryMultiplier": 1.12, "tradeoff": "起薪和岗位层次更高，但晚3年进入职场，也有考研失败的风险。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 3, "typicalRoles": ["硕士毕业，入职后端/基础架构岗"], "lifeDescription": "刚拿到硕士学位入职，起点岗位更好一些，但同龄的本科同学已经工作3年了。" }
+          ] },
+        { "id": "civil", "label": "考公/进国企", "description": "进入政府或国企的信息部门", "metricsDelta": { "stability": 30, "income": -20, "workIntensity": -25, "growth": -15 }, "salaryMultiplier": 0.65, "tradeoff": "稳定、压力小，但收入增长慢，技术成长空间有限。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 3, "typicalRoles": ["国企信息部门工程师", "政务系统运维开发"], "cities": ["家乡省会", "郑州", "广州"], "lifeDescription": "朝九晚六，很少加班。工作内容偏系统维护和对接供应商，写代码的时间不多。" },
+            { "yearsAfterGrad": 5, "typicalRoles": ["信息化项目负责人"], "cities": ["家乡省会", "郑州", "广州"], "lifeDescription": "开始负责信息化项目的立项和验收，工作稳定，有时间照顾家庭。" },
+            { "yearsAfterGrad": 10, "typicalRoles": ["信息中心副主任", "数字化部门主管"], "cities": ["家乡省会", "郑州", "广州"], "lifeDescription": "在单位里是懂技术的骨干，收入稳定增长，晋升节奏取决于单位和机遇。" }
+          ] }
+      ]
+    },
+    {
+      "id": "city-choice", "atStage": "工作第3年", "question": "工作3年后，你会留在大城市吗？",
+      "options": [
+        { "id": "stay", "label": "留在一线/新一线", "description": "继续在大厂发展", "metricsDelta": {}, "salaryMultiplier": 1.0, "tradeoff": "机会和收入更高，但房价和生活压力大。" },
+        { "id": "home", "label": "回家乡省会", "description": "去本地企业或远程工作", "metricsDelta": { "income": -15, "workIntensity": -15, "stability": 10, "freedom": 5 }, "salaryMultiplier": 0.75, "tradeoff": "收入下降，但离家近、房价低，相对生活质量可能更高。",
+          "stageOverrides": [
+            { "yearsAfterGrad": 5, "cities": ["郑州", "长沙", "合肥", "家乡省会"], "lifeDescription": "回到省会城市的本地企业做技术骨干，周末能回家吃饭，开始考虑买房。" },
+            { "yearsAfterGrad": 10, "cities": ["郑州", "长沙", "合肥", "家乡省会"], "lifeDescription": "在本地是稀缺的技术负责人，房贷压力小，下班后有时间陪家人。" }
+          ] }
+      ]
+    }
+  ],
+  "highSchoolPrep": ["学好数学和物理，特别是逻辑推理能力", "可以尝试学Python，做一个小项目", "了解信息学竞赛（适合有兴趣、学有余力的学生）", "选科：物理必选，化学推荐"],
+  "posterMoment": "22:00 被拉进紧急群，20分钟修好了线上问题"
+}
