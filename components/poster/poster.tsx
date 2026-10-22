@@ -160,7 +160,6 @@ export const Poster = forwardRef<HTMLDivElement, Props>(({ template, theme, path
       <div className="relative mt-4 flex items-end justify-between">
         <div>
           <p className="text-[15px] font-bold">职业平行人生</p>
-          <p className={cn("text-[10px]", t.sub)}>在选专业之前，先试穿你的未来</p>
           <p className={cn("mt-1 text-[8px] opacity-70", t.sub)}>示例数据 · 统计分布不代表个人预测</p>
         </div>
         <div className="flex h-16 w-16 flex-col items-center justify-center rounded-lg bg-snow p-1.5">

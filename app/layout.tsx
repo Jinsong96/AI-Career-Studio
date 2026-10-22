@@ -9,7 +9,7 @@ import { Starfield } from "@/components/common/starfield";
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "职业平行人生 · 在选专业之前，先试穿你的未来",
+  title: "职业平行人生",
   description: "面向高中生和家长的 AI 职业探索产品 Demo",
 };
 
