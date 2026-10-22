@@ -49,9 +49,7 @@ export default function Home() {
     <div>
       <section className="mx-auto max-w-3xl px-4 pb-14 pt-16 text-center md:pt-24">
         <h1 className="text-[32px] font-bold leading-tight tracking-tight text-neutral-900 md:text-5xl">
-          在选专业之前，
-          <br className="md:hidden" />
-          先<span className="text-brand">试穿</span>你的未来
+          看看你的<span className="text-brand">平行人生</span>
         </h1>
         <p className="mx-auto mt-4 max-w-md text-base text-neutral-500">输入分数和兴趣，看看10年后的你过着怎样的一天</p>
         <div className="mt-8 flex flex-col items-center gap-4">
